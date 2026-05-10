@@ -2,6 +2,7 @@
 
 from receipts.judge.kappa import cohen_kappa, wilson_ci
 from receipts.judge.l0 import Issue, RuleRegistry, run_rules
+from receipts.judge.l1 import StructuralResult, score_structure
 from receipts.judge.passk import (
     PasskResult,
     TrialResult,
@@ -13,10 +14,12 @@ __all__ = [
     "Issue",
     "PasskResult",
     "RuleRegistry",
+    "StructuralResult",
     "TrialResult",
     "cohen_kappa",
     "compute_passk",
     "compute_passk_detailed",
     "run_rules",
+    "score_structure",
     "wilson_ci",
 ]
