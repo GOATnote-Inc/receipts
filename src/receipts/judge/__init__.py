@@ -8,15 +8,25 @@ from receipts.judge.passk import (
     compute_passk,
     compute_passk_detailed,
 )
+from receipts.judge.replay import (
+    JudgeCall,
+    JudgeRecording,
+    ReplayStore,
+    stable_hash,
+)
 
 __all__ = [
     "Issue",
+    "JudgeCall",
+    "JudgeRecording",
     "PasskResult",
+    "ReplayStore",
     "RuleRegistry",
     "TrialResult",
     "cohen_kappa",
     "compute_passk",
     "compute_passk_detailed",
     "run_rules",
+    "stable_hash",
     "wilson_ci",
 ]
