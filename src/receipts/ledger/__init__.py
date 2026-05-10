@@ -27,6 +27,7 @@ from receipts.ledger.models import (
     Meeting,
     Thread,
 )
+from receipts.ledger.run_log import RunLog
 
 __all__ = [
     "DEFAULT_DATABASE_URL",
@@ -40,6 +41,7 @@ __all__ = [
     "JudgeRationale",
     "Meeting",
     "MerkleLog",
+    "RunLog",
     "Thread",
     "compute_hash",
     "engine",
