@@ -11,7 +11,12 @@ from typing import Literal
 
 from pydantic import BaseModel, ConfigDict, Field
 
-ArtifactKind = Literal["pr", "meeting", "thread"]
+ArtifactKind = Literal["pr", "meeting", "thread", "transcript", "note", "order"]
+
+#: Subset of ``ArtifactKind`` that clinical encounter contracts are allowed to
+#: cite. Engineering-side kinds (pr/meeting/thread) on a clinical citation are
+#: a validator failure — see ``validate_encounter_contract``.
+ENCOUNTER_ARTIFACT_KINDS: frozenset[str] = frozenset({"transcript", "note", "order"})
 
 
 class PRRef(BaseModel):
@@ -90,5 +95,45 @@ class RevisedSpec(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
     acceptance_criteria: list[str]
+    citations: dict[str, list[Citation]] = Field(default_factory=dict)
+    drift_summary: str
+
+
+# ---------------------------------------------------------------------------
+# Clinical encounter-contract models (S2)
+# ---------------------------------------------------------------------------
+
+
+class EncounterStub(BaseModel):
+    """The clinical analog of an Epic: a stub of what walked through the door.
+
+    Holds the chief complaint, presenting features, and a pointer to the
+    encounter audio. The drafter expands this into an EncounterContract —
+    structured acceptance + safety criteria with citations back to the
+    transcript, the chart note, or any orders placed.
+    """
+
+    model_config = ConfigDict(extra="forbid", frozen=True)
+
+    external_id: str
+    chief_complaint: str
+    presenting_features: list[str]
+    audio_ref: str
+
+
+class EncounterContract(BaseModel):
+    """The drafter's clinical output: criteria + safety floor + drift summary.
+
+    Differences vs RevisedSpec:
+      - safety_criteria is a separate, required-non-empty list.
+      - citations are keyed by criterion text and must point at clinical
+        artifact kinds only (transcript / note / order).
+    """
+
+    model_config = ConfigDict(extra="forbid")
+
+    external_id: str
+    acceptance_criteria: list[str]
+    safety_criteria: list[str]
     citations: dict[str, list[Citation]] = Field(default_factory=dict)
     drift_summary: str
