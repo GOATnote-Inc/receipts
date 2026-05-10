@@ -1,0 +1,51 @@
+{
+  "expected_contract": {
+    "acceptance_criteria": [
+      "Psychiatric evaluation documented with risk assessment."
+    ],
+    "citations": {
+      "Means restriction counseling documented when risk is non-low.": [
+        {
+          "artifact_kind": "transcript",
+          "external_id": "TRX-005",
+          "locator": "00:31:15"
+        }
+      ],
+      "Psychiatric evaluation documented with risk assessment.": [
+        {
+          "artifact_kind": "note",
+          "external_id": "NOTE-005",
+          "locator": "psych"
+        }
+      ],
+      "Suicide risk assessed with structured tool and disposition justified.": [
+        {
+          "artifact_kind": "note",
+          "external_id": "NOTE-005",
+          "locator": "risk"
+        },
+        {
+          "artifact_kind": "transcript",
+          "external_id": "TRX-005",
+          "locator": "00:22:30"
+        }
+      ]
+    },
+    "drift_summary": "Means-restriction safety criterion added after risk stratified to moderate; original stub anticipated only a single safety criterion.",
+    "external_id": "ENC-005",
+    "safety_criteria": [
+      "Suicide risk assessed with structured tool and disposition justified.",
+      "Means restriction counseling documented when risk is non-low."
+    ]
+  },
+  "stub": {
+    "audio_ref": "s3://receipts-audio/enc-005.wav",
+    "chief_complaint": "Suicidal ideation.",
+    "external_id": "ENC-005",
+    "presenting_features": [
+      "Recent plan disclosed.",
+      "No prior attempts.",
+      "Family support present."
+    ]
+  }
+}

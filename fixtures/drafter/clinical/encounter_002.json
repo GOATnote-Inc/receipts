@@ -1,0 +1,43 @@
+{
+  "expected_contract": {
+    "acceptance_criteria": [
+      "Uncomplicated cystitis diagnosis recorded with ICD-10 code."
+    ],
+    "citations": {
+      "Allergy reconciliation completed before antibiotic order.": [
+        {
+          "artifact_kind": "order",
+          "external_id": "ORD-002-ABX",
+          "locator": null
+        },
+        {
+          "artifact_kind": "note",
+          "external_id": "NOTE-002",
+          "locator": "allergies"
+        }
+      ],
+      "Uncomplicated cystitis diagnosis recorded with ICD-10 code.": [
+        {
+          "artifact_kind": "note",
+          "external_id": "NOTE-002",
+          "locator": "assessment"
+        }
+      ]
+    },
+    "drift_summary": "Shipped as scoped \u2014 no drift.",
+    "external_id": "ENC-002",
+    "safety_criteria": [
+      "Allergy reconciliation completed before antibiotic order."
+    ]
+  },
+  "stub": {
+    "audio_ref": "s3://receipts-audio/enc-002.wav",
+    "chief_complaint": "Dysuria x 2 days.",
+    "external_id": "ENC-002",
+    "presenting_features": [
+      "Frequency and urgency.",
+      "No flank pain, no fever.",
+      "UA: positive leukocyte esterase."
+    ]
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "epic": {
+    "acceptance_criteria": [
+      "EPIC-018: feature shipped with telemetry and a kill-switch."
+    ],
+    "external_id": "EPIC-018",
+    "id": 18,
+    "title": "Templated epic EPIC-018"
+  },
+  "execution": {
+    "meetings": [
+      {
+        "decisions": [
+          "EPIC-018: ship behind feature flag with kill-switch documented."
+        ],
+        "external_id": "MTG-018"
+      }
+    ],
+    "prs": [
+      {
+        "diff_summary": "Ship EPIC-018 feature flag + kill-switch.",
+        "external_id": "PR-01801",
+        "number": 1801,
+        "repo": "receipts"
+      },
+      {
+        "diff_summary": "Wire EPIC-018 telemetry (success + error rates).",
+        "external_id": "PR-01802",
+        "number": 1802,
+        "repo": "receipts"
+      }
+    ],
+    "threads": [
+      {
+        "channel": "#receipts-eng",
+        "external_id": "THR-018",
+        "summary": "EPIC-018: confirmed telemetry shape covers errors."
+      }
+    ]
+  },
+  "expected_revised_spec": {
+    "acceptance_criteria": [
+      "Exports CSV streaming ships with feature-flag kill-switch documented.",
+      "Exports CSV streaming emits success + error telemetry per call."
+    ],
+    "citations": {
+      "Exports CSV streaming emits success + error telemetry per call.": [
+        {
+          "artifact_kind": "pr",
+          "external_id": "PR-01802",
+          "locator": null
+        },
+        {
+          "artifact_kind": "thread",
+          "external_id": "THR-018",
+          "locator": null
+        }
+      ],
+      "Exports CSV streaming ships with feature-flag kill-switch documented.": [
+        {
+          "artifact_kind": "pr",
+          "external_id": "PR-01801",
+          "locator": null
+        },
+        {
+          "artifact_kind": "meeting",
+          "external_id": "MTG-018",
+          "locator": "0"
+        }
+      ]
+    },
+    "drift_summary": "EPIC-018: criterion (b) rephrased from generic 'instrumented' to explicit 'success + error telemetry per call' after THR-018."
+  }
+}

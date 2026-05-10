@@ -1,0 +1,74 @@
+{
+  "epic": {
+    "acceptance_criteria": [
+      "EPIC-030: feature shipped with telemetry and a kill-switch."
+    ],
+    "external_id": "EPIC-030",
+    "id": 30,
+    "title": "Templated epic EPIC-030"
+  },
+  "execution": {
+    "meetings": [
+      {
+        "decisions": [
+          "EPIC-030: ship behind feature flag with kill-switch documented."
+        ],
+        "external_id": "MTG-030"
+      }
+    ],
+    "prs": [
+      {
+        "diff_summary": "Ship EPIC-030 feature flag + kill-switch.",
+        "external_id": "PR-03001",
+        "number": 3001,
+        "repo": "receipts"
+      },
+      {
+        "diff_summary": "Wire EPIC-030 telemetry (success + error rates).",
+        "external_id": "PR-03002",
+        "number": 3002,
+        "repo": "receipts"
+      }
+    ],
+    "threads": [
+      {
+        "channel": "#receipts-eng",
+        "external_id": "THR-030",
+        "summary": "EPIC-030: confirmed telemetry shape covers errors."
+      }
+    ]
+  },
+  "expected_revised_spec": {
+    "acceptance_criteria": [
+      "Retention delete-after-90d job ships with feature-flag kill-switch documented.",
+      "Retention delete-after-90d job emits success + error telemetry per call."
+    ],
+    "citations": {
+      "Retention delete-after-90d job emits success + error telemetry per call.": [
+        {
+          "artifact_kind": "pr",
+          "external_id": "PR-03002",
+          "locator": null
+        },
+        {
+          "artifact_kind": "thread",
+          "external_id": "THR-030",
+          "locator": null
+        }
+      ],
+      "Retention delete-after-90d job ships with feature-flag kill-switch documented.": [
+        {
+          "artifact_kind": "pr",
+          "external_id": "PR-03001",
+          "locator": null
+        },
+        {
+          "artifact_kind": "meeting",
+          "external_id": "MTG-030",
+          "locator": "0"
+        }
+      ]
+    },
+    "drift_summary": "EPIC-030: criterion (b) rephrased from generic 'instrumented' to explicit 'success + error telemetry per call' after THR-030."
+  }
+}

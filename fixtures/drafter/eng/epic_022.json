@@ -1,0 +1,74 @@
+{
+  "epic": {
+    "acceptance_criteria": [
+      "EPIC-022: feature shipped with telemetry and a kill-switch."
+    ],
+    "external_id": "EPIC-022",
+    "id": 22,
+    "title": "Templated epic EPIC-022"
+  },
+  "execution": {
+    "meetings": [
+      {
+        "decisions": [
+          "EPIC-022: ship behind feature flag with kill-switch documented."
+        ],
+        "external_id": "MTG-022"
+      }
+    ],
+    "prs": [
+      {
+        "diff_summary": "Ship EPIC-022 feature flag + kill-switch.",
+        "external_id": "PR-02201",
+        "number": 2201,
+        "repo": "receipts"
+      },
+      {
+        "diff_summary": "Wire EPIC-022 telemetry (success + error rates).",
+        "external_id": "PR-02202",
+        "number": 2202,
+        "repo": "receipts"
+      }
+    ],
+    "threads": [
+      {
+        "channel": "#receipts-eng",
+        "external_id": "THR-022",
+        "summary": "EPIC-022: confirmed telemetry shape covers errors."
+      }
+    ]
+  },
+  "expected_revised_spec": {
+    "acceptance_criteria": [
+      "Calendar ICS feed ships with feature-flag kill-switch documented.",
+      "Calendar ICS feed emits success + error telemetry per call."
+    ],
+    "citations": {
+      "Calendar ICS feed emits success + error telemetry per call.": [
+        {
+          "artifact_kind": "pr",
+          "external_id": "PR-02202",
+          "locator": null
+        },
+        {
+          "artifact_kind": "thread",
+          "external_id": "THR-022",
+          "locator": null
+        }
+      ],
+      "Calendar ICS feed ships with feature-flag kill-switch documented.": [
+        {
+          "artifact_kind": "pr",
+          "external_id": "PR-02201",
+          "locator": null
+        },
+        {
+          "artifact_kind": "meeting",
+          "external_id": "MTG-022",
+          "locator": "0"
+        }
+      ]
+    },
+    "drift_summary": "EPIC-022: criterion (b) rephrased from generic 'instrumented' to explicit 'success + error telemetry per call' after THR-022."
+  }
+}

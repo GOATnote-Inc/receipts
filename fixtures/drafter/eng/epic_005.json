@@ -1,0 +1,63 @@
+{
+  "epic": {
+    "acceptance_criteria": [
+      "Transcript ingest writes a meeting row keyed by transcript external_id."
+    ],
+    "external_id": "EPIC-005",
+    "id": 5,
+    "title": "Meeting transcript ingest"
+  },
+  "execution": {
+    "meetings": [
+      {
+        "decisions": [
+          "Reviewed accidental double-writes in fixture week."
+        ],
+        "external_id": "MTG-55"
+      }
+    ],
+    "prs": [
+      {
+        "diff_summary": "Transcript ingest writes meeting row.",
+        "external_id": "PR-501",
+        "number": 501,
+        "repo": "receipts"
+      },
+      {
+        "diff_summary": "Dedup transcript ingest by external_id.",
+        "external_id": "PR-502",
+        "number": 502,
+        "repo": "receipts"
+      }
+    ],
+    "threads": []
+  },
+  "expected_revised_spec": {
+    "acceptance_criteria": [
+      "Transcript ingest writes a meeting row with decision array.",
+      "Transcript ingest deduplicates by transcript external_id."
+    ],
+    "citations": {
+      "Transcript ingest deduplicates by transcript external_id.": [
+        {
+          "artifact_kind": "pr",
+          "external_id": "PR-502",
+          "locator": null
+        },
+        {
+          "artifact_kind": "meeting",
+          "external_id": "MTG-55",
+          "locator": "0"
+        }
+      ],
+      "Transcript ingest writes a meeting row with decision array.": [
+        {
+          "artifact_kind": "pr",
+          "external_id": "PR-501",
+          "locator": null
+        }
+      ]
+    },
+    "drift_summary": "Dedup criterion added after MTG-55 reviewed accidental double-writes in the synthetic week fixture."
+  }
+}

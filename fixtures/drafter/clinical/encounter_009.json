@@ -1,0 +1,47 @@
+{
+  "expected_contract": {
+    "acceptance_criteria": [
+      "Dyspnea: asthma exacerbation severity documented with risk stratification."
+    ],
+    "citations": {
+      "Dyspnea: asthma exacerbation severity documented with risk stratification.": [
+        {
+          "artifact_kind": "note",
+          "external_id": "NOTE-009",
+          "locator": "mdm"
+        },
+        {
+          "artifact_kind": "order",
+          "external_id": "ORD-009-PFT",
+          "locator": null
+        }
+      ],
+      "Return precautions and red-flag escalation criteria documented for dyspnea.": [
+        {
+          "artifact_kind": "transcript",
+          "external_id": "TRX-009",
+          "locator": "00:15:00"
+        },
+        {
+          "artifact_kind": "note",
+          "external_id": "NOTE-009",
+          "locator": "dispo"
+        }
+      ]
+    },
+    "drift_summary": "ENC-009: shipped as scoped \u2014 no drift.",
+    "external_id": "ENC-009",
+    "safety_criteria": [
+      "Return precautions and red-flag escalation criteria documented for dyspnea."
+    ]
+  },
+  "stub": {
+    "audio_ref": "s3://receipts-audio/enc-009.wav",
+    "chief_complaint": "ENC-009: templated presenting complaint.",
+    "external_id": "ENC-009",
+    "presenting_features": [
+      "Vital signs documented on arrival.",
+      "Pertinent positives noted on exam."
+    ]
+  }
+}

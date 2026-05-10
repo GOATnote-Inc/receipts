@@ -1,0 +1,74 @@
+{
+  "epic": {
+    "acceptance_criteria": [
+      "EPIC-010: feature shipped with telemetry and a kill-switch."
+    ],
+    "external_id": "EPIC-010",
+    "id": 10,
+    "title": "Templated epic EPIC-010"
+  },
+  "execution": {
+    "meetings": [
+      {
+        "decisions": [
+          "EPIC-010: ship behind feature flag with kill-switch documented."
+        ],
+        "external_id": "MTG-010"
+      }
+    ],
+    "prs": [
+      {
+        "diff_summary": "Ship EPIC-010 feature flag + kill-switch.",
+        "external_id": "PR-01001",
+        "number": 1001,
+        "repo": "receipts"
+      },
+      {
+        "diff_summary": "Wire EPIC-010 telemetry (success + error rates).",
+        "external_id": "PR-01002",
+        "number": 1002,
+        "repo": "receipts"
+      }
+    ],
+    "threads": [
+      {
+        "channel": "#receipts-eng",
+        "external_id": "THR-010",
+        "summary": "EPIC-010: confirmed telemetry shape covers errors."
+      }
+    ]
+  },
+  "expected_revised_spec": {
+    "acceptance_criteria": [
+      "Dashboard live tile refresh ships with feature-flag kill-switch documented.",
+      "Dashboard live tile refresh emits success + error telemetry per call."
+    ],
+    "citations": {
+      "Dashboard live tile refresh emits success + error telemetry per call.": [
+        {
+          "artifact_kind": "pr",
+          "external_id": "PR-01002",
+          "locator": null
+        },
+        {
+          "artifact_kind": "thread",
+          "external_id": "THR-010",
+          "locator": null
+        }
+      ],
+      "Dashboard live tile refresh ships with feature-flag kill-switch documented.": [
+        {
+          "artifact_kind": "pr",
+          "external_id": "PR-01001",
+          "locator": null
+        },
+        {
+          "artifact_kind": "meeting",
+          "external_id": "MTG-010",
+          "locator": "0"
+        }
+      ]
+    },
+    "drift_summary": "EPIC-010: criterion (b) rephrased from generic 'instrumented' to explicit 'success + error telemetry per call' after THR-010."
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "epic": {
+    "acceptance_criteria": [
+      "EPIC-020: feature shipped with telemetry and a kill-switch."
+    ],
+    "external_id": "EPIC-020",
+    "id": 20,
+    "title": "Templated epic EPIC-020"
+  },
+  "execution": {
+    "meetings": [
+      {
+        "decisions": [
+          "EPIC-020: ship behind feature flag with kill-switch documented."
+        ],
+        "external_id": "MTG-020"
+      }
+    ],
+    "prs": [
+      {
+        "diff_summary": "Ship EPIC-020 feature flag + kill-switch.",
+        "external_id": "PR-02001",
+        "number": 2001,
+        "repo": "receipts"
+      },
+      {
+        "diff_summary": "Wire EPIC-020 telemetry (success + error rates).",
+        "external_id": "PR-02002",
+        "number": 2002,
+        "repo": "receipts"
+      }
+    ],
+    "threads": [
+      {
+        "channel": "#receipts-eng",
+        "external_id": "THR-020",
+        "summary": "EPIC-020: confirmed telemetry shape covers errors."
+      }
+    ]
+  },
+  "expected_revised_spec": {
+    "acceptance_criteria": [
+      "Roles viewer downgrade ships with feature-flag kill-switch documented.",
+      "Roles viewer downgrade emits success + error telemetry per call."
+    ],
+    "citations": {
+      "Roles viewer downgrade emits success + error telemetry per call.": [
+        {
+          "artifact_kind": "pr",
+          "external_id": "PR-02002",
+          "locator": null
+        },
+        {
+          "artifact_kind": "thread",
+          "external_id": "THR-020",
+          "locator": null
+        }
+      ],
+      "Roles viewer downgrade ships with feature-flag kill-switch documented.": [
+        {
+          "artifact_kind": "pr",
+          "external_id": "PR-02001",
+          "locator": null
+        },
+        {
+          "artifact_kind": "meeting",
+          "external_id": "MTG-020",
+          "locator": "0"
+        }
+      ]
+    },
+    "drift_summary": "EPIC-020: criterion (b) rephrased from generic 'instrumented' to explicit 'success + error telemetry per call' after THR-020."
+  }
+}

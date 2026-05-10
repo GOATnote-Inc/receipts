@@ -1,0 +1,74 @@
+{
+  "epic": {
+    "acceptance_criteria": [
+      "EPIC-013: feature shipped with telemetry and a kill-switch."
+    ],
+    "external_id": "EPIC-013",
+    "id": 13,
+    "title": "Templated epic EPIC-013"
+  },
+  "execution": {
+    "meetings": [
+      {
+        "decisions": [
+          "EPIC-013: ship behind feature flag with kill-switch documented."
+        ],
+        "external_id": "MTG-013"
+      }
+    ],
+    "prs": [
+      {
+        "diff_summary": "Ship EPIC-013 feature flag + kill-switch.",
+        "external_id": "PR-01301",
+        "number": 1301,
+        "repo": "receipts"
+      },
+      {
+        "diff_summary": "Wire EPIC-013 telemetry (success + error rates).",
+        "external_id": "PR-01302",
+        "number": 1302,
+        "repo": "receipts"
+      }
+    ],
+    "threads": [
+      {
+        "channel": "#receipts-eng",
+        "external_id": "THR-013",
+        "summary": "EPIC-013: confirmed telemetry shape covers errors."
+      }
+    ]
+  },
+  "expected_revised_spec": {
+    "acceptance_criteria": [
+      "Audit actor attribution ships with feature-flag kill-switch documented.",
+      "Audit actor attribution emits success + error telemetry per call."
+    ],
+    "citations": {
+      "Audit actor attribution emits success + error telemetry per call.": [
+        {
+          "artifact_kind": "pr",
+          "external_id": "PR-01302",
+          "locator": null
+        },
+        {
+          "artifact_kind": "thread",
+          "external_id": "THR-013",
+          "locator": null
+        }
+      ],
+      "Audit actor attribution ships with feature-flag kill-switch documented.": [
+        {
+          "artifact_kind": "pr",
+          "external_id": "PR-01301",
+          "locator": null
+        },
+        {
+          "artifact_kind": "meeting",
+          "external_id": "MTG-013",
+          "locator": "0"
+        }
+      ]
+    },
+    "drift_summary": "EPIC-013: shipped as scoped \u2014 no drift."
+  }
+}

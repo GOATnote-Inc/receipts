@@ -1,0 +1,74 @@
+{
+  "epic": {
+    "acceptance_criteria": [
+      "EPIC-015: feature shipped with telemetry and a kill-switch."
+    ],
+    "external_id": "EPIC-015",
+    "id": 15,
+    "title": "Templated epic EPIC-015"
+  },
+  "execution": {
+    "meetings": [
+      {
+        "decisions": [
+          "EPIC-015: ship behind feature flag with kill-switch documented."
+        ],
+        "external_id": "MTG-015"
+      }
+    ],
+    "prs": [
+      {
+        "diff_summary": "Ship EPIC-015 feature flag + kill-switch.",
+        "external_id": "PR-01501",
+        "number": 1501,
+        "repo": "receipts"
+      },
+      {
+        "diff_summary": "Wire EPIC-015 telemetry (success + error rates).",
+        "external_id": "PR-01502",
+        "number": 1502,
+        "repo": "receipts"
+      }
+    ],
+    "threads": [
+      {
+        "channel": "#receipts-eng",
+        "external_id": "THR-015",
+        "summary": "EPIC-015: confirmed telemetry shape covers errors."
+      }
+    ]
+  },
+  "expected_revised_spec": {
+    "acceptance_criteria": [
+      "Notifications batched delivery ships with feature-flag kill-switch documented.",
+      "Notifications batched delivery emits success + error telemetry per call."
+    ],
+    "citations": {
+      "Notifications batched delivery emits success + error telemetry per call.": [
+        {
+          "artifact_kind": "pr",
+          "external_id": "PR-01502",
+          "locator": null
+        },
+        {
+          "artifact_kind": "thread",
+          "external_id": "THR-015",
+          "locator": null
+        }
+      ],
+      "Notifications batched delivery ships with feature-flag kill-switch documented.": [
+        {
+          "artifact_kind": "pr",
+          "external_id": "PR-01501",
+          "locator": null
+        },
+        {
+          "artifact_kind": "meeting",
+          "external_id": "MTG-015",
+          "locator": "0"
+        }
+      ]
+    },
+    "drift_summary": "EPIC-015: shipped as scoped \u2014 no drift."
+  }
+}

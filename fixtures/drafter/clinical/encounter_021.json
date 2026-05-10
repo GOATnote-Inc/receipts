@@ -1,0 +1,47 @@
+{
+  "expected_contract": {
+    "acceptance_criteria": [
+      "Dialysis missed: hyperkalemia management documented with risk stratification."
+    ],
+    "citations": {
+      "Dialysis missed: hyperkalemia management documented with risk stratification.": [
+        {
+          "artifact_kind": "note",
+          "external_id": "NOTE-021",
+          "locator": "mdm"
+        },
+        {
+          "artifact_kind": "order",
+          "external_id": "ORD-021-KCL",
+          "locator": null
+        }
+      ],
+      "Return precautions and red-flag escalation criteria documented for dialysis missed.": [
+        {
+          "artifact_kind": "transcript",
+          "external_id": "TRX-021",
+          "locator": "00:15:00"
+        },
+        {
+          "artifact_kind": "note",
+          "external_id": "NOTE-021",
+          "locator": "dispo"
+        }
+      ]
+    },
+    "drift_summary": "ENC-021: shipped as scoped \u2014 no drift.",
+    "external_id": "ENC-021",
+    "safety_criteria": [
+      "Return precautions and red-flag escalation criteria documented for dialysis missed."
+    ]
+  },
+  "stub": {
+    "audio_ref": "s3://receipts-audio/enc-021.wav",
+    "chief_complaint": "ENC-021: templated presenting complaint.",
+    "external_id": "ENC-021",
+    "presenting_features": [
+      "Vital signs documented on arrival.",
+      "Pertinent positives noted on exam."
+    ]
+  }
+}

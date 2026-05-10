@@ -1,0 +1,47 @@
+{
+  "expected_contract": {
+    "acceptance_criteria": [
+      "Rash: anaphylaxis vs urticaria triage documented with risk stratification."
+    ],
+    "citations": {
+      "Rash: anaphylaxis vs urticaria triage documented with risk stratification.": [
+        {
+          "artifact_kind": "note",
+          "external_id": "NOTE-012",
+          "locator": "mdm"
+        },
+        {
+          "artifact_kind": "order",
+          "external_id": "ORD-012-EPI",
+          "locator": null
+        }
+      ],
+      "Return precautions and red-flag escalation criteria documented for rash.": [
+        {
+          "artifact_kind": "transcript",
+          "external_id": "TRX-012",
+          "locator": "00:15:00"
+        },
+        {
+          "artifact_kind": "note",
+          "external_id": "NOTE-012",
+          "locator": "dispo"
+        }
+      ]
+    },
+    "drift_summary": "ENC-012: workup criterion rephrased from generic 'evaluated' to explicit 'documented with risk stratification' after TRX-012.",
+    "external_id": "ENC-012",
+    "safety_criteria": [
+      "Return precautions and red-flag escalation criteria documented for rash."
+    ]
+  },
+  "stub": {
+    "audio_ref": "s3://receipts-audio/enc-012.wav",
+    "chief_complaint": "ENC-012: templated presenting complaint.",
+    "external_id": "ENC-012",
+    "presenting_features": [
+      "Vital signs documented on arrival.",
+      "Pertinent positives noted on exam."
+    ]
+  }
+}

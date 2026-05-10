@@ -1,0 +1,43 @@
+{
+  "expected_contract": {
+    "acceptance_criteria": [
+      "Wound cleaned, anesthetized, and closed with sutures appropriate to depth."
+    ],
+    "citations": {
+      "Tetanus immunization status verified and updated as indicated.": [
+        {
+          "artifact_kind": "order",
+          "external_id": "ORD-004-TDAP",
+          "locator": null
+        },
+        {
+          "artifact_kind": "note",
+          "external_id": "NOTE-004",
+          "locator": "immunizations"
+        }
+      ],
+      "Wound cleaned, anesthetized, and closed with sutures appropriate to depth.": [
+        {
+          "artifact_kind": "note",
+          "external_id": "NOTE-004",
+          "locator": "procedure"
+        }
+      ]
+    },
+    "drift_summary": "Tetanus status criterion rephrased from 'reviewed' to explicit 'verified and updated as indicated' after Tdap was actually given.",
+    "external_id": "ENC-004",
+    "safety_criteria": [
+      "Tetanus immunization status verified and updated as indicated."
+    ]
+  },
+  "stub": {
+    "audio_ref": "s3://receipts-audio/enc-004.wav",
+    "chief_complaint": "Laceration to dorsum of hand.",
+    "external_id": "ENC-004",
+    "presenting_features": [
+      "Clean wound margins.",
+      "Sensation intact.",
+      "Tetanus status uncertain."
+    ]
+  }
+}

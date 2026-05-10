@@ -1,0 +1,47 @@
+{
+  "expected_contract": {
+    "acceptance_criteria": [
+      "Burn: TBSA + airway risk documented with risk stratification."
+    ],
+    "citations": {
+      "Burn: TBSA + airway risk documented with risk stratification.": [
+        {
+          "artifact_kind": "note",
+          "external_id": "NOTE-023",
+          "locator": "mdm"
+        },
+        {
+          "artifact_kind": "order",
+          "external_id": "ORD-023-ABG",
+          "locator": null
+        }
+      ],
+      "Return precautions and red-flag escalation criteria documented for burn.": [
+        {
+          "artifact_kind": "transcript",
+          "external_id": "TRX-023",
+          "locator": "00:15:00"
+        },
+        {
+          "artifact_kind": "note",
+          "external_id": "NOTE-023",
+          "locator": "dispo"
+        }
+      ]
+    },
+    "drift_summary": "ENC-023: shipped as scoped \u2014 no drift.",
+    "external_id": "ENC-023",
+    "safety_criteria": [
+      "Return precautions and red-flag escalation criteria documented for burn."
+    ]
+  },
+  "stub": {
+    "audio_ref": "s3://receipts-audio/enc-023.wav",
+    "chief_complaint": "ENC-023: templated presenting complaint.",
+    "external_id": "ENC-023",
+    "presenting_features": [
+      "Vital signs documented on arrival.",
+      "Pertinent positives noted on exam."
+    ]
+  }
+}

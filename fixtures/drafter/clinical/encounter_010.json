@@ -1,0 +1,47 @@
+{
+  "expected_contract": {
+    "acceptance_criteria": [
+      "Headache: subarachnoid red-flag screen documented with risk stratification."
+    ],
+    "citations": {
+      "Headache: subarachnoid red-flag screen documented with risk stratification.": [
+        {
+          "artifact_kind": "note",
+          "external_id": "NOTE-010",
+          "locator": "mdm"
+        },
+        {
+          "artifact_kind": "order",
+          "external_id": "ORD-010-CT",
+          "locator": null
+        }
+      ],
+      "Return precautions and red-flag escalation criteria documented for headache.": [
+        {
+          "artifact_kind": "transcript",
+          "external_id": "TRX-010",
+          "locator": "00:15:00"
+        },
+        {
+          "artifact_kind": "note",
+          "external_id": "NOTE-010",
+          "locator": "dispo"
+        }
+      ]
+    },
+    "drift_summary": "ENC-010: workup criterion rephrased from generic 'evaluated' to explicit 'documented with risk stratification' after TRX-010.",
+    "external_id": "ENC-010",
+    "safety_criteria": [
+      "Return precautions and red-flag escalation criteria documented for headache."
+    ]
+  },
+  "stub": {
+    "audio_ref": "s3://receipts-audio/enc-010.wav",
+    "chief_complaint": "ENC-010: templated presenting complaint.",
+    "external_id": "ENC-010",
+    "presenting_features": [
+      "Vital signs documented on arrival.",
+      "Pertinent positives noted on exam."
+    ]
+  }
+}

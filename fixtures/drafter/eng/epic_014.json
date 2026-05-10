@@ -1,0 +1,74 @@
+{
+  "epic": {
+    "acceptance_criteria": [
+      "EPIC-014: feature shipped with telemetry and a kill-switch."
+    ],
+    "external_id": "EPIC-014",
+    "id": 14,
+    "title": "Templated epic EPIC-014"
+  },
+  "execution": {
+    "meetings": [
+      {
+        "decisions": [
+          "EPIC-014: ship behind feature flag with kill-switch documented."
+        ],
+        "external_id": "MTG-014"
+      }
+    ],
+    "prs": [
+      {
+        "diff_summary": "Ship EPIC-014 feature flag + kill-switch.",
+        "external_id": "PR-01401",
+        "number": 1401,
+        "repo": "receipts"
+      },
+      {
+        "diff_summary": "Wire EPIC-014 telemetry (success + error rates).",
+        "external_id": "PR-01402",
+        "number": 1402,
+        "repo": "receipts"
+      }
+    ],
+    "threads": [
+      {
+        "channel": "#receipts-eng",
+        "external_id": "THR-014",
+        "summary": "EPIC-014: confirmed telemetry shape covers errors."
+      }
+    ]
+  },
+  "expected_revised_spec": {
+    "acceptance_criteria": [
+      "Settings tenant scope ships with feature-flag kill-switch documented.",
+      "Settings tenant scope emits success + error telemetry per call."
+    ],
+    "citations": {
+      "Settings tenant scope emits success + error telemetry per call.": [
+        {
+          "artifact_kind": "pr",
+          "external_id": "PR-01402",
+          "locator": null
+        },
+        {
+          "artifact_kind": "thread",
+          "external_id": "THR-014",
+          "locator": null
+        }
+      ],
+      "Settings tenant scope ships with feature-flag kill-switch documented.": [
+        {
+          "artifact_kind": "pr",
+          "external_id": "PR-01401",
+          "locator": null
+        },
+        {
+          "artifact_kind": "meeting",
+          "external_id": "MTG-014",
+          "locator": "0"
+        }
+      ]
+    },
+    "drift_summary": "EPIC-014: criterion (b) rephrased from generic 'instrumented' to explicit 'success + error telemetry per call' after THR-014."
+  }
+}

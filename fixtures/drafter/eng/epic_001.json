@@ -1,0 +1,72 @@
+{
+  "epic": {
+    "acceptance_criteria": [
+      "GET /v1/spec returns the latest revised spec for a given epic_id.",
+      "Batch lookup for many epic_ids in a single request."
+    ],
+    "external_id": "EPIC-001",
+    "id": 1,
+    "title": "Expose revised-spec endpoint"
+  },
+  "execution": {
+    "meetings": [
+      {
+        "decisions": [
+          "Defer batch endpoint to next sprint."
+        ],
+        "external_id": "MTG-21"
+      }
+    ],
+    "prs": [
+      {
+        "diff_summary": "Add /v1/spec endpoint with epic_id query param.",
+        "external_id": "PR-101",
+        "number": 101,
+        "repo": "receipts"
+      },
+      {
+        "diff_summary": "Wire spec endpoint into CLI; add fixture corpus.",
+        "external_id": "PR-102",
+        "number": 102,
+        "repo": "receipts"
+      }
+    ],
+    "threads": [
+      {
+        "channel": "#receipts",
+        "external_id": "THR-7",
+        "summary": "Confirmed CLI consumes the new endpoint."
+      }
+    ]
+  },
+  "expected_revised_spec": {
+    "acceptance_criteria": [
+      "GET /v1/spec returns the latest revised spec for a given epic_id."
+    ],
+    "citations": {
+      "GET /v1/spec returns the latest revised spec for a given epic_id.": [
+        {
+          "artifact_kind": "pr",
+          "external_id": "PR-101",
+          "locator": null
+        },
+        {
+          "artifact_kind": "pr",
+          "external_id": "PR-102",
+          "locator": null
+        },
+        {
+          "artifact_kind": "meeting",
+          "external_id": "MTG-21",
+          "locator": "1"
+        },
+        {
+          "artifact_kind": "thread",
+          "external_id": "THR-7",
+          "locator": null
+        }
+      ]
+    },
+    "drift_summary": "Batch lookup criterion was dropped in MTG-21 to keep v1 scope to single-epic GET. Endpoint shipped via PR-101/PR-102."
+  }
+}

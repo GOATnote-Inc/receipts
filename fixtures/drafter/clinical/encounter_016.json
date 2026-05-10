@@ -1,0 +1,47 @@
+{
+  "expected_contract": {
+    "acceptance_criteria": [
+      "Ob bleeding: first-trimester evaluation documented with risk stratification."
+    ],
+    "citations": {
+      "Ob bleeding: first-trimester evaluation documented with risk stratification.": [
+        {
+          "artifact_kind": "note",
+          "external_id": "NOTE-016",
+          "locator": "mdm"
+        },
+        {
+          "artifact_kind": "order",
+          "external_id": "ORD-016-USG",
+          "locator": null
+        }
+      ],
+      "Return precautions and red-flag escalation criteria documented for OB bleeding.": [
+        {
+          "artifact_kind": "transcript",
+          "external_id": "TRX-016",
+          "locator": "00:15:00"
+        },
+        {
+          "artifact_kind": "note",
+          "external_id": "NOTE-016",
+          "locator": "dispo"
+        }
+      ]
+    },
+    "drift_summary": "ENC-016: workup criterion rephrased from generic 'evaluated' to explicit 'documented with risk stratification' after TRX-016.",
+    "external_id": "ENC-016",
+    "safety_criteria": [
+      "Return precautions and red-flag escalation criteria documented for OB bleeding."
+    ]
+  },
+  "stub": {
+    "audio_ref": "s3://receipts-audio/enc-016.wav",
+    "chief_complaint": "ENC-016: templated presenting complaint.",
+    "external_id": "ENC-016",
+    "presenting_features": [
+      "Vital signs documented on arrival.",
+      "Pertinent positives noted on exam."
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "expected_contract": {
+    "acceptance_criteria": [
+      "Anaphylaxis: biphasic monitoring plan documented with risk stratification."
+    ],
+    "citations": {
+      "Anaphylaxis: biphasic monitoring plan documented with risk stratification.": [
+        {
+          "artifact_kind": "note",
+          "external_id": "NOTE-024",
+          "locator": "mdm"
+        },
+        {
+          "artifact_kind": "order",
+          "external_id": "ORD-024-EPI",
+          "locator": null
+        }
+      ],
+      "Return precautions and red-flag escalation criteria documented for anaphylaxis.": [
+        {
+          "artifact_kind": "transcript",
+          "external_id": "TRX-024",
+          "locator": "00:15:00"
+        },
+        {
+          "artifact_kind": "note",
+          "external_id": "NOTE-024",
+          "locator": "dispo"
+        }
+      ]
+    },
+    "drift_summary": "ENC-024: workup criterion rephrased from generic 'evaluated' to explicit 'documented with risk stratification' after TRX-024.",
+    "external_id": "ENC-024",
+    "safety_criteria": [
+      "Return precautions and red-flag escalation criteria documented for anaphylaxis."
+    ]
+  },
+  "stub": {
+    "audio_ref": "s3://receipts-audio/enc-024.wav",
+    "chief_complaint": "ENC-024: templated presenting complaint.",
+    "external_id": "ENC-024",
+    "presenting_features": [
+      "Vital signs documented on arrival.",
+      "Pertinent positives noted on exam."
+    ]
+  }
+}

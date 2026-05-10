@@ -1,0 +1,74 @@
+{
+  "epic": {
+    "acceptance_criteria": [
+      "EPIC-021: feature shipped with telemetry and a kill-switch."
+    ],
+    "external_id": "EPIC-021",
+    "id": 21,
+    "title": "Templated epic EPIC-021"
+  },
+  "execution": {
+    "meetings": [
+      {
+        "decisions": [
+          "EPIC-021: ship behind feature flag with kill-switch documented."
+        ],
+        "external_id": "MTG-021"
+      }
+    ],
+    "prs": [
+      {
+        "diff_summary": "Ship EPIC-021 feature flag + kill-switch.",
+        "external_id": "PR-02101",
+        "number": 2101,
+        "repo": "receipts"
+      },
+      {
+        "diff_summary": "Wire EPIC-021 telemetry (success + error rates).",
+        "external_id": "PR-02102",
+        "number": 2102,
+        "repo": "receipts"
+      }
+    ],
+    "threads": [
+      {
+        "channel": "#receipts-eng",
+        "external_id": "THR-021",
+        "summary": "EPIC-021: confirmed telemetry shape covers errors."
+      }
+    ]
+  },
+  "expected_revised_spec": {
+    "acceptance_criteria": [
+      "Permissions deny-by-default ships with feature-flag kill-switch documented.",
+      "Permissions deny-by-default emits success + error telemetry per call."
+    ],
+    "citations": {
+      "Permissions deny-by-default emits success + error telemetry per call.": [
+        {
+          "artifact_kind": "pr",
+          "external_id": "PR-02102",
+          "locator": null
+        },
+        {
+          "artifact_kind": "thread",
+          "external_id": "THR-021",
+          "locator": null
+        }
+      ],
+      "Permissions deny-by-default ships with feature-flag kill-switch documented.": [
+        {
+          "artifact_kind": "pr",
+          "external_id": "PR-02101",
+          "locator": null
+        },
+        {
+          "artifact_kind": "meeting",
+          "external_id": "MTG-021",
+          "locator": "0"
+        }
+      ]
+    },
+    "drift_summary": "EPIC-021: shipped as scoped \u2014 no drift."
+  }
+}

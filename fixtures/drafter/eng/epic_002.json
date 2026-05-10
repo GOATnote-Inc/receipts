@@ -1,0 +1,49 @@
+{
+  "epic": {
+    "acceptance_criteria": [
+      "Appending an event extends the SHA-256 chain."
+    ],
+    "external_id": "EPIC-002",
+    "id": 2,
+    "title": "Merkle ledger append"
+  },
+  "execution": {
+    "meetings": [
+      {
+        "decisions": [
+          "Ship as scoped; no follow-ups."
+        ],
+        "external_id": "MTG-30"
+      }
+    ],
+    "prs": [
+      {
+        "diff_summary": "Implement Merkle log append with SHA-256 chain.",
+        "external_id": "PR-201",
+        "number": 201,
+        "repo": "receipts"
+      }
+    ],
+    "threads": []
+  },
+  "expected_revised_spec": {
+    "acceptance_criteria": [
+      "Appending an event extends the SHA-256 chain."
+    ],
+    "citations": {
+      "Appending an event extends the SHA-256 chain.": [
+        {
+          "artifact_kind": "pr",
+          "external_id": "PR-201",
+          "locator": null
+        },
+        {
+          "artifact_kind": "meeting",
+          "external_id": "MTG-30",
+          "locator": "0"
+        }
+      ]
+    },
+    "drift_summary": "Shipped as scoped \u2014 no drift."
+  }
+}

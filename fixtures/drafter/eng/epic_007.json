@@ -1,0 +1,74 @@
+{
+  "epic": {
+    "acceptance_criteria": [
+      "EPIC-007: feature shipped with telemetry and a kill-switch."
+    ],
+    "external_id": "EPIC-007",
+    "id": 7,
+    "title": "Templated epic EPIC-007"
+  },
+  "execution": {
+    "meetings": [
+      {
+        "decisions": [
+          "EPIC-007: ship behind feature flag with kill-switch documented."
+        ],
+        "external_id": "MTG-007"
+      }
+    ],
+    "prs": [
+      {
+        "diff_summary": "Ship EPIC-007 feature flag + kill-switch.",
+        "external_id": "PR-00701",
+        "number": 701,
+        "repo": "receipts"
+      },
+      {
+        "diff_summary": "Wire EPIC-007 telemetry (success + error rates).",
+        "external_id": "PR-00702",
+        "number": 702,
+        "repo": "receipts"
+      }
+    ],
+    "threads": [
+      {
+        "channel": "#receipts-eng",
+        "external_id": "THR-007",
+        "summary": "EPIC-007: confirmed telemetry shape covers errors."
+      }
+    ]
+  },
+  "expected_revised_spec": {
+    "acceptance_criteria": [
+      "Auth step-up verification ships with feature-flag kill-switch documented.",
+      "Auth step-up verification emits success + error telemetry per call."
+    ],
+    "citations": {
+      "Auth step-up verification emits success + error telemetry per call.": [
+        {
+          "artifact_kind": "pr",
+          "external_id": "PR-00702",
+          "locator": null
+        },
+        {
+          "artifact_kind": "thread",
+          "external_id": "THR-007",
+          "locator": null
+        }
+      ],
+      "Auth step-up verification ships with feature-flag kill-switch documented.": [
+        {
+          "artifact_kind": "pr",
+          "external_id": "PR-00701",
+          "locator": null
+        },
+        {
+          "artifact_kind": "meeting",
+          "external_id": "MTG-007",
+          "locator": "0"
+        }
+      ]
+    },
+    "drift_summary": "EPIC-007: shipped as scoped \u2014 no drift."
+  }
+}

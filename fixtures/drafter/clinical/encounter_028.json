@@ -1,0 +1,47 @@
+{
+  "expected_contract": {
+    "acceptance_criteria": [
+      "Pe workup: Wells score documentation documented with risk stratification."
+    ],
+    "citations": {
+      "Pe workup: Wells score documentation documented with risk stratification.": [
+        {
+          "artifact_kind": "note",
+          "external_id": "NOTE-028",
+          "locator": "mdm"
+        },
+        {
+          "artifact_kind": "order",
+          "external_id": "ORD-028-DDM",
+          "locator": null
+        }
+      ],
+      "Return precautions and red-flag escalation criteria documented for PE workup.": [
+        {
+          "artifact_kind": "transcript",
+          "external_id": "TRX-028",
+          "locator": "00:15:00"
+        },
+        {
+          "artifact_kind": "note",
+          "external_id": "NOTE-028",
+          "locator": "dispo"
+        }
+      ]
+    },
+    "drift_summary": "ENC-028: workup criterion rephrased from generic 'evaluated' to explicit 'documented with risk stratification' after TRX-028.",
+    "external_id": "ENC-028",
+    "safety_criteria": [
+      "Return precautions and red-flag escalation criteria documented for PE workup."
+    ]
+  },
+  "stub": {
+    "audio_ref": "s3://receipts-audio/enc-028.wav",
+    "chief_complaint": "ENC-028: templated presenting complaint.",
+    "external_id": "ENC-028",
+    "presenting_features": [
+      "Vital signs documented on arrival.",
+      "Pertinent positives noted on exam."
+    ]
+  }
+}

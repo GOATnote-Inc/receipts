@@ -1,0 +1,47 @@
+{
+  "expected_contract": {
+    "acceptance_criteria": [
+      "Uti elderly: delirium contribution screen documented with risk stratification."
+    ],
+    "citations": {
+      "Return precautions and red-flag escalation criteria documented for UTI elderly.": [
+        {
+          "artifact_kind": "transcript",
+          "external_id": "TRX-027",
+          "locator": "00:15:00"
+        },
+        {
+          "artifact_kind": "note",
+          "external_id": "NOTE-027",
+          "locator": "dispo"
+        }
+      ],
+      "Uti elderly: delirium contribution screen documented with risk stratification.": [
+        {
+          "artifact_kind": "note",
+          "external_id": "NOTE-027",
+          "locator": "mdm"
+        },
+        {
+          "artifact_kind": "order",
+          "external_id": "ORD-027-UA",
+          "locator": null
+        }
+      ]
+    },
+    "drift_summary": "ENC-027: shipped as scoped \u2014 no drift.",
+    "external_id": "ENC-027",
+    "safety_criteria": [
+      "Return precautions and red-flag escalation criteria documented for UTI elderly."
+    ]
+  },
+  "stub": {
+    "audio_ref": "s3://receipts-audio/enc-027.wav",
+    "chief_complaint": "ENC-027: templated presenting complaint.",
+    "external_id": "ENC-027",
+    "presenting_features": [
+      "Vital signs documented on arrival.",
+      "Pertinent positives noted on exam."
+    ]
+  }
+}
