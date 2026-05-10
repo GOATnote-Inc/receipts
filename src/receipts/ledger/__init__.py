@@ -15,6 +15,7 @@ from receipts.ledger.db import (
     make_session_factory,
     session_factory,
 )
+from receipts.ledger.merkle import MerkleLog, compute_hash
 from receipts.ledger.models import (
     PR,
     Attestation,
@@ -38,7 +39,9 @@ __all__ = [
     "Epic",
     "JudgeRationale",
     "Meeting",
+    "MerkleLog",
     "Thread",
+    "compute_hash",
     "engine",
     "get_database_url",
     "make_engine",
