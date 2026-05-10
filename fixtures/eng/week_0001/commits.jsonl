@@ -1,0 +1,497 @@
+{"author": "bob@example.com", "committed_at": "2026-05-05T18:41:43+00:00", "message": "tighten fixture loader", "repo": "billing-svc", "sha": "6b99035f975a255ae40fda058250bf0f7f310975"}
+{"author": "erin@example.com", "committed_at": "2026-05-07T08:27:46+00:00", "message": "rename edge case", "repo": "billing-svc", "sha": "aefb8f8be0b9af3804d74bf07db626c38e58bacd"}
+{"author": "gina@example.com", "committed_at": "2026-05-06T09:18:03+00:00", "message": "stabilize race condition", "repo": "billing-svc", "sha": "3deb930f4e4959f9290e16931f90db0184b94284"}
+{"author": "hugo@example.com", "committed_at": "2026-05-08T23:29:47+00:00", "message": "wire up auth check", "repo": "billing-svc", "sha": "971fb7cdc38995da4684d69929e5cd34eabebded"}
+{"author": "bob@example.com", "committed_at": "2026-05-05T09:24:40+00:00", "message": "wire up type signature", "repo": "billing-svc", "sha": "0d2497b491c4c0ee12183a39fa13164f474990f6"}
+{"author": "alice@example.com", "committed_at": "2026-05-05T19:09:23+00:00", "message": "drop unused feature flag", "repo": "platform", "sha": "3763f0ec139cf578e3d4054756ff993fb8cc3edd"}
+{"author": "dave@example.com", "committed_at": "2026-05-05T22:21:51+00:00", "message": "tighten schema bump", "repo": "mobile", "sha": "c091e1b4ee805b6bc254bae489c2fcf584abc210"}
+{"author": "alice@example.com", "committed_at": "2026-05-05T16:56:30+00:00", "message": "guard against metric label", "repo": "ml-tooling", "sha": "ffa7735cd218312eb05a3ec4668fe9765d620361"}
+{"author": "alice@example.com", "committed_at": "2026-05-04T08:43:54+00:00", "message": "guard against metric label", "repo": "platform", "sha": "a5f66fbb42edc224933f71a0798cb259279c13f8"}
+{"author": "carol@example.com", "committed_at": "2026-05-09T04:19:27+00:00", "message": "tighten feature flag", "repo": "ml-tooling", "sha": "6a146a17f21b2d2f48131f7bdf970106c0f1cc4d"}
+{"author": "frank@example.com", "committed_at": "2026-05-07T16:10:23+00:00", "message": "document fixture loader", "repo": "ml-tooling", "sha": "3bb6ad177207d1071214e591ab794cf32286fb7e"}
+{"author": "dave@example.com", "committed_at": "2026-05-06T17:22:31+00:00", "message": "extract helper for type signature", "repo": "ml-tooling", "sha": "78a31bdf82647963b417ee30f188c9218cf0cce1"}
+{"author": "frank@example.com", "committed_at": "2026-05-10T21:34:13+00:00", "message": "drop unused type signature", "repo": "billing-svc", "sha": "191b0a860add13c9ed85ce74088279ac18b88039"}
+{"author": "alice@example.com", "committed_at": "2026-05-10T13:24:53+00:00", "message": "stabilize test helper", "repo": "billing-svc", "sha": "ee0e0e1bf6d128a2e5888f475417315ea171880b"}
+{"author": "dave@example.com", "committed_at": "2026-05-04T22:31:06+00:00", "message": "stabilize auth check", "repo": "billing-svc", "sha": "b32e3276abd2d940abadbf905b194036ab6c14c2"}
+{"author": "gina@example.com", "committed_at": "2026-05-08T22:59:06+00:00", "message": "document type signature", "repo": "billing-svc", "sha": "d31fea8697a7b7ea37edb2b2bf7ed747d489aa32"}
+{"author": "alice@example.com", "committed_at": "2026-05-05T20:20:52+00:00", "message": "stabilize cache key", "repo": "ml-tooling", "sha": "65e053d8f341d0524cdb4c793aa312beded9f452"}
+{"author": "carol@example.com", "committed_at": "2026-05-07T09:09:23+00:00", "message": "tighten test helper", "repo": "ml-tooling", "sha": "becae58379fa1d9aca5416d8a3b95398fe759837"}
+{"author": "alice@example.com", "committed_at": "2026-05-06T07:27:27+00:00", "message": "wire up test helper", "repo": "ml-tooling", "sha": "50160f0b69de4e933edf82483b272a5a8e2a1d3a"}
+{"author": "erin@example.com", "committed_at": "2026-05-05T08:43:45+00:00", "message": "extract helper for feature flag", "repo": "ml-tooling", "sha": "4c768f4f5f946260d2f651d8c7bf5979ffcbf937"}
+{"author": "dave@example.com", "committed_at": "2026-05-10T12:07:30+00:00", "message": "tighten cache key", "repo": "platform", "sha": "7d35ea3bc4ffd70986d1a8adcedc818f7a19ed75"}
+{"author": "carol@example.com", "committed_at": "2026-05-08T20:43:37+00:00", "message": "drop unused race condition", "repo": "platform", "sha": "a400c2ab216b65c795bad670103cf1599077183c"}
+{"author": "hugo@example.com", "committed_at": "2026-05-06T19:36:30+00:00", "message": "guard against feature flag", "repo": "platform", "sha": "22d0043c69ad098e638fc9d27d8f97c0fcb3e70c"}
+{"author": "carol@example.com", "committed_at": "2026-05-04T03:58:06+00:00", "message": "document race condition", "repo": "ml-tooling", "sha": "9a42356f724cf71f8d9a41ad086ffa7aef23d2c4"}
+{"author": "dave@example.com", "committed_at": "2026-05-07T18:49:48+00:00", "message": "rename race condition", "repo": "ml-tooling", "sha": "6e31df5f4dc093d98ab5496b8fe6a45f0ad54f20"}
+{"author": "carol@example.com", "committed_at": "2026-05-05T17:44:55+00:00", "message": "add logging around edge case", "repo": "ml-tooling", "sha": "ea31e52b7b0689d9bc86243685834ca8f6507624"}
+{"author": "dave@example.com", "committed_at": "2026-05-04T03:06:30+00:00", "message": "add logging around retry budget", "repo": "platform", "sha": "214edfa937cccfb9a26584def83db50bebd66cb5"}
+{"author": "frank@example.com", "committed_at": "2026-05-04T04:51:24+00:00", "message": "guard against type signature", "repo": "platform", "sha": "609a3b80818fc18810fef5f31b04542d31e1a386"}
+{"author": "erin@example.com", "committed_at": "2026-05-06T23:51:57+00:00", "message": "rename type signature", "repo": "platform", "sha": "b0cd1264825e186d5098b3ae2e232525a0506be2"}
+{"author": "bob@example.com", "committed_at": "2026-05-04T09:09:35+00:00", "message": "document schema bump", "repo": "platform", "sha": "1c9584ad7686598e82fbbbe51c46db96a82686e8"}
+{"author": "gina@example.com", "committed_at": "2026-05-09T02:37:15+00:00", "message": "drop unused cache key", "repo": "platform", "sha": "5f4eabc1a3b05dfaa35b95e50eedcf78bafc9173"}
+{"author": "hugo@example.com", "committed_at": "2026-05-06T13:53:33+00:00", "message": "extract helper for feature flag", "repo": "platform", "sha": "c0559644a1294bec5e0465992576d274b0f5b3fc"}
+{"author": "alice@example.com", "committed_at": "2026-05-09T20:00:00+00:00", "message": "drop unused metric label", "repo": "ml-tooling", "sha": "3c4a4ca9dc2bf0757bba0c274f6169d2ac5d499c"}
+{"author": "alice@example.com", "committed_at": "2026-05-09T06:40:13+00:00", "message": "add logging around fixture loader", "repo": "ml-tooling", "sha": "55c3e2b3c05a4ce0fcd19d83ebfab35dc240a86e"}
+{"author": "frank@example.com", "committed_at": "2026-05-07T23:07:32+00:00", "message": "wire up type signature", "repo": "platform", "sha": "3feb1b8da90859bd0ea913b1c752344fd8be7e12"}
+{"author": "dave@example.com", "committed_at": "2026-05-06T16:27:54+00:00", "message": "wire up retry budget", "repo": "infra", "sha": "c2a9dc0582d368971bf6d8581c5980d60d488ea3"}
+{"author": "hugo@example.com", "committed_at": "2026-05-07T10:41:17+00:00", "message": "rename metric label", "repo": "ml-tooling", "sha": "29edacf0aaabe4ef65c8c12fb26b99aee045bdd0"}
+{"author": "dave@example.com", "committed_at": "2026-05-08T23:30:24+00:00", "message": "wire up cache key", "repo": "ml-tooling", "sha": "4c33c663955cdb6d8ab3ac7cfe9e55c90ae53cdd"}
+{"author": "gina@example.com", "committed_at": "2026-05-04T09:24:52+00:00", "message": "document feature flag", "repo": "infra", "sha": "42d0a75f2b0c65eb75f6a49206ee7e75e3a57e20"}
+{"author": "hugo@example.com", "committed_at": "2026-05-08T00:18:43+00:00", "message": "drop unused cache key", "repo": "infra", "sha": "c2d830ef19c1bced334835bda47f683a2ef78a9e"}
+{"author": "hugo@example.com", "committed_at": "2026-05-06T03:05:06+00:00", "message": "extract helper for edge case", "repo": "mobile", "sha": "144907bb9959fe94449c87069408bcf5b4abcf5f"}
+{"author": "erin@example.com", "committed_at": "2026-05-05T14:36:27+00:00", "message": "wire up test helper", "repo": "mobile", "sha": "2a79674836bfe076b1c3a2821e778577e5188262"}
+{"author": "bob@example.com", "committed_at": "2026-05-09T08:10:19+00:00", "message": "split feature flag", "repo": "mobile", "sha": "77fe31a26f3e2f636f90d3e6e08d8f5af9987a89"}
+{"author": "erin@example.com", "committed_at": "2026-05-05T18:13:49+00:00", "message": "guard against retry budget", "repo": "infra", "sha": "aff552d93ea5637699af3964a56c555afd878f9b"}
+{"author": "alice@example.com", "committed_at": "2026-05-08T13:13:55+00:00", "message": "tighten edge case", "repo": "mobile", "sha": "e9dcd0c1db4e806689b0adca66e83275aff1cf78"}
+{"author": "gina@example.com", "committed_at": "2026-05-05T10:43:00+00:00", "message": "extract helper for metric label", "repo": "mobile", "sha": "a8be93f42ad44962e7a89042abe65ae7eba68804"}
+{"author": "carol@example.com", "committed_at": "2026-05-09T04:24:58+00:00", "message": "drop unused test helper", "repo": "mobile", "sha": "f11b0d1af9a222352e62d8ee4a25aed0c90c007a"}
+{"author": "dave@example.com", "committed_at": "2026-05-06T09:51:26+00:00", "message": "extract helper for cache key", "repo": "billing-svc", "sha": "e6b4646953014b2aa76695d876b04e3c0e6c1eec"}
+{"author": "carol@example.com", "committed_at": "2026-05-07T00:31:33+00:00", "message": "stabilize edge case", "repo": "billing-svc", "sha": "3253563fbad662bf83e00cdc3bb92d972cf08a14"}
+{"author": "frank@example.com", "committed_at": "2026-05-04T04:21:04+00:00", "message": "rename race condition", "repo": "billing-svc", "sha": "444f1169bd5d5545b350f69cb8a00a0f14d1c553"}
+{"author": "carol@example.com", "committed_at": "2026-05-08T13:09:35+00:00", "message": "stabilize edge case", "repo": "platform", "sha": "23fede409ff84ab3ff64744723c9377859ae84ad"}
+{"author": "hugo@example.com", "committed_at": "2026-05-06T18:09:17+00:00", "message": "tighten race condition", "repo": "platform", "sha": "c16504175ca0ffb6ce6e8e38aa58afe3a82bd043"}
+{"author": "erin@example.com", "committed_at": "2026-05-04T21:48:27+00:00", "message": "document schema bump", "repo": "platform", "sha": "94b9ed25c64706b41b75b53574d681c9cdfea490"}
+{"author": "frank@example.com", "committed_at": "2026-05-04T20:30:22+00:00", "message": "drop unused edge case", "repo": "platform", "sha": "9621d44f57c5dc67b2784c346e48a0393f7e93e4"}
+{"author": "bob@example.com", "committed_at": "2026-05-10T23:39:47+00:00", "message": "tighten test helper", "repo": "mobile", "sha": "83ed5f9732b7fdd13888ad8b203f7f7d83fcc133"}
+{"author": "dave@example.com", "committed_at": "2026-05-08T06:28:13+00:00", "message": "guard against fixture loader", "repo": "mobile", "sha": "bdc1bee1cd0650a39d0e8bbb78e1ae856acb5f2a"}
+{"author": "hugo@example.com", "committed_at": "2026-05-06T17:29:05+00:00", "message": "wire up test helper", "repo": "mobile", "sha": "32caf5c68fbaeb55a036995c2622c84abc4c392a"}
+{"author": "dave@example.com", "committed_at": "2026-05-05T06:31:38+00:00", "message": "guard against schema bump", "repo": "mobile", "sha": "480f7777e640970fed6d5cc8b8dbb7ab24a743fa"}
+{"author": "gina@example.com", "committed_at": "2026-05-10T10:18:26+00:00", "message": "split test helper", "repo": "ml-tooling", "sha": "e81eefd250e1bf42b2880fd4c6e99a7d4a01b322"}
+{"author": "carol@example.com", "committed_at": "2026-05-05T03:48:48+00:00", "message": "wire up auth check", "repo": "ml-tooling", "sha": "7550f3a23ccdcf4a539b5d8f258c67b2ae38011b"}
+{"author": "dave@example.com", "committed_at": "2026-05-08T02:32:59+00:00", "message": "guard against type signature", "repo": "billing-svc", "sha": "0ac90b256f56b34b5e54e013993b553f64aece32"}
+{"author": "alice@example.com", "committed_at": "2026-05-04T13:58:05+00:00", "message": "wire up fixture loader", "repo": "platform", "sha": "f6c1b1f32ac69a4e69dcdc2f0f3afc9f9116295a"}
+{"author": "gina@example.com", "committed_at": "2026-05-07T07:24:17+00:00", "message": "wire up metric label", "repo": "platform", "sha": "c6b1d5b163e57a26f601c63907a5c7bc14478d96"}
+{"author": "gina@example.com", "committed_at": "2026-05-04T11:04:38+00:00", "message": "split race condition", "repo": "infra", "sha": "c86f80c1e472335f25a58c999833c62f641ff337"}
+{"author": "bob@example.com", "committed_at": "2026-05-05T08:26:15+00:00", "message": "extract helper for auth check", "repo": "infra", "sha": "27dbe4e166a104a85be61cc492756ae0e27954a1"}
+{"author": "gina@example.com", "committed_at": "2026-05-04T06:05:54+00:00", "message": "drop unused type signature", "repo": "infra", "sha": "05ab14370c01c37120fc9ce7f8bef4eb7495c85b"}
+{"author": "dave@example.com", "committed_at": "2026-05-06T10:04:56+00:00", "message": "guard against auth check", "repo": "infra", "sha": "1ed7c4b6cddeeecebaac467666bedb96c4f3e9d1"}
+{"author": "carol@example.com", "committed_at": "2026-05-08T02:37:49+00:00", "message": "drop unused fixture loader", "repo": "mobile", "sha": "cd5e06c584c64dae74fa1322001a2ab64692baef"}
+{"author": "frank@example.com", "committed_at": "2026-05-06T09:25:07+00:00", "message": "drop unused race condition", "repo": "mobile", "sha": "3545d3d5f8734e314cfcf50be5e0fba2b2549c43"}
+{"author": "frank@example.com", "committed_at": "2026-05-08T22:36:14+00:00", "message": "split retry budget", "repo": "mobile", "sha": "f0d5b8680fa51798eda18e2a14009c6fcc18cabd"}
+{"author": "dave@example.com", "committed_at": "2026-05-06T19:53:17+00:00", "message": "wire up race condition", "repo": "mobile", "sha": "86f982e2a3043725b2472200a24ea3314625220d"}
+{"author": "bob@example.com", "committed_at": "2026-05-04T17:56:52+00:00", "message": "add logging around retry budget", "repo": "mobile", "sha": "ca6f6f5f91e502568463265a75c9d96d8b708952"}
+{"author": "frank@example.com", "committed_at": "2026-05-08T20:20:20+00:00", "message": "wire up metric label", "repo": "billing-svc", "sha": "d2e02ab28aebfbf9fa6751bdeeaceee44cd04ac4"}
+{"author": "frank@example.com", "committed_at": "2026-05-05T22:11:46+00:00", "message": "drop unused schema bump", "repo": "ml-tooling", "sha": "45630cf48a60fc59876ffdd5f1b32af947f6df09"}
+{"author": "bob@example.com", "committed_at": "2026-05-07T05:28:48+00:00", "message": "add logging around metric label", "repo": "ml-tooling", "sha": "d349ab4bf20ebd76a7af8aa64a777ff0a3c4a2fe"}
+{"author": "carol@example.com", "committed_at": "2026-05-08T15:16:16+00:00", "message": "stabilize feature flag", "repo": "infra", "sha": "84b1f770abf48afa66391697cd09864900d2be4e"}
+{"author": "frank@example.com", "committed_at": "2026-05-05T02:45:21+00:00", "message": "guard against retry budget", "repo": "infra", "sha": "a38e86e954a031afb4ac0dac5a19a114f2244357"}
+{"author": "dave@example.com", "committed_at": "2026-05-04T10:29:14+00:00", "message": "rename cache key", "repo": "ml-tooling", "sha": "da2fc1dc426e538771017f117744aacc09f0d216"}
+{"author": "dave@example.com", "committed_at": "2026-05-04T15:50:08+00:00", "message": "stabilize fixture loader", "repo": "web", "sha": "0b2b5c64098bc568a6a8c39e0ec6531c366969be"}
+{"author": "erin@example.com", "committed_at": "2026-05-04T06:31:22+00:00", "message": "wire up race condition", "repo": "web", "sha": "609065a6fcaec5ff97230010809ec531b66db28d"}
+{"author": "dave@example.com", "committed_at": "2026-05-07T07:12:53+00:00", "message": "rename feature flag", "repo": "web", "sha": "948e630f50327e880f2462cc01fded501289f680"}
+{"author": "carol@example.com", "committed_at": "2026-05-10T03:29:09+00:00", "message": "stabilize retry budget", "repo": "web", "sha": "01df719b2bef5bb4abd5cbeb94fdbd284abee51a"}
+{"author": "alice@example.com", "committed_at": "2026-05-04T04:43:27+00:00", "message": "drop unused race condition", "repo": "billing-svc", "sha": "46c2d3130857af3abcc7bd37e4603f4297c96360"}
+{"author": "bob@example.com", "committed_at": "2026-05-10T14:22:27+00:00", "message": "tighten test helper", "repo": "billing-svc", "sha": "65228e3dbc09acb69df1f1fab08fc3dbf0c1f2f8"}
+{"author": "gina@example.com", "committed_at": "2026-05-04T01:39:29+00:00", "message": "split metric label", "repo": "mobile", "sha": "eca7f1a9e6d3040e25e8c183f5e9519ad3426ff7"}
+{"author": "hugo@example.com", "committed_at": "2026-05-06T09:14:23+00:00", "message": "document retry budget", "repo": "ml-tooling", "sha": "957af7e335440efbd0b3df18dd2228bfc7430525"}
+{"author": "carol@example.com", "committed_at": "2026-05-10T20:54:19+00:00", "message": "rename schema bump", "repo": "platform", "sha": "f25d3176494c0b1038094a7f66fff635c24442f2"}
+{"author": "hugo@example.com", "committed_at": "2026-05-09T16:52:18+00:00", "message": "extract helper for cache key", "repo": "platform", "sha": "db78d1d1ac06bce74fd579f2d0d2241b8c8ea9a9"}
+{"author": "dave@example.com", "committed_at": "2026-05-08T13:13:34+00:00", "message": "extract helper for feature flag", "repo": "platform", "sha": "4fa2fa288897aa76b96ad88d6496ba6e53976a5f"}
+{"author": "dave@example.com", "committed_at": "2026-05-09T03:17:04+00:00", "message": "wire up schema bump", "repo": "mobile", "sha": "ea48283cc0268fe8d681df3fdca3453b11283843"}
+{"author": "gina@example.com", "committed_at": "2026-05-09T06:45:33+00:00", "message": "add logging around test helper", "repo": "mobile", "sha": "103a89d7778b740a75c60528f337d77e55783079"}
+{"author": "hugo@example.com", "committed_at": "2026-05-04T18:50:37+00:00", "message": "wire up metric label", "repo": "mobile", "sha": "732dee4cc086fdaa0fce6b42c5c66abc8797cf07"}
+{"author": "erin@example.com", "committed_at": "2026-05-08T23:15:54+00:00", "message": "split auth check", "repo": "platform", "sha": "bc0fded2d8b78b8f55761cb172521828e494d857"}
+{"author": "dave@example.com", "committed_at": "2026-05-09T14:41:07+00:00", "message": "add logging around type signature", "repo": "platform", "sha": "272159fd5706223853eb54570a5801c451f447b8"}
+{"author": "carol@example.com", "committed_at": "2026-05-09T11:03:16+00:00", "message": "drop unused metric label", "repo": "platform", "sha": "37512c409efccebc8d5f4162b93dcc9b0af606d4"}
+{"author": "erin@example.com", "committed_at": "2026-05-10T19:34:29+00:00", "message": "wire up edge case", "repo": "billing-svc", "sha": "407e8fceeb6e4d17439b1becd29bf1f2ba695034"}
+{"author": "gina@example.com", "committed_at": "2026-05-05T20:10:12+00:00", "message": "document cache key", "repo": "billing-svc", "sha": "6b0ecaeba9b13efd124cae84462c8c7119046d6d"}
+{"author": "hugo@example.com", "committed_at": "2026-05-07T00:27:00+00:00", "message": "split race condition", "repo": "platform", "sha": "602518f27e5f32eabf8aa48770df8a9fc1983477"}
+{"author": "bob@example.com", "committed_at": "2026-05-05T05:19:09+00:00", "message": "tighten edge case", "repo": "platform", "sha": "bdcda9275f2a1dcd4df0ab397ffc6cd7975a5ac2"}
+{"author": "erin@example.com", "committed_at": "2026-05-06T17:11:02+00:00", "message": "wire up metric label", "repo": "platform", "sha": "4df2410f5149bb2159a3121065cf3892942e853f"}
+{"author": "dave@example.com", "committed_at": "2026-05-08T17:49:37+00:00", "message": "guard against race condition", "repo": "billing-svc", "sha": "5feb99cd79a67e44121343e4429aa7fdd396f1b5"}
+{"author": "dave@example.com", "committed_at": "2026-05-10T01:56:57+00:00", "message": "rename type signature", "repo": "billing-svc", "sha": "118c5fecae4ada5058d2fa4147f865d10baba03f"}
+{"author": "gina@example.com", "committed_at": "2026-05-07T07:42:06+00:00", "message": "wire up auth check", "repo": "billing-svc", "sha": "a8c6d1e9e19a0d2fde7a7e89178c80717e7c0d12"}
+{"author": "bob@example.com", "committed_at": "2026-05-06T04:07:44+00:00", "message": "add logging around retry budget", "repo": "platform", "sha": "1f6937ca560d2a7f0348598d5d65b39922430728"}
+{"author": "alice@example.com", "committed_at": "2026-05-06T09:59:45+00:00", "message": "wire up feature flag", "repo": "platform", "sha": "3e3f82b2b5c6802254a56fb0acd3c656f27fecab"}
+{"author": "erin@example.com", "committed_at": "2026-05-07T17:49:25+00:00", "message": "extract helper for edge case", "repo": "platform", "sha": "60b0bad0ae24334ffa31a79d9131948c48ad2b2f"}
+{"author": "gina@example.com", "committed_at": "2026-05-08T09:11:10+00:00", "message": "document race condition", "repo": "billing-svc", "sha": "9a5243b338aa356271892993c19d2a8142303f1f"}
+{"author": "carol@example.com", "committed_at": "2026-05-07T01:40:22+00:00", "message": "stabilize type signature", "repo": "web", "sha": "572a5530f6457d086f71d6c69b4cd9873d8f03c6"}
+{"author": "gina@example.com", "committed_at": "2026-05-07T07:46:42+00:00", "message": "wire up fixture loader", "repo": "web", "sha": "37417712c46830630d3a6e443badc8e646cb67ff"}
+{"author": "carol@example.com", "committed_at": "2026-05-10T16:42:28+00:00", "message": "tighten fixture loader", "repo": "web", "sha": "0de511e96d394985d0f2eb97e68fc85f7e407fc7"}
+{"author": "hugo@example.com", "committed_at": "2026-05-08T07:56:56+00:00", "message": "rename auth check", "repo": "platform", "sha": "8389c02379875f040ada0f6539d886cb3cf67a1a"}
+{"author": "carol@example.com", "committed_at": "2026-05-07T08:42:21+00:00", "message": "wire up feature flag", "repo": "platform", "sha": "af7d02347d16ed23e4766b3180d38e62a732871f"}
+{"author": "carol@example.com", "committed_at": "2026-05-04T18:25:41+00:00", "message": "add logging around metric label", "repo": "platform", "sha": "6da32780dbbe5030865571566649e1e74136b9d4"}
+{"author": "bob@example.com", "committed_at": "2026-05-10T11:24:20+00:00", "message": "document feature flag", "repo": "platform", "sha": "5b15d325624d3d758ae56ed5e8a8606c9ce23417"}
+{"author": "frank@example.com", "committed_at": "2026-05-05T00:21:36+00:00", "message": "split schema bump", "repo": "platform", "sha": "4157471272a288a451df64724e2d2ae58a010000"}
+{"author": "frank@example.com", "committed_at": "2026-05-08T14:04:12+00:00", "message": "guard against race condition", "repo": "platform", "sha": "226f3eb104bac3998524f9f24591acf1de011087"}
+{"author": "erin@example.com", "committed_at": "2026-05-07T04:11:55+00:00", "message": "split auth check", "repo": "platform", "sha": "b84cc37d487ab1b95c11f1d67deb05421813c830"}
+{"author": "carol@example.com", "committed_at": "2026-05-04T12:19:34+00:00", "message": "extract helper for test helper", "repo": "platform", "sha": "ff76c62c87424c959d9507d4bd63982e1c9c5bb9"}
+{"author": "bob@example.com", "committed_at": "2026-05-05T05:45:38+00:00", "message": "tighten cache key", "repo": "platform", "sha": "a59602fc9d89073b758a4e1a19197666b68a3c74"}
+{"author": "hugo@example.com", "committed_at": "2026-05-09T17:33:34+00:00", "message": "drop unused fixture loader", "repo": "platform", "sha": "ee316726f64ca71d122fac3ed0056003ad3407ca"}
+{"author": "carol@example.com", "committed_at": "2026-05-07T13:37:07+00:00", "message": "document auth check", "repo": "platform", "sha": "3d06cbb41292393977cfa04d6556427e8aad2281"}
+{"author": "bob@example.com", "committed_at": "2026-05-10T22:37:08+00:00", "message": "add logging around schema bump", "repo": "mobile", "sha": "1b0a7fcdd1334d01616bcc20c4e2a63568ab1d5d"}
+{"author": "gina@example.com", "committed_at": "2026-05-10T22:50:11+00:00", "message": "stabilize cache key", "repo": "mobile", "sha": "fd468913790e6a97f4d167b313be01b29950e85c"}
+{"author": "dave@example.com", "committed_at": "2026-05-10T07:27:32+00:00", "message": "guard against schema bump", "repo": "mobile", "sha": "c9e294bc74a390965635794dc1d0f4c3ed0e5697"}
+{"author": "erin@example.com", "committed_at": "2026-05-06T22:04:48+00:00", "message": "document fixture loader", "repo": "mobile", "sha": "b74090bd34da04cb4d82ccbd260fd346aa3868c4"}
+{"author": "alice@example.com", "committed_at": "2026-05-07T06:40:42+00:00", "message": "add logging around feature flag", "repo": "platform", "sha": "05f700dcc213c6226a012c18292a1ed56ed41b78"}
+{"author": "alice@example.com", "committed_at": "2026-05-09T15:13:26+00:00", "message": "rename type signature", "repo": "web", "sha": "9c51e4cd44b02ffc15280c82666e724ab56bc3e2"}
+{"author": "gina@example.com", "committed_at": "2026-05-05T05:35:51+00:00", "message": "add logging around auth check", "repo": "web", "sha": "3250c37d7a4efbc366e299815a14c913d8917e68"}
+{"author": "hugo@example.com", "committed_at": "2026-05-08T21:16:58+00:00", "message": "rename metric label", "repo": "web", "sha": "34ef552052f5368d5afe7d7735ad0a7e0fdc3ef1"}
+{"author": "dave@example.com", "committed_at": "2026-05-04T09:52:38+00:00", "message": "document metric label", "repo": "web", "sha": "40b0c42557ba52cb0ae38c42524ace187d90541a"}
+{"author": "frank@example.com", "committed_at": "2026-05-04T11:07:14+00:00", "message": "document edge case", "repo": "platform", "sha": "949a229bee1e2b57cecf650e8c22effc4df44a6f"}
+{"author": "erin@example.com", "committed_at": "2026-05-05T23:53:28+00:00", "message": "tighten schema bump", "repo": "platform", "sha": "c57b180bccae103585ab885cec64b95748c763ac"}
+{"author": "dave@example.com", "committed_at": "2026-05-04T13:39:27+00:00", "message": "document retry budget", "repo": "platform", "sha": "a5af5ac55c77ab373cbb0f8ca0af987069323ff5"}
+{"author": "hugo@example.com", "committed_at": "2026-05-10T08:32:41+00:00", "message": "document edge case", "repo": "mobile", "sha": "812b6c92a9e3aa6365b6df37dea10843921b5ec3"}
+{"author": "alice@example.com", "committed_at": "2026-05-05T15:38:57+00:00", "message": "wire up edge case", "repo": "mobile", "sha": "4f08b47bc54add1adee8954faa8adba954932da0"}
+{"author": "erin@example.com", "committed_at": "2026-05-08T11:25:50+00:00", "message": "rename race condition", "repo": "web", "sha": "9b772743aa260aaf16d53999ccf4f7dee9d404b5"}
+{"author": "gina@example.com", "committed_at": "2026-05-05T15:30:56+00:00", "message": "split cache key", "repo": "web", "sha": "6534624640921c027d8f56eb05fc2e55bfea8b8f"}
+{"author": "dave@example.com", "committed_at": "2026-05-06T23:13:19+00:00", "message": "guard against auth check", "repo": "mobile", "sha": "a42ec73c15e3f52e66e650a5546d53da297475ab"}
+{"author": "carol@example.com", "committed_at": "2026-05-05T04:42:23+00:00", "message": "guard against metric label", "repo": "web", "sha": "8d3fef75c970a88f35ee055e251a7ef36fa47440"}
+{"author": "hugo@example.com", "committed_at": "2026-05-06T09:54:58+00:00", "message": "drop unused schema bump", "repo": "web", "sha": "165118feeb6bb57c1160897c2a3e2b562045b029"}
+{"author": "hugo@example.com", "committed_at": "2026-05-10T10:07:39+00:00", "message": "rename test helper", "repo": "web", "sha": "6160df26f234c1443653ede413233cc345131e4a"}
+{"author": "bob@example.com", "committed_at": "2026-05-04T04:58:38+00:00", "message": "rename feature flag", "repo": "web", "sha": "196dca605e934953290c4a0a449c406bbc206b4f"}
+{"author": "bob@example.com", "committed_at": "2026-05-07T09:57:48+00:00", "message": "guard against retry budget", "repo": "web", "sha": "3486dbabc946082404f1d3b5f7f8151e2dd0d744"}
+{"author": "gina@example.com", "committed_at": "2026-05-04T07:45:39+00:00", "message": "document test helper", "repo": "platform", "sha": "507917130bcfebd92bebb9d578f348ed03113316"}
+{"author": "bob@example.com", "committed_at": "2026-05-06T02:58:00+00:00", "message": "rename edge case", "repo": "platform", "sha": "3ec82f5d103be3403a1e261de371e7a219b8f96c"}
+{"author": "alice@example.com", "committed_at": "2026-05-08T00:12:57+00:00", "message": "tighten race condition", "repo": "platform", "sha": "0d5bbedd8f0630a66c5e8dcd42b274f0118cdd39"}
+{"author": "alice@example.com", "committed_at": "2026-05-07T11:29:39+00:00", "message": "add logging around feature flag", "repo": "billing-svc", "sha": "efe381087280a72a51819fcf726ee3dc93dc346f"}
+{"author": "alice@example.com", "committed_at": "2026-05-10T04:01:44+00:00", "message": "tighten auth check", "repo": "infra", "sha": "775ad5693e0285d406e1e532d1508327be432e09"}
+{"author": "erin@example.com", "committed_at": "2026-05-04T14:34:15+00:00", "message": "wire up cache key", "repo": "infra", "sha": "c89453eb7ebe051081dfaf256c29c225f85d4ecf"}
+{"author": "frank@example.com", "committed_at": "2026-05-05T20:32:58+00:00", "message": "tighten metric label", "repo": "infra", "sha": "b7382d3bd1f75f97acb3ec591d9cc78d08e942e0"}
+{"author": "dave@example.com", "committed_at": "2026-05-06T06:20:43+00:00", "message": "wire up fixture loader", "repo": "infra", "sha": "5b7d84078c71d48cf4e2d02292637b56d376fd0a"}
+{"author": "bob@example.com", "committed_at": "2026-05-10T06:34:44+00:00", "message": "rename retry budget", "repo": "infra", "sha": "a3ca05b89f4833da16980dc2ff24810ce4382e8d"}
+{"author": "bob@example.com", "committed_at": "2026-05-05T12:37:52+00:00", "message": "document cache key", "repo": "platform", "sha": "cc8d7ce9c92aa8a133451fb7c1b32f2d17c6da7d"}
+{"author": "dave@example.com", "committed_at": "2026-05-06T16:17:34+00:00", "message": "document cache key", "repo": "platform", "sha": "8ab1cf0109498519cc8ddfd1ad8509adbfea0e9a"}
+{"author": "carol@example.com", "committed_at": "2026-05-04T23:01:45+00:00", "message": "drop unused race condition", "repo": "ml-tooling", "sha": "d47b8cc45da913cab710d5535495edff9c4a2c03"}
+{"author": "frank@example.com", "committed_at": "2026-05-09T14:20:07+00:00", "message": "split retry budget", "repo": "ml-tooling", "sha": "b8c1003fcff4625be08e4d85d24351687fa7dbc1"}
+{"author": "gina@example.com", "committed_at": "2026-05-10T17:40:52+00:00", "message": "split race condition", "repo": "web", "sha": "59437a8b811d89b9ea4623464e9f2eec6795f506"}
+{"author": "dave@example.com", "committed_at": "2026-05-04T15:34:45+00:00", "message": "document retry budget", "repo": "web", "sha": "fb012c718a61c7a487a790132cef92db5888b88d"}
+{"author": "bob@example.com", "committed_at": "2026-05-06T21:24:01+00:00", "message": "split race condition", "repo": "web", "sha": "2f6e30a734e8cd419af4f38e48c712c858467e57"}
+{"author": "dave@example.com", "committed_at": "2026-05-07T21:00:36+00:00", "message": "tighten cache key", "repo": "web", "sha": "0c56516543130575002cedc310fc30296bc29179"}
+{"author": "dave@example.com", "committed_at": "2026-05-05T02:18:02+00:00", "message": "drop unused edge case", "repo": "web", "sha": "1f8d46a9da31060ec50b8ace2a01ddcd8220cb92"}
+{"author": "bob@example.com", "committed_at": "2026-05-04T06:29:19+00:00", "message": "split metric label", "repo": "web", "sha": "ea3c8f10b6dd694cc5ce07d3ff2b0bd5be2ec074"}
+{"author": "bob@example.com", "committed_at": "2026-05-10T05:11:48+00:00", "message": "add logging around edge case", "repo": "web", "sha": "be5c0920b42ebaa3efe924f9c523482c4d8554fa"}
+{"author": "carol@example.com", "committed_at": "2026-05-09T21:24:17+00:00", "message": "split fixture loader", "repo": "mobile", "sha": "b843b9bf1ad4044bf0012c7ad81e5648f55a8012"}
+{"author": "hugo@example.com", "committed_at": "2026-05-04T01:20:27+00:00", "message": "drop unused schema bump", "repo": "mobile", "sha": "e724d2cb0f21b123b05e32a5d21b7e14611e2da0"}
+{"author": "dave@example.com", "committed_at": "2026-05-07T02:34:30+00:00", "message": "guard against type signature", "repo": "mobile", "sha": "29a974ed6db488f3d24f6926218a14bc752e96be"}
+{"author": "frank@example.com", "committed_at": "2026-05-04T09:54:26+00:00", "message": "guard against race condition", "repo": "web", "sha": "1c8d1de6789695a7c9c41aa1ee81cbeab2bc5650"}
+{"author": "bob@example.com", "committed_at": "2026-05-04T14:47:20+00:00", "message": "guard against race condition", "repo": "web", "sha": "1f9037323ec304a9ec1550cb7a8250245eab105d"}
+{"author": "erin@example.com", "committed_at": "2026-05-10T03:31:25+00:00", "message": "tighten race condition", "repo": "web", "sha": "a65b8ea1e91f3e64e1bb07210c96906308b416d1"}
+{"author": "alice@example.com", "committed_at": "2026-05-04T05:58:27+00:00", "message": "extract helper for feature flag", "repo": "web", "sha": "937a5bb7ba41bc211df00cd12cef817f846699b7"}
+{"author": "gina@example.com", "committed_at": "2026-05-10T13:34:54+00:00", "message": "document fixture loader", "repo": "ml-tooling", "sha": "c5aa065b02f6ca84c593e85154779a32011d1b70"}
+{"author": "alice@example.com", "committed_at": "2026-05-05T12:43:26+00:00", "message": "add logging around race condition", "repo": "ml-tooling", "sha": "70432cce7409aeaea525d95c177d504ebb528ee0"}
+{"author": "hugo@example.com", "committed_at": "2026-05-05T21:01:21+00:00", "message": "split auth check", "repo": "ml-tooling", "sha": "2b57056d5352b3f0b3d33d6ba2aef53c11a7f62c"}
+{"author": "dave@example.com", "committed_at": "2026-05-05T19:28:38+00:00", "message": "split type signature", "repo": "ml-tooling", "sha": "8a91345f501569474418288f86432db604041618"}
+{"author": "dave@example.com", "committed_at": "2026-05-10T10:37:54+00:00", "message": "tighten edge case", "repo": "mobile", "sha": "fb437b6142da1d8c601b7eeebc3742052d2f9c15"}
+{"author": "dave@example.com", "committed_at": "2026-05-07T17:10:42+00:00", "message": "rename cache key", "repo": "mobile", "sha": "8782cc54263df01bcbdce1c7c42cbb199891edc6"}
+{"author": "erin@example.com", "committed_at": "2026-05-05T15:01:26+00:00", "message": "add logging around type signature", "repo": "mobile", "sha": "db09c5e645c4d329486d4aa8431f3d4792c876a7"}
+{"author": "erin@example.com", "committed_at": "2026-05-06T12:45:55+00:00", "message": "split race condition", "repo": "mobile", "sha": "b1b777861722bfc0b8bec8faec8a6b7dbf8ccc2d"}
+{"author": "frank@example.com", "committed_at": "2026-05-07T15:40:18+00:00", "message": "drop unused test helper", "repo": "web", "sha": "a9b00a92a5c4abcc9e5370e847b385c3918675d3"}
+{"author": "hugo@example.com", "committed_at": "2026-05-06T16:49:35+00:00", "message": "add logging around feature flag", "repo": "web", "sha": "1ed7e73003fb5432be28a56b85de88f13f650da4"}
+{"author": "bob@example.com", "committed_at": "2026-05-10T10:06:27+00:00", "message": "add logging around type signature", "repo": "ml-tooling", "sha": "dcad66e03811b4e20ba1104f54295ae63d09736c"}
+{"author": "hugo@example.com", "committed_at": "2026-05-04T10:07:26+00:00", "message": "extract helper for race condition", "repo": "ml-tooling", "sha": "1636cbb4c505f7b4bb67454e76509bf7b747dd2b"}
+{"author": "erin@example.com", "committed_at": "2026-05-07T13:03:42+00:00", "message": "split retry budget", "repo": "platform", "sha": "e15cf356c130f34c3b752fd88cf6ae8446644503"}
+{"author": "dave@example.com", "committed_at": "2026-05-08T20:18:12+00:00", "message": "stabilize feature flag", "repo": "platform", "sha": "55bc1c5a6b1c7f72318cf8370fa793a4027c5c19"}
+{"author": "alice@example.com", "committed_at": "2026-05-05T22:06:25+00:00", "message": "tighten cache key", "repo": "platform", "sha": "bc2a8f1ba8252b2d822aad802c6aefb51f04085d"}
+{"author": "erin@example.com", "committed_at": "2026-05-07T23:46:28+00:00", "message": "rename edge case", "repo": "infra", "sha": "34249267dceec1f625dff7254ec0eafdb769632c"}
+{"author": "alice@example.com", "committed_at": "2026-05-09T04:15:54+00:00", "message": "drop unused retry budget", "repo": "infra", "sha": "a57341532b0bfc89e9f0104dec99dfc9ee92d6cb"}
+{"author": "frank@example.com", "committed_at": "2026-05-04T22:49:29+00:00", "message": "stabilize fixture loader", "repo": "infra", "sha": "10d7ba7f61c8d5ee23b4c7a61be05bb355ed6d97"}
+{"author": "carol@example.com", "committed_at": "2026-05-07T00:34:41+00:00", "message": "tighten edge case", "repo": "infra", "sha": "acb9dd79a89798293c7788e978d805471ad4f683"}
+{"author": "frank@example.com", "committed_at": "2026-05-08T18:36:36+00:00", "message": "document cache key", "repo": "infra", "sha": "4153f1fa9b69dbaf44170198d9c247104b3436ea"}
+{"author": "bob@example.com", "committed_at": "2026-05-06T12:33:31+00:00", "message": "wire up fixture loader", "repo": "infra", "sha": "c6aaf0d2628b968acc7227b16956d541769e958d"}
+{"author": "carol@example.com", "committed_at": "2026-05-06T10:33:27+00:00", "message": "document type signature", "repo": "infra", "sha": "7edc01a48c142fe92e86196a147b1558dca5ea56"}
+{"author": "erin@example.com", "committed_at": "2026-05-06T19:14:03+00:00", "message": "add logging around type signature", "repo": "infra", "sha": "70404ac366070768dee23deb0ed4fba7158b6125"}
+{"author": "bob@example.com", "committed_at": "2026-05-08T02:52:48+00:00", "message": "split type signature", "repo": "web", "sha": "0684149e202e55491b1ed8e3ffa8d3581cb7e4f4"}
+{"author": "bob@example.com", "committed_at": "2026-05-07T20:43:23+00:00", "message": "add logging around race condition", "repo": "web", "sha": "a1acc9847f76e25342213e17bd12e1f9174b38b5"}
+{"author": "frank@example.com", "committed_at": "2026-05-04T03:00:25+00:00", "message": "stabilize schema bump", "repo": "ml-tooling", "sha": "54fc877e550b9443c5ca8c66066999e09fa08e05"}
+{"author": "frank@example.com", "committed_at": "2026-05-04T20:46:41+00:00", "message": "extract helper for test helper", "repo": "ml-tooling", "sha": "cb2a6ef85cd65ad785effa55b40d2cb2440b5493"}
+{"author": "bob@example.com", "committed_at": "2026-05-10T04:56:41+00:00", "message": "guard against auth check", "repo": "billing-svc", "sha": "4aac7d7e4d5951dc2a80a36637118752254352b9"}
+{"author": "bob@example.com", "committed_at": "2026-05-06T04:09:03+00:00", "message": "rename type signature", "repo": "mobile", "sha": "ddfc9033a81c99401c5fef7aacc9c93d469534d4"}
+{"author": "alice@example.com", "committed_at": "2026-05-05T04:04:02+00:00", "message": "guard against schema bump", "repo": "mobile", "sha": "0921958639f32fe4d83563017ddd05010b65a6c6"}
+{"author": "dave@example.com", "committed_at": "2026-05-04T21:39:58+00:00", "message": "split schema bump", "repo": "platform", "sha": "a58770b5d511ecd5ed7756c66fd2a3c5ce37d930"}
+{"author": "carol@example.com", "committed_at": "2026-05-04T04:50:44+00:00", "message": "extract helper for metric label", "repo": "mobile", "sha": "67437b5e2fa0cffc31db5038724eed3e3bd79bf5"}
+{"author": "erin@example.com", "committed_at": "2026-05-10T22:18:34+00:00", "message": "extract helper for fixture loader", "repo": "mobile", "sha": "bcc5b34ae695aa78d0e940e8f4dd92ecf00e9f8b"}
+{"author": "bob@example.com", "committed_at": "2026-05-10T07:29:07+00:00", "message": "rename edge case", "repo": "billing-svc", "sha": "693de79ea6c3c9089a05c0a5315c4e1cc910588b"}
+{"author": "hugo@example.com", "committed_at": "2026-05-05T10:27:42+00:00", "message": "split metric label", "repo": "ml-tooling", "sha": "1af97f83bd704eb01061bcc3b60bc9386e9de1f0"}
+{"author": "frank@example.com", "committed_at": "2026-05-04T02:18:18+00:00", "message": "rename test helper", "repo": "ml-tooling", "sha": "1036db317899841cf8adcb591c443abdf4ad5553"}
+{"author": "hugo@example.com", "committed_at": "2026-05-09T14:57:00+00:00", "message": "split metric label", "repo": "mobile", "sha": "e08f9fc99ab7da5377a0f249ab635107c4522f74"}
+{"author": "hugo@example.com", "committed_at": "2026-05-07T14:40:17+00:00", "message": "document fixture loader", "repo": "mobile", "sha": "87baaa5595b4a3c3afb2e21a11b928ee98f7b6b4"}
+{"author": "frank@example.com", "committed_at": "2026-05-04T18:13:55+00:00", "message": "split race condition", "repo": "mobile", "sha": "3e3b9e68961a7f07636d22675d1f52b5ff609d5a"}
+{"author": "frank@example.com", "committed_at": "2026-05-10T11:02:01+00:00", "message": "add logging around test helper", "repo": "mobile", "sha": "9da6a7f133bdf698cf2fec5c2976c48cd8a10131"}
+{"author": "frank@example.com", "committed_at": "2026-05-07T04:30:52+00:00", "message": "tighten fixture loader", "repo": "mobile", "sha": "07a532d9959c89ebe5bfab431542ee2496e2e0a9"}
+{"author": "dave@example.com", "committed_at": "2026-05-07T20:44:44+00:00", "message": "split schema bump", "repo": "mobile", "sha": "6df5c325606ad327f28a0053ee1ba4dd67b2a0e0"}
+{"author": "dave@example.com", "committed_at": "2026-05-04T22:58:16+00:00", "message": "guard against auth check", "repo": "mobile", "sha": "c03372074f94ab37d11a3319a1496e6c2af6cc4e"}
+{"author": "alice@example.com", "committed_at": "2026-05-08T23:22:48+00:00", "message": "guard against test helper", "repo": "mobile", "sha": "76b710aad2b9e72acc7f5bb33c97c147ff5e05dc"}
+{"author": "dave@example.com", "committed_at": "2026-05-05T09:48:16+00:00", "message": "stabilize retry budget", "repo": "mobile", "sha": "952c882d213ea6a9d81b31604f6084fd6d43888e"}
+{"author": "frank@example.com", "committed_at": "2026-05-09T09:05:15+00:00", "message": "document test helper", "repo": "mobile", "sha": "60d1dfc80558e8ab37ae4f3e860d33c816962f6f"}
+{"author": "hugo@example.com", "committed_at": "2026-05-04T16:29:06+00:00", "message": "stabilize fixture loader", "repo": "mobile", "sha": "76c9fe0837003b6d054c4b851825721bee408820"}
+{"author": "gina@example.com", "committed_at": "2026-05-07T16:58:37+00:00", "message": "document metric label", "repo": "ml-tooling", "sha": "658b721f93448e0f4c8d655b2f94590865d33116"}
+{"author": "dave@example.com", "committed_at": "2026-05-05T02:03:41+00:00", "message": "wire up schema bump", "repo": "ml-tooling", "sha": "c61f04ce51411a7cd42b6d00aefa013f74a00e6e"}
+{"author": "gina@example.com", "committed_at": "2026-05-05T03:02:32+00:00", "message": "wire up type signature", "repo": "mobile", "sha": "55236c1f2cf45308a8d3f352f0e897d1479945b4"}
+{"author": "bob@example.com", "committed_at": "2026-05-07T21:06:37+00:00", "message": "split metric label", "repo": "mobile", "sha": "a56824089ef5c065dba374fd2e9048bbb3c14333"}
+{"author": "gina@example.com", "committed_at": "2026-05-10T04:30:28+00:00", "message": "drop unused feature flag", "repo": "mobile", "sha": "c9d8fdd46ec1089e807e231f942d911c6c46a788"}
+{"author": "alice@example.com", "committed_at": "2026-05-08T22:18:45+00:00", "message": "wire up cache key", "repo": "mobile", "sha": "1537da8d5405256f40ba0660100c79ce73002383"}
+{"author": "alice@example.com", "committed_at": "2026-05-05T19:42:51+00:00", "message": "rename schema bump", "repo": "mobile", "sha": "c474f6ee1c0a92df8c7110877d337e232a2b8a49"}
+{"author": "erin@example.com", "committed_at": "2026-05-10T00:43:37+00:00", "message": "guard against type signature", "repo": "ml-tooling", "sha": "02b6a78dd0eac898cde413148042447e904c41b2"}
+{"author": "carol@example.com", "committed_at": "2026-05-05T00:49:54+00:00", "message": "document test helper", "repo": "ml-tooling", "sha": "e7b6d957be0092534a33d25ab09c311e5718dd01"}
+{"author": "hugo@example.com", "committed_at": "2026-05-08T10:35:27+00:00", "message": "rename fixture loader", "repo": "ml-tooling", "sha": "4e202564d2b2408b0fdda789c1954ed79c032a70"}
+{"author": "gina@example.com", "committed_at": "2026-05-04T10:37:52+00:00", "message": "tighten auth check", "repo": "mobile", "sha": "487bd2fd55a34e5ce0cdcbc4482ede89fe2516b0"}
+{"author": "dave@example.com", "committed_at": "2026-05-09T04:57:55+00:00", "message": "drop unused test helper", "repo": "mobile", "sha": "9f9447a86919dc4342ad8b5b850c89233f624e70"}
+{"author": "alice@example.com", "committed_at": "2026-05-05T23:31:21+00:00", "message": "rename race condition", "repo": "mobile", "sha": "a9528d0cc80b331525b96825703c19d07f43c116"}
+{"author": "carol@example.com", "committed_at": "2026-05-09T17:38:22+00:00", "message": "document auth check", "repo": "mobile", "sha": "e12281069f373f3ed13c4b1839eab0326ea7a530"}
+{"author": "erin@example.com", "committed_at": "2026-05-07T02:49:32+00:00", "message": "rename type signature", "repo": "web", "sha": "0f4e17e3d3d03f446c8ff36fa71ed30590bbe105"}
+{"author": "erin@example.com", "committed_at": "2026-05-10T08:14:31+00:00", "message": "split fixture loader", "repo": "web", "sha": "6c553c1ccbe8cf0ceb2d37b42a13d94c20f066b1"}
+{"author": "gina@example.com", "committed_at": "2026-05-10T01:14:52+00:00", "message": "drop unused type signature", "repo": "web", "sha": "637499270093d20a7143b2cfbc9c77a79220a038"}
+{"author": "alice@example.com", "committed_at": "2026-05-05T17:10:12+00:00", "message": "guard against race condition", "repo": "web", "sha": "fd3af7aa342efa347bf3ab84c1e57c0499db8dee"}
+{"author": "erin@example.com", "committed_at": "2026-05-10T17:39:20+00:00", "message": "wire up feature flag", "repo": "ml-tooling", "sha": "30e61e3bc8f7f163fa9705e929ae5c155a8cc4e5"}
+{"author": "gina@example.com", "committed_at": "2026-05-06T10:15:30+00:00", "message": "tighten retry budget", "repo": "ml-tooling", "sha": "dd840ec64f26a6cfd4b46df1d08c751ab780b04f"}
+{"author": "hugo@example.com", "committed_at": "2026-05-08T12:03:33+00:00", "message": "extract helper for cache key", "repo": "ml-tooling", "sha": "ed80a6ade1fefab85d207845f6c4e651554f332e"}
+{"author": "dave@example.com", "committed_at": "2026-05-04T05:37:45+00:00", "message": "tighten metric label", "repo": "ml-tooling", "sha": "3f3d5195b398c71b53d065505d0385c8f21d02ee"}
+{"author": "bob@example.com", "committed_at": "2026-05-06T04:28:54+00:00", "message": "split cache key", "repo": "platform", "sha": "e1a019665de588c73e58ed7071ca815ba3774e5f"}
+{"author": "carol@example.com", "committed_at": "2026-05-06T00:19:22+00:00", "message": "tighten retry budget", "repo": "platform", "sha": "3c7b19d14ddeca5e59b6f8b0e0d90dfbd0510351"}
+{"author": "carol@example.com", "committed_at": "2026-05-08T18:47:38+00:00", "message": "stabilize metric label", "repo": "billing-svc", "sha": "71881755b6765057b214bab137a9a17c96676597"}
+{"author": "carol@example.com", "committed_at": "2026-05-05T04:28:59+00:00", "message": "split metric label", "repo": "billing-svc", "sha": "400b73488251eaca41347fc62fe9b8520c5826ea"}
+{"author": "frank@example.com", "committed_at": "2026-05-04T02:53:35+00:00", "message": "tighten fixture loader", "repo": "billing-svc", "sha": "e273fb7c4d8fa4c8c340d3e70058a4816532b7ab"}
+{"author": "frank@example.com", "committed_at": "2026-05-06T00:19:49+00:00", "message": "add logging around auth check", "repo": "platform", "sha": "433971efe48e4b844278a3509ff1dfc6675db3b1"}
+{"author": "gina@example.com", "committed_at": "2026-05-06T02:07:43+00:00", "message": "rename cache key", "repo": "platform", "sha": "9d81ab65adf4c508cf45b96ab2c5555b035bc59e"}
+{"author": "carol@example.com", "committed_at": "2026-05-06T10:29:05+00:00", "message": "split type signature", "repo": "infra", "sha": "502557829500dc5e14dc08a1bd652f910721277b"}
+{"author": "dave@example.com", "committed_at": "2026-05-05T18:42:15+00:00", "message": "tighten test helper", "repo": "infra", "sha": "9e227c01d04ef1ac8c3d1fd4c96b00a7e568d2ed"}
+{"author": "hugo@example.com", "committed_at": "2026-05-10T05:00:48+00:00", "message": "wire up race condition", "repo": "infra", "sha": "6d30892d9463cb8936e5efcbfd1d689518d2faa3"}
+{"author": "alice@example.com", "committed_at": "2026-05-04T18:24:50+00:00", "message": "wire up cache key", "repo": "billing-svc", "sha": "65951597e9882f578bda6c8e05b9b7c4d18e56d8"}
+{"author": "carol@example.com", "committed_at": "2026-05-09T16:07:36+00:00", "message": "extract helper for test helper", "repo": "billing-svc", "sha": "a7aaf852c87a017f28d19fd397e886e1cc2ebd8d"}
+{"author": "gina@example.com", "committed_at": "2026-05-04T06:28:54+00:00", "message": "add logging around race condition", "repo": "billing-svc", "sha": "c2b92b114ef5309a1ec097bdd1a177e8d760cfe6"}
+{"author": "gina@example.com", "committed_at": "2026-05-08T22:35:11+00:00", "message": "rename type signature", "repo": "billing-svc", "sha": "455ddf820eda6a1cf6d695fc0aa09443e18d2ce0"}
+{"author": "gina@example.com", "committed_at": "2026-05-04T07:48:05+00:00", "message": "stabilize type signature", "repo": "mobile", "sha": "2c50f6525f34da67e2e0d985c9506727a9039bde"}
+{"author": "erin@example.com", "committed_at": "2026-05-09T00:04:52+00:00", "message": "wire up feature flag", "repo": "infra", "sha": "ae60b858787142e3df0cc873a13c842a06e13f14"}
+{"author": "hugo@example.com", "committed_at": "2026-05-05T10:57:58+00:00", "message": "wire up schema bump", "repo": "infra", "sha": "6012e5c45d599a00e4a5e822d0d3c35fcc401407"}
+{"author": "erin@example.com", "committed_at": "2026-05-05T14:24:24+00:00", "message": "rename metric label", "repo": "billing-svc", "sha": "d68886ac58af02509495b6d0247eb7058ec17ce0"}
+{"author": "erin@example.com", "committed_at": "2026-05-08T12:35:43+00:00", "message": "stabilize feature flag", "repo": "billing-svc", "sha": "a491bb7d82eb807c843bef7b8cd4647d1cced924"}
+{"author": "bob@example.com", "committed_at": "2026-05-06T23:56:58+00:00", "message": "guard against test helper", "repo": "billing-svc", "sha": "4185c55d40cdc2ed56bc476afcefe5bd09378518"}
+{"author": "carol@example.com", "committed_at": "2026-05-07T23:58:32+00:00", "message": "wire up auth check", "repo": "billing-svc", "sha": "6244c0002991ec429719269306fa4f41dac95490"}
+{"author": "dave@example.com", "committed_at": "2026-05-04T21:07:46+00:00", "message": "add logging around schema bump", "repo": "ml-tooling", "sha": "7a70fdd38c41bc402fb70edd3daf490979f835a7"}
+{"author": "hugo@example.com", "committed_at": "2026-05-04T07:28:39+00:00", "message": "document metric label", "repo": "ml-tooling", "sha": "ac301fff652fb17d2514a26f66e1695998e908fd"}
+{"author": "hugo@example.com", "committed_at": "2026-05-04T13:39:28+00:00", "message": "add logging around edge case", "repo": "ml-tooling", "sha": "7a20fda22f1b2f75b28bc6812b0bb23ae88cb73c"}
+{"author": "gina@example.com", "committed_at": "2026-05-08T03:46:25+00:00", "message": "split test helper", "repo": "ml-tooling", "sha": "190709a9380745206cc517bc80e04ca5a2c9d667"}
+{"author": "carol@example.com", "committed_at": "2026-05-05T22:17:32+00:00", "message": "wire up retry budget", "repo": "infra", "sha": "6e9801df1f15132972264cc33a8a1a5c7533c19e"}
+{"author": "frank@example.com", "committed_at": "2026-05-05T13:47:22+00:00", "message": "add logging around auth check", "repo": "mobile", "sha": "f0ff8b89f1462e29c2a78dfcd4d57ac0b704c290"}
+{"author": "frank@example.com", "committed_at": "2026-05-09T14:00:16+00:00", "message": "stabilize feature flag", "repo": "mobile", "sha": "e06cc1a1c71cc7d0b142d803061351704b408a56"}
+{"author": "bob@example.com", "committed_at": "2026-05-05T19:31:05+00:00", "message": "add logging around cache key", "repo": "mobile", "sha": "735c11d14ebf9a8841a999a72303cbb699acc55b"}
+{"author": "gina@example.com", "committed_at": "2026-05-07T20:03:05+00:00", "message": "wire up retry budget", "repo": "mobile", "sha": "f1adc07d3d49d0e09e4dc046b2bb02b602e72df3"}
+{"author": "hugo@example.com", "committed_at": "2026-05-07T04:50:59+00:00", "message": "extract helper for auth check", "repo": "mobile", "sha": "e1b4589267a9e81c8b63ae1ae32cd9c6dac376af"}
+{"author": "hugo@example.com", "committed_at": "2026-05-06T00:09:29+00:00", "message": "add logging around test helper", "repo": "infra", "sha": "be157ff28703550bdf7664f646c98154a75cec58"}
+{"author": "dave@example.com", "committed_at": "2026-05-10T16:31:25+00:00", "message": "tighten edge case", "repo": "mobile", "sha": "7a4147503802d67589469f240faa2a8a4c1ead26"}
+{"author": "erin@example.com", "committed_at": "2026-05-09T17:44:49+00:00", "message": "wire up type signature", "repo": "mobile", "sha": "0c97645d44feee662d1cc9f0e06b17c1aa594921"}
+{"author": "erin@example.com", "committed_at": "2026-05-04T04:08:16+00:00", "message": "stabilize schema bump", "repo": "platform", "sha": "80dfb5ded4b0d5017c6bc8d29e8af636f828d1aa"}
+{"author": "carol@example.com", "committed_at": "2026-05-04T18:42:13+00:00", "message": "split test helper", "repo": "platform", "sha": "64dd964478c343523a9a780025ed5469f955acef"}
+{"author": "bob@example.com", "committed_at": "2026-05-04T02:09:28+00:00", "message": "extract helper for retry budget", "repo": "platform", "sha": "ef1a92c1c268bc9e8c0ade8c670e46c3114d2cc4"}
+{"author": "erin@example.com", "committed_at": "2026-05-07T16:07:12+00:00", "message": "tighten auth check", "repo": "platform", "sha": "baed8afcaabfb358fd8001cead491b2dcb8a3458"}
+{"author": "hugo@example.com", "committed_at": "2026-05-10T23:43:49+00:00", "message": "split fixture loader", "repo": "platform", "sha": "90466dd07af12e07d619846d151a17082680d2ff"}
+{"author": "hugo@example.com", "committed_at": "2026-05-04T05:06:55+00:00", "message": "rename fixture loader", "repo": "platform", "sha": "a4836bc809a1e6bcf90af780a14d05884172b4a8"}
+{"author": "dave@example.com", "committed_at": "2026-05-10T06:23:56+00:00", "message": "tighten feature flag", "repo": "platform", "sha": "4173eef9debb392d85604ac83d5775d0bc85edf9"}
+{"author": "hugo@example.com", "committed_at": "2026-05-10T13:54:48+00:00", "message": "wire up schema bump", "repo": "platform", "sha": "60cc562b22e494cba9d0d474e47f3e0457f11da8"}
+{"author": "bob@example.com", "committed_at": "2026-05-08T20:15:37+00:00", "message": "split race condition", "repo": "infra", "sha": "eea82edfaa621e6e2b2af19bc5c68ed6040fc247"}
+{"author": "frank@example.com", "committed_at": "2026-05-08T02:32:33+00:00", "message": "add logging around edge case", "repo": "infra", "sha": "0a234c340f0cc131e47f44c778d9e17a1dfaed76"}
+{"author": "hugo@example.com", "committed_at": "2026-05-10T12:02:58+00:00", "message": "tighten retry budget", "repo": "infra", "sha": "fe73563aaa1ae1b42f788819b632929f1347a16c"}
+{"author": "bob@example.com", "committed_at": "2026-05-06T20:01:04+00:00", "message": "document metric label", "repo": "mobile", "sha": "21eee14798bd98df907dd902d64af6f63bfbe54e"}
+{"author": "hugo@example.com", "committed_at": "2026-05-04T18:32:13+00:00", "message": "wire up retry budget", "repo": "mobile", "sha": "6142ab9577592cb2b87dc0e699cf8c53bb92f83d"}
+{"author": "gina@example.com", "committed_at": "2026-05-05T11:51:34+00:00", "message": "extract helper for metric label", "repo": "mobile", "sha": "05523c293798fc186fe9044c97604db0c536dcee"}
+{"author": "frank@example.com", "committed_at": "2026-05-06T23:27:09+00:00", "message": "tighten feature flag", "repo": "mobile", "sha": "d204ac785144478126ed7dfb03fe2a498c389056"}
+{"author": "gina@example.com", "committed_at": "2026-05-10T16:00:10+00:00", "message": "add logging around type signature", "repo": "web", "sha": "cbd94c13c7f4c62bcab55fec829106a05aa26898"}
+{"author": "frank@example.com", "committed_at": "2026-05-04T15:04:42+00:00", "message": "document edge case", "repo": "web", "sha": "5709f7728b8c2bf964b238eea624090a97efdd36"}
+{"author": "carol@example.com", "committed_at": "2026-05-07T04:41:06+00:00", "message": "rename edge case", "repo": "web", "sha": "13f72962a2287dfd530f2e31cad94ae1d04d672b"}
+{"author": "alice@example.com", "committed_at": "2026-05-04T10:52:52+00:00", "message": "guard against test helper", "repo": "billing-svc", "sha": "115615daa0a45933940cdf13a28a403cd7644448"}
+{"author": "gina@example.com", "committed_at": "2026-05-09T08:57:03+00:00", "message": "wire up type signature", "repo": "billing-svc", "sha": "4551bc403123689673675b5c36578ad9a4695c99"}
+{"author": "frank@example.com", "committed_at": "2026-05-09T17:41:35+00:00", "message": "rename test helper", "repo": "billing-svc", "sha": "8dd6851b7def78b5f7bc2a5ccba28fc5b71dd938"}
+{"author": "gina@example.com", "committed_at": "2026-05-04T07:36:43+00:00", "message": "tighten metric label", "repo": "billing-svc", "sha": "cb59e8cda7a6d4a7496cf493af25ed67a869dad7"}
+{"author": "erin@example.com", "committed_at": "2026-05-06T09:13:22+00:00", "message": "add logging around metric label", "repo": "infra", "sha": "9f72d3b723c6e2070f6f4c1f5038df04c863439c"}
+{"author": "frank@example.com", "committed_at": "2026-05-06T01:27:36+00:00", "message": "stabilize edge case", "repo": "infra", "sha": "5a845c9bc663e4906c8235dc9e2de0d76a7313c3"}
+{"author": "gina@example.com", "committed_at": "2026-05-05T19:50:33+00:00", "message": "extract helper for race condition", "repo": "billing-svc", "sha": "c7812677886fdf683918212df612823c09201951"}
+{"author": "hugo@example.com", "committed_at": "2026-05-07T16:23:15+00:00", "message": "wire up type signature", "repo": "mobile", "sha": "121794368a98416a62d1f3f36c12af32f3643904"}
+{"author": "dave@example.com", "committed_at": "2026-05-08T01:43:33+00:00", "message": "guard against edge case", "repo": "mobile", "sha": "29234e9a4f26dfbfc9d62721f93c395743b91272"}
+{"author": "erin@example.com", "committed_at": "2026-05-10T03:03:10+00:00", "message": "split type signature", "repo": "mobile", "sha": "dd5c2d8ba5a5f9204b9f2e8bdc9710b3adebc6bb"}
+{"author": "hugo@example.com", "committed_at": "2026-05-04T02:14:42+00:00", "message": "extract helper for type signature", "repo": "mobile", "sha": "e2e4cc4bcb08c0f01298370cd581e300dd183f44"}
+{"author": "carol@example.com", "committed_at": "2026-05-05T23:58:54+00:00", "message": "wire up metric label", "repo": "infra", "sha": "33b54744554908fa46b9108218e37b337b0a6ae4"}
+{"author": "bob@example.com", "committed_at": "2026-05-09T15:20:30+00:00", "message": "split race condition", "repo": "infra", "sha": "93bf1e704020939a792a4389fde9415270c7bf07"}
+{"author": "carol@example.com", "committed_at": "2026-05-07T20:43:31+00:00", "message": "add logging around metric label", "repo": "billing-svc", "sha": "e87c0aaabfb90850dd19b4d0c21cade77e8be12c"}
+{"author": "frank@example.com", "committed_at": "2026-05-08T00:24:32+00:00", "message": "rename metric label", "repo": "billing-svc", "sha": "27d2914b7086fc5c989ef5a0957485690182e493"}
+{"author": "bob@example.com", "committed_at": "2026-05-05T22:00:03+00:00", "message": "add logging around fixture loader", "repo": "infra", "sha": "aaae90c5fc0585be17674a9b572a4c71804dc52e"}
+{"author": "dave@example.com", "committed_at": "2026-05-08T12:50:23+00:00", "message": "add logging around cache key", "repo": "web", "sha": "44092de53b75cc6f0c74b1637519b0541d313776"}
+{"author": "erin@example.com", "committed_at": "2026-05-09T08:28:38+00:00", "message": "rename feature flag", "repo": "web", "sha": "f210105ad3c45ac8f2bb90e4709b6472cee29ac9"}
+{"author": "frank@example.com", "committed_at": "2026-05-06T11:33:51+00:00", "message": "rename type signature", "repo": "mobile", "sha": "39b632efddda1b5fd24052af1d2144723cfe0cfd"}
+{"author": "hugo@example.com", "committed_at": "2026-05-05T06:04:58+00:00", "message": "document test helper", "repo": "mobile", "sha": "6f3b424c9bd7f2294960107ea7472648dbcc64f8"}
+{"author": "hugo@example.com", "committed_at": "2026-05-10T10:03:48+00:00", "message": "document fixture loader", "repo": "mobile", "sha": "fda2a6413380cb5dc95de7b24f58ab77fbcacfd8"}
+{"author": "alice@example.com", "committed_at": "2026-05-08T12:08:01+00:00", "message": "split type signature", "repo": "platform", "sha": "5589b309d4a0d4daca341d4edf57a0e68842439d"}
+{"author": "gina@example.com", "committed_at": "2026-05-05T16:57:35+00:00", "message": "rename edge case", "repo": "platform", "sha": "69fe09bfe4b391e067429e476e418a2cfce0c6d7"}
+{"author": "dave@example.com", "committed_at": "2026-05-05T03:15:27+00:00", "message": "guard against edge case", "repo": "platform", "sha": "324401984c8666dec05cf26c0a89d40bd813648b"}
+{"author": "alice@example.com", "committed_at": "2026-05-04T12:15:06+00:00", "message": "tighten metric label", "repo": "platform", "sha": "023a9c3fb1161982191872bcca26a6386f9eab16"}
+{"author": "dave@example.com", "committed_at": "2026-05-10T12:12:41+00:00", "message": "guard against test helper", "repo": "infra", "sha": "c9e3fe81214e3c6f3d23bcdd32fceb665d2f1a0a"}
+{"author": "gina@example.com", "committed_at": "2026-05-09T19:30:57+00:00", "message": "extract helper for cache key", "repo": "infra", "sha": "8b2bdae4b7b77595cc43efa12a8ddf60604a65e5"}
+{"author": "bob@example.com", "committed_at": "2026-05-09T08:54:44+00:00", "message": "split race condition", "repo": "infra", "sha": "78a2b15a4b9d370e60f40e75fffe3394a4fc6010"}
+{"author": "frank@example.com", "committed_at": "2026-05-08T14:38:34+00:00", "message": "rename feature flag", "repo": "platform", "sha": "484699f61bfef3d3f3cbdbcced91c769800b4594"}
+{"author": "frank@example.com", "committed_at": "2026-05-06T16:16:15+00:00", "message": "drop unused auth check", "repo": "web", "sha": "5422870e0b9f7d13af32a1312c4d0014cb68eae6"}
+{"author": "gina@example.com", "committed_at": "2026-05-04T06:03:21+00:00", "message": "wire up race condition", "repo": "web", "sha": "6bf2539cf28c7dc974062f4ddb449ca85f490114"}
+{"author": "carol@example.com", "committed_at": "2026-05-10T14:22:48+00:00", "message": "stabilize schema bump", "repo": "platform", "sha": "c0a20a864f3c6167ad6c602111172e309157a82a"}
+{"author": "bob@example.com", "committed_at": "2026-05-05T03:34:22+00:00", "message": "drop unused type signature", "repo": "platform", "sha": "17187edd27dc50244d2b9e8e0b7221b670df6e94"}
+{"author": "carol@example.com", "committed_at": "2026-05-07T22:37:25+00:00", "message": "split auth check", "repo": "platform", "sha": "d7fdb03cfdf3ffc46d7db02c5ec555ddde06ec2c"}
+{"author": "erin@example.com", "committed_at": "2026-05-05T09:14:55+00:00", "message": "document metric label", "repo": "infra", "sha": "e97a34aaffe4dafc906b0a0293e3caf624bcb2e2"}
+{"author": "alice@example.com", "committed_at": "2026-05-10T19:20:34+00:00", "message": "extract helper for type signature", "repo": "web", "sha": "1b105885efbe170460334a02c1f850cb45576d63"}
+{"author": "gina@example.com", "committed_at": "2026-05-08T14:55:15+00:00", "message": "document auth check", "repo": "billing-svc", "sha": "0f60485cd48eb7f90af289cbdf81cf6b98b78a28"}
+{"author": "alice@example.com", "committed_at": "2026-05-08T09:12:02+00:00", "message": "stabilize type signature", "repo": "billing-svc", "sha": "b68697bd5df6dc9a740efbf0975d6897da1b09a1"}
+{"author": "dave@example.com", "committed_at": "2026-05-08T04:01:39+00:00", "message": "tighten type signature", "repo": "billing-svc", "sha": "8ce501e68561ee7f4a8b0702d4ab3b1409a05396"}
+{"author": "dave@example.com", "committed_at": "2026-05-04T23:32:27+00:00", "message": "guard against race condition", "repo": "billing-svc", "sha": "e877fa623347b085cb5e84dc5b31bf76bb9a28d1"}
+{"author": "alice@example.com", "committed_at": "2026-05-04T04:06:41+00:00", "message": "extract helper for cache key", "repo": "billing-svc", "sha": "2f9bba7e1d4f53de67e8c342afbd5d835d083ec5"}
+{"author": "bob@example.com", "committed_at": "2026-05-06T21:11:25+00:00", "message": "rename fixture loader", "repo": "ml-tooling", "sha": "2d707a2df19a1a44de73568719b29414b7c9b145"}
+{"author": "dave@example.com", "committed_at": "2026-05-09T11:37:46+00:00", "message": "split auth check", "repo": "ml-tooling", "sha": "4fbbece523a909862697db7215ff33a0d43e4ca2"}
+{"author": "dave@example.com", "committed_at": "2026-05-08T13:53:30+00:00", "message": "document feature flag", "repo": "infra", "sha": "d421f74537c2ae6edf30b4ef0e9b2b6188a10504"}
+{"author": "erin@example.com", "committed_at": "2026-05-05T05:17:14+00:00", "message": "split type signature", "repo": "mobile", "sha": "69b15acec1718068deb9247d31274e521a3778c1"}
+{"author": "dave@example.com", "committed_at": "2026-05-09T06:19:29+00:00", "message": "drop unused auth check", "repo": "web", "sha": "375b75162c3d7d072f7c0e9fdf5110b42831f0e3"}
+{"author": "gina@example.com", "committed_at": "2026-05-05T15:10:04+00:00", "message": "extract helper for feature flag", "repo": "ml-tooling", "sha": "0a356e0b23289b8bdf4cbac35edf27ee3d4d7bc3"}
+{"author": "dave@example.com", "committed_at": "2026-05-10T04:56:38+00:00", "message": "tighten cache key", "repo": "ml-tooling", "sha": "70bbf6e36f915469c299cc5fd660932ed3953b59"}
+{"author": "gina@example.com", "committed_at": "2026-05-04T14:31:42+00:00", "message": "split cache key", "repo": "ml-tooling", "sha": "cd6d8f08caccf06c70087f7c72b5435f1ca78218"}
+{"author": "dave@example.com", "committed_at": "2026-05-09T23:27:20+00:00", "message": "guard against metric label", "repo": "billing-svc", "sha": "2e5458f36023ec1fae8f9e1a543f338dadb330d2"}
+{"author": "bob@example.com", "committed_at": "2026-05-06T22:30:36+00:00", "message": "add logging around cache key", "repo": "platform", "sha": "3d635ebbe5d3d9d6f2261c51360f2dfb653c76d3"}
+{"author": "alice@example.com", "committed_at": "2026-05-08T22:12:08+00:00", "message": "tighten auth check", "repo": "platform", "sha": "a811917f5b9ba7ad734f8644aa3e825a28fd5356"}
+{"author": "dave@example.com", "committed_at": "2026-05-09T17:02:02+00:00", "message": "extract helper for feature flag", "repo": "platform", "sha": "78b8368a73ac6170fca1d9be48153ef6a2dc2266"}
+{"author": "hugo@example.com", "committed_at": "2026-05-07T17:36:34+00:00", "message": "extract helper for retry budget", "repo": "platform", "sha": "0f43f790594558371d757da903399859840587b0"}
+{"author": "gina@example.com", "committed_at": "2026-05-09T19:53:35+00:00", "message": "extract helper for metric label", "repo": "platform", "sha": "23d2ad80939fb626e1a949a215c2206aca855157"}
+{"author": "gina@example.com", "committed_at": "2026-05-10T03:53:13+00:00", "message": "guard against fixture loader", "repo": "platform", "sha": "d55b77c2822607948490cd568d6697786fb3cd81"}
+{"author": "hugo@example.com", "committed_at": "2026-05-10T16:20:18+00:00", "message": "rename fixture loader", "repo": "ml-tooling", "sha": "975c4aa0e86a0b5b8f07dd9a6a3fca18e3601a84"}
+{"author": "erin@example.com", "committed_at": "2026-05-07T13:12:21+00:00", "message": "stabilize schema bump", "repo": "ml-tooling", "sha": "9ccdde8e0d3e0d128e22068e3acfbdda0a2d03cf"}
+{"author": "bob@example.com", "committed_at": "2026-05-10T05:45:38+00:00", "message": "extract helper for test helper", "repo": "platform", "sha": "696bda08a0add7fa91485d2f5ae3914a17afd5c9"}
+{"author": "dave@example.com", "committed_at": "2026-05-07T09:55:21+00:00", "message": "stabilize fixture loader", "repo": "platform", "sha": "97d1c6ab702024eca2609b4febcf16cad416d689"}
+{"author": "erin@example.com", "committed_at": "2026-05-06T21:44:17+00:00", "message": "document retry budget", "repo": "billing-svc", "sha": "c7732467bed2f1e73e98beed5d4c7cea1ff8fb89"}
+{"author": "frank@example.com", "committed_at": "2026-05-08T23:08:30+00:00", "message": "extract helper for retry budget", "repo": "billing-svc", "sha": "4b6ee807fcedf90840fdeb29eb6922af66111181"}
+{"author": "gina@example.com", "committed_at": "2026-05-08T21:01:50+00:00", "message": "tighten fixture loader", "repo": "billing-svc", "sha": "4798a7adb7a564dd1018e022179bd22ca223a6e8"}
+{"author": "bob@example.com", "committed_at": "2026-05-05T21:18:42+00:00", "message": "drop unused edge case", "repo": "billing-svc", "sha": "9fed2df08edcc40b4bcab028577055fd90a8f7d5"}
+{"author": "bob@example.com", "committed_at": "2026-05-07T16:05:37+00:00", "message": "rename race condition", "repo": "mobile", "sha": "262cc19f9e7628ea58e99406a893057f7b2dd9ff"}
+{"author": "dave@example.com", "committed_at": "2026-05-04T16:09:42+00:00", "message": "document race condition", "repo": "mobile", "sha": "6b2604bb68da2b6b53faa1925cab3ceb56637921"}
+{"author": "erin@example.com", "committed_at": "2026-05-07T17:30:39+00:00", "message": "wire up feature flag", "repo": "mobile", "sha": "8c6845953be71352a4f69229c2672abb612a7161"}
+{"author": "gina@example.com", "committed_at": "2026-05-05T11:58:16+00:00", "message": "document type signature", "repo": "infra", "sha": "231db9aaedd79a93534d8a41d9230d3cc2014584"}
+{"author": "carol@example.com", "committed_at": "2026-05-05T11:33:47+00:00", "message": "stabilize retry budget", "repo": "infra", "sha": "d442fbc5cc4068f200b74bf44e165401e8af486e"}
+{"author": "carol@example.com", "committed_at": "2026-05-09T05:39:31+00:00", "message": "rename auth check", "repo": "infra", "sha": "29a51a04c0c1905580db9f8eca1082adc8613cab"}
+{"author": "alice@example.com", "committed_at": "2026-05-10T20:05:23+00:00", "message": "guard against test helper", "repo": "infra", "sha": "fecbd726c1d440236c08f8e20606a38a7599238e"}
+{"author": "hugo@example.com", "committed_at": "2026-05-08T23:16:36+00:00", "message": "document edge case", "repo": "mobile", "sha": "e47b2df61a74cf08cdac45b55503647b61dad9df"}
+{"author": "gina@example.com", "committed_at": "2026-05-07T06:07:29+00:00", "message": "guard against retry budget", "repo": "mobile", "sha": "c8a7f88afa427b62faba5f8e8229c5dea33fd8a7"}
+{"author": "alice@example.com", "committed_at": "2026-05-07T07:58:52+00:00", "message": "rename test helper", "repo": "mobile", "sha": "2bd93ced7016b513c612af458448695fcd18d121"}
+{"author": "frank@example.com", "committed_at": "2026-05-05T20:43:43+00:00", "message": "wire up type signature", "repo": "ml-tooling", "sha": "02a7e7bccf3ba88d0b74c1df8c4f41a6c9234bde"}
+{"author": "erin@example.com", "committed_at": "2026-05-05T03:57:19+00:00", "message": "stabilize type signature", "repo": "ml-tooling", "sha": "2ba670feaa425c5d86bcf89c0e0fa232efbb2489"}
+{"author": "bob@example.com", "committed_at": "2026-05-07T14:55:56+00:00", "message": "guard against test helper", "repo": "ml-tooling", "sha": "a63d857af8eedbca1f0ba98697dff3ad54081fc7"}
+{"author": "carol@example.com", "committed_at": "2026-05-06T21:15:38+00:00", "message": "document retry budget", "repo": "billing-svc", "sha": "ee31133a8ee798728f45bbeac837a8f93cabe6a4"}
+{"author": "dave@example.com", "committed_at": "2026-05-04T12:09:27+00:00", "message": "add logging around fixture loader", "repo": "billing-svc", "sha": "bb0bf9fb3dc14836d5769e090e38ce38ff793baa"}
+{"author": "dave@example.com", "committed_at": "2026-05-09T21:47:34+00:00", "message": "guard against schema bump", "repo": "billing-svc", "sha": "bc13e06c302eb013e1ce81fd5aa3c43b7dec7b6d"}
+{"author": "frank@example.com", "committed_at": "2026-05-06T18:30:18+00:00", "message": "extract helper for retry budget", "repo": "web", "sha": "d1f1e4468267b3602861e95f97dc7afde280601e"}
+{"author": "frank@example.com", "committed_at": "2026-05-06T04:40:49+00:00", "message": "guard against fixture loader", "repo": "web", "sha": "4c05a5d7f824cd324465285a5c23f4a9cae88cb6"}
+{"author": "carol@example.com", "committed_at": "2026-05-09T09:00:30+00:00", "message": "document test helper", "repo": "web", "sha": "9233a26ce60a41636ed938f28c45028767a81335"}
+{"author": "erin@example.com", "committed_at": "2026-05-08T16:45:27+00:00", "message": "guard against metric label", "repo": "platform", "sha": "060fc9ef10dfd37ec4b0fdf2d53f419c193c7175"}
+{"author": "gina@example.com", "committed_at": "2026-05-07T00:31:02+00:00", "message": "split retry budget", "repo": "platform", "sha": "8de932c1a70c81f0794a3e132b36c4ce0e853a72"}
+{"author": "carol@example.com", "committed_at": "2026-05-05T01:45:22+00:00", "message": "document test helper", "repo": "platform", "sha": "5c0453d0eb80476b79620dbe7a2f9a8c6b305291"}
+{"author": "hugo@example.com", "committed_at": "2026-05-08T21:35:22+00:00", "message": "add logging around schema bump", "repo": "platform", "sha": "62abf07ae3ff2f061bde19248c0a2c87a67ec83e"}
+{"author": "hugo@example.com", "committed_at": "2026-05-04T14:59:24+00:00", "message": "stabilize cache key", "repo": "billing-svc", "sha": "10c879ae72f717758deaf8a309819e632bc0a95f"}
+{"author": "dave@example.com", "committed_at": "2026-05-04T19:42:46+00:00", "message": "document type signature", "repo": "billing-svc", "sha": "b9fd3331ffc9eb9bdae4e45c69a80608cbd0dc5d"}
+{"author": "dave@example.com", "committed_at": "2026-05-05T17:40:48+00:00", "message": "stabilize cache key", "repo": "billing-svc", "sha": "df1eeeebe16d4c7fe5e221e7b34d551d59657671"}
+{"author": "frank@example.com", "committed_at": "2026-05-06T00:33:37+00:00", "message": "guard against fixture loader", "repo": "billing-svc", "sha": "788c0c0c870cb46aeca4924a7f11c88a9fa73308"}
+{"author": "frank@example.com", "committed_at": "2026-05-10T21:15:45+00:00", "message": "extract helper for type signature", "repo": "ml-tooling", "sha": "0a7ed94ba0fdec051745372f12acd64ff5f62859"}
+{"author": "erin@example.com", "committed_at": "2026-05-04T16:10:52+00:00", "message": "extract helper for metric label", "repo": "ml-tooling", "sha": "3fc993d07650f00a215f9a2404502fb9b82c8f42"}
+{"author": "frank@example.com", "committed_at": "2026-05-07T06:01:44+00:00", "message": "document race condition", "repo": "mobile", "sha": "ea03b5ce88517c1fa9660bf476c0d128ae474cf2"}
+{"author": "carol@example.com", "committed_at": "2026-05-07T10:15:41+00:00", "message": "wire up feature flag", "repo": "mobile", "sha": "e03b13dff404b24134b4774e086fa53aba32d6e2"}
+{"author": "erin@example.com", "committed_at": "2026-05-08T22:17:07+00:00", "message": "rename auth check", "repo": "mobile", "sha": "e93959e7d5c4b27259fe7def589696a9ef5cbf3a"}
+{"author": "bob@example.com", "committed_at": "2026-05-04T17:04:56+00:00", "message": "guard against type signature", "repo": "mobile", "sha": "151780949fd101902dbf7fd495cc44b8417d7128"}
+{"author": "erin@example.com", "committed_at": "2026-05-05T23:37:49+00:00", "message": "add logging around test helper", "repo": "mobile", "sha": "e733e55c928fad0028476a8e9557addff2b7055d"}
+{"author": "erin@example.com", "committed_at": "2026-05-04T05:35:58+00:00", "message": "guard against test helper", "repo": "billing-svc", "sha": "a0164011d9ed2994ef7aa819573cf41deb87697c"}
+{"author": "bob@example.com", "committed_at": "2026-05-07T22:25:44+00:00", "message": "extract helper for edge case", "repo": "billing-svc", "sha": "5b5f7ae673770f78a76157d93549f80b6e5177b1"}
+{"author": "erin@example.com", "committed_at": "2026-05-07T18:18:41+00:00", "message": "tighten cache key", "repo": "billing-svc", "sha": "474a30f2bbaf1818449ac9225bb24a71f227b0b7"}
+{"author": "hugo@example.com", "committed_at": "2026-05-09T02:20:30+00:00", "message": "add logging around race condition", "repo": "billing-svc", "sha": "f3afabf3cd7548d70d3d42bd7a400ed2a1941acb"}
+{"author": "alice@example.com", "committed_at": "2026-05-06T03:17:31+00:00", "message": "wire up feature flag", "repo": "platform", "sha": "66d0113129d3164f3618c3c73dfb2bd1b1cac5cf"}
+{"author": "bob@example.com", "committed_at": "2026-05-08T12:31:12+00:00", "message": "document retry budget", "repo": "platform", "sha": "4f5039e46e6bd90e7071ceb38b96de28cf81dcde"}
+{"author": "bob@example.com", "committed_at": "2026-05-09T01:04:35+00:00", "message": "guard against fixture loader", "repo": "platform", "sha": "f32d9bd1bbc69721e64014bbda67fff7063cff35"}
+{"author": "carol@example.com", "committed_at": "2026-05-07T19:07:49+00:00", "message": "stabilize fixture loader", "repo": "ml-tooling", "sha": "4034814b9aa01a9116fce7f49c3c606977100297"}
+{"author": "bob@example.com", "committed_at": "2026-05-08T08:41:25+00:00", "message": "guard against auth check", "repo": "ml-tooling", "sha": "70f83eda8dc4f6b3c54a4eac1054714791bcee35"}
+{"author": "bob@example.com", "committed_at": "2026-05-06T07:44:49+00:00", "message": "rename feature flag", "repo": "ml-tooling", "sha": "18350a2dcd13564f98f1c6d2a4fca9994045848c"}
+{"author": "erin@example.com", "committed_at": "2026-05-04T22:51:44+00:00", "message": "tighten test helper", "repo": "ml-tooling", "sha": "7e29b172314cc3837d0c208e2334ac49fd692178"}
+{"author": "frank@example.com", "committed_at": "2026-05-09T13:19:19+00:00", "message": "add logging around cache key", "repo": "billing-svc", "sha": "33390a275a3e099e1bd081ce39e620638bc8af44"}
+{"author": "gina@example.com", "committed_at": "2026-05-04T07:47:42+00:00", "message": "guard against fixture loader", "repo": "ml-tooling", "sha": "1e8076e88e07737c925c920c075deb721bfc7212"}
+{"author": "hugo@example.com", "committed_at": "2026-05-04T10:46:08+00:00", "message": "document race condition", "repo": "ml-tooling", "sha": "d35a7c1c9018e9ce9c882e07c301ee02ef7fa966"}
+{"author": "gina@example.com", "committed_at": "2026-05-08T16:03:35+00:00", "message": "guard against test helper", "repo": "ml-tooling", "sha": "32e3d1180528992bade87779dab573f067b70195"}
+{"author": "hugo@example.com", "committed_at": "2026-05-07T21:02:26+00:00", "message": "stabilize type signature", "repo": "billing-svc", "sha": "3fe73e69d48f46bca74fce2827863fce1d0bb3f7"}
+{"author": "alice@example.com", "committed_at": "2026-05-04T02:03:52+00:00", "message": "tighten race condition", "repo": "billing-svc", "sha": "33c4a0c6b8c9c6e039abf07784f3cc4ba41a05c1"}
+{"author": "carol@example.com", "committed_at": "2026-05-05T16:20:30+00:00", "message": "tighten auth check", "repo": "billing-svc", "sha": "12ad2d2e688242701469c1cf46621883fe7dbad2"}
+{"author": "bob@example.com", "committed_at": "2026-05-09T12:17:57+00:00", "message": "split metric label", "repo": "billing-svc", "sha": "440d62c93fc27046d83d7d6a2ded80747275a44c"}
+{"author": "bob@example.com", "committed_at": "2026-05-08T07:47:19+00:00", "message": "split edge case", "repo": "platform", "sha": "e8a55a5d88987dd3329771d800aff2aab1c5ff15"}
+{"author": "hugo@example.com", "committed_at": "2026-05-08T18:02:11+00:00", "message": "wire up test helper", "repo": "platform", "sha": "8c7e53d5cc0646a9205abfe7e6bfab248e8222f6"}
+{"author": "alice@example.com", "committed_at": "2026-05-06T05:33:44+00:00", "message": "add logging around type signature", "repo": "web", "sha": "4bced335b9566001bc714584e7531f625e7db9b4"}
+{"author": "carol@example.com", "committed_at": "2026-05-09T11:35:43+00:00", "message": "split test helper", "repo": "web", "sha": "02e094f82d5fd6ca25aba200b2139844d56106d0"}
+{"author": "erin@example.com", "committed_at": "2026-05-08T17:52:35+00:00", "message": "stabilize feature flag", "repo": "web", "sha": "a147068486ea63d403dc73ddcf907608b8820c3d"}
+{"author": "hugo@example.com", "committed_at": "2026-05-09T12:49:41+00:00", "message": "drop unused test helper", "repo": "web", "sha": "0099a03a3fd94d504933b0a0dd363a5ab57541a6"}
+{"author": "dave@example.com", "committed_at": "2026-05-06T03:52:21+00:00", "message": "guard against retry budget", "repo": "billing-svc", "sha": "819fc5a6b1323a5aad5ee5c172e80708b0f3d294"}
+{"author": "gina@example.com", "committed_at": "2026-05-10T07:57:09+00:00", "message": "wire up edge case", "repo": "billing-svc", "sha": "9b51abdeaef236e709aed4e8a32c0be13b55366c"}
+{"author": "erin@example.com", "committed_at": "2026-05-07T10:53:10+00:00", "message": "drop unused retry budget", "repo": "billing-svc", "sha": "68ed2470f8c337f4e3ac176fb4bc387ec7100f7f"}
+{"author": "alice@example.com", "committed_at": "2026-05-07T17:17:55+00:00", "message": "add logging around test helper", "repo": "web", "sha": "89831ec5d4ca979eb3c087a6a1edbae7fad2cf96"}
+{"author": "erin@example.com", "committed_at": "2026-05-05T10:37:35+00:00", "message": "stabilize feature flag", "repo": "web", "sha": "1e3eec36a00f6c5466a9076da4a15724ca65e7aa"}
+{"author": "dave@example.com", "committed_at": "2026-05-05T07:23:28+00:00", "message": "stabilize race condition", "repo": "web", "sha": "48164478ff29da17babbe1411d3f826d98b8fc35"}
+{"author": "carol@example.com", "committed_at": "2026-05-06T19:36:00+00:00", "message": "add logging around metric label", "repo": "web", "sha": "4f0da0ec345470bc99db708bbaaa14d6ad0fff96"}
+{"author": "carol@example.com", "committed_at": "2026-05-09T18:32:07+00:00", "message": "tighten metric label", "repo": "ml-tooling", "sha": "18d1057cc4d05541eba0c3e1de02a351166891ed"}
+{"author": "carol@example.com", "committed_at": "2026-05-05T19:54:07+00:00", "message": "document edge case", "repo": "ml-tooling", "sha": "5267725c430a70f255d11447ee85e1a9afe541c6"}
+{"author": "alice@example.com", "committed_at": "2026-05-09T13:26:43+00:00", "message": "extract helper for race condition", "repo": "billing-svc", "sha": "5d198ddba48fd0d0d8e48a5be6ee8ff80e08dafe"}
+{"author": "frank@example.com", "committed_at": "2026-05-05T14:53:42+00:00", "message": "rename retry budget", "repo": "billing-svc", "sha": "e494c144c2c83e00a6f2d1acc062cc9fb24e6358"}
+{"author": "bob@example.com", "committed_at": "2026-05-04T19:37:26+00:00", "message": "wire up cache key", "repo": "billing-svc", "sha": "82c02280e03f0cf3b51fe31f91977dbece49d21a"}
+{"author": "erin@example.com", "committed_at": "2026-05-04T16:21:24+00:00", "message": "tighten metric label", "repo": "infra", "sha": "1f13fb050b14b9f5751205fbf8ea7dae985b4c85"}
+{"author": "frank@example.com", "committed_at": "2026-05-04T13:08:45+00:00", "message": "add logging around fixture loader", "repo": "ml-tooling", "sha": "3b6e91b267e7edcec3c0aaf2e91b9c288116ac59"}
+{"author": "carol@example.com", "committed_at": "2026-05-07T05:05:55+00:00", "message": "guard against cache key", "repo": "ml-tooling", "sha": "8a0d658b7a4e33321b28dda7527bd361e680144d"}
+{"author": "gina@example.com", "committed_at": "2026-05-06T04:41:58+00:00", "message": "add logging around metric label", "repo": "ml-tooling", "sha": "f40aa95f3429f88e9c0957e3f8f528d2e5fa18b4"}
+{"author": "frank@example.com", "committed_at": "2026-05-04T20:21:41+00:00", "message": "extract helper for auth check", "repo": "billing-svc", "sha": "efa98a8e92780346d0ad5ea268c7034899f7dbd3"}
+{"author": "alice@example.com", "committed_at": "2026-05-06T13:04:53+00:00", "message": "add logging around auth check", "repo": "billing-svc", "sha": "c4471e0da80a73c144e97716e5f2d599ebd62342"}
+{"author": "bob@example.com", "committed_at": "2026-05-06T22:38:40+00:00", "message": "rename schema bump", "repo": "billing-svc", "sha": "5f1cd2a9bacc7bda92055a425cd1a8c9559e1a41"}
+{"author": "frank@example.com", "committed_at": "2026-05-08T05:03:32+00:00", "message": "add logging around test helper", "repo": "billing-svc", "sha": "5e256506dcd94efc4da5f4ec0740fe78e20d5778"}
+{"author": "gina@example.com", "committed_at": "2026-05-05T06:17:30+00:00", "message": "add logging around auth check", "repo": "ml-tooling", "sha": "d564ef118a6abf614e745be095814aaa9d7ee193"}
+{"author": "alice@example.com", "committed_at": "2026-05-09T00:10:21+00:00", "message": "document cache key", "repo": "ml-tooling", "sha": "2bd9ce7cac0988df7655259abee00d578a85d81f"}
+{"author": "frank@example.com", "committed_at": "2026-05-04T20:38:40+00:00", "message": "extract helper for retry budget", "repo": "ml-tooling", "sha": "a6124177037f2c477bd1a2103b66e86ace04ef5e"}
+{"author": "hugo@example.com", "committed_at": "2026-05-08T13:00:40+00:00", "message": "drop unused fixture loader", "repo": "billing-svc", "sha": "be9bfaabb0aa7c42e39b927b5a4b41e52ca32529"}
+{"author": "alice@example.com", "committed_at": "2026-05-10T21:29:43+00:00", "message": "wire up fixture loader", "repo": "billing-svc", "sha": "a41614fc8e604916b752599056d79082521b5bfa"}
+{"author": "bob@example.com", "committed_at": "2026-05-10T02:21:50+00:00", "message": "rename edge case", "repo": "billing-svc", "sha": "f82474a9d02236978bf266d5edd25f7943340526"}
+{"author": "alice@example.com", "committed_at": "2026-05-07T12:37:56+00:00", "message": "guard against edge case", "repo": "billing-svc", "sha": "2991512cd9b563314266ac63e47dcf192f20623f"}
+{"author": "gina@example.com", "committed_at": "2026-05-10T22:59:41+00:00", "message": "rename edge case", "repo": "web", "sha": "7650788bd0f28fcb1feb4be472c63c06f221ae06"}
+{"author": "hugo@example.com", "committed_at": "2026-05-06T22:53:49+00:00", "message": "guard against cache key", "repo": "mobile", "sha": "ce00b8ccc7476e10f3a00f281d6756960caf9965"}
+{"author": "gina@example.com", "committed_at": "2026-05-07T07:39:14+00:00", "message": "add logging around fixture loader", "repo": "mobile", "sha": "0f54a4ba8ba363d06957df6f6c6470187d8eb9dd"}
+{"author": "erin@example.com", "committed_at": "2026-05-05T05:42:11+00:00", "message": "extract helper for edge case", "repo": "mobile", "sha": "3c7f241c73eab5efc138b9033882be5396c22dc3"}
+{"author": "carol@example.com", "committed_at": "2026-05-09T00:29:16+00:00", "message": "split feature flag", "repo": "mobile", "sha": "6c225c0aaa8cb85c7c87fe280698a8abdd007022"}
+{"author": "frank@example.com", "committed_at": "2026-05-10T22:08:40+00:00", "message": "stabilize retry budget", "repo": "infra", "sha": "7cf843e6c7b1ae06802db1326d8078886fe10d5f"}
+{"author": "hugo@example.com", "committed_at": "2026-05-07T09:07:06+00:00", "message": "tighten schema bump", "repo": "infra", "sha": "395b89cda942fbd4fa5003d2e689e9a57a3d675d"}
+{"author": "hugo@example.com", "committed_at": "2026-05-09T12:55:12+00:00", "message": "tighten race condition", "repo": "web", "sha": "12e0e349aec2718992957ab466f5fbcf3614dac8"}
+{"author": "bob@example.com", "committed_at": "2026-05-10T19:12:15+00:00", "message": "split retry budget", "repo": "platform", "sha": "42e1820f33d329c88c2371eb959f6a57ff9fe01f"}
+{"author": "gina@example.com", "committed_at": "2026-05-10T09:42:44+00:00", "message": "extract helper for cache key", "repo": "platform", "sha": "75a352055cf1dcd04db66be2d9c43006f00e17f1"}
+{"author": "dave@example.com", "committed_at": "2026-05-04T11:45:18+00:00", "message": "drop unused retry budget", "repo": "platform", "sha": "751f17884df9ed5db1f98acae4dfcb8253e8ffb0"}
+{"author": "alice@example.com", "committed_at": "2026-05-09T20:26:50+00:00", "message": "wire up retry budget", "repo": "billing-svc", "sha": "415d5c7164c8b5be7701e81c7a2da448ecfb34a6"}
+{"author": "dave@example.com", "committed_at": "2026-05-07T05:47:52+00:00", "message": "rename test helper", "repo": "billing-svc", "sha": "6cd664fd76844bc57e47f55a63177f10946816e0"}
+{"author": "dave@example.com", "committed_at": "2026-05-09T11:09:36+00:00", "message": "stabilize metric label", "repo": "ml-tooling", "sha": "368bc24bf08e7e3b3fdc0c9bb9943bf7e5d90a64"}
+{"author": "gina@example.com", "committed_at": "2026-05-10T21:30:44+00:00", "message": "rename type signature", "repo": "ml-tooling", "sha": "b684617ee662b0753bdbb204a0cddc1ce79fdf29"}
+{"author": "carol@example.com", "committed_at": "2026-05-04T15:36:17+00:00", "message": "tighten edge case", "repo": "infra", "sha": "207a594fc543abc7e96d78a906ba9dbdb62f1f61"}
+{"author": "erin@example.com", "committed_at": "2026-05-08T09:45:03+00:00", "message": "tighten feature flag", "repo": "infra", "sha": "4e6cc75bce65569e862dc033109dc0e64d99e6fb"}
+{"author": "erin@example.com", "committed_at": "2026-05-09T09:37:59+00:00", "message": "rename fixture loader", "repo": "infra", "sha": "d106f3d9b309bf78dd98f67e1a40acdb26e9ee27"}
+{"author": "gina@example.com", "committed_at": "2026-05-07T12:41:00+00:00", "message": "extract helper for edge case", "repo": "mobile", "sha": "1ca61c5a1471c8c58797b8ca5353bc17e2016a9d"}
+{"author": "frank@example.com", "committed_at": "2026-05-10T06:11:11+00:00", "message": "guard against edge case", "repo": "mobile", "sha": "916fc8e8ed32d2553a17cabd21193a766b4dc037"}
+{"author": "dave@example.com", "committed_at": "2026-05-05T18:59:33+00:00", "message": "split auth check", "repo": "mobile", "sha": "05af6030259be32b1c2936cb1ba337de2df2f009"}
+{"author": "gina@example.com", "committed_at": "2026-05-04T17:20:38+00:00", "message": "stabilize retry budget", "repo": "platform", "sha": "0f3d24764268b5418116f2ffbbc4e80cc325d417"}
+{"author": "carol@example.com", "committed_at": "2026-05-08T04:07:59+00:00", "message": "tighten race condition", "repo": "platform", "sha": "2daf2533d1223477615abf41d4739ad30c3c19b0"}
+{"author": "alice@example.com", "committed_at": "2026-05-10T22:27:39+00:00", "message": "add logging around fixture loader", "repo": "platform", "sha": "416d03c83088d12f38178da88b0c0a1d4e8acd7b"}
+{"author": "gina@example.com", "committed_at": "2026-05-08T17:39:45+00:00", "message": "split auth check", "repo": "ml-tooling", "sha": "829409beed5a69ecc2b613c9f4c3f9ca04c4ec23"}
+{"author": "erin@example.com", "committed_at": "2026-05-10T08:11:00+00:00", "message": "stabilize metric label", "repo": "ml-tooling", "sha": "cd06948cdf13cbc5ff9152bf4624a4856a4ac10a"}
+{"author": "dave@example.com", "committed_at": "2026-05-07T05:15:23+00:00", "message": "add logging around feature flag", "repo": "platform", "sha": "e53b1a40b7a62638bd0a794744302488738280f7"}
+{"author": "carol@example.com", "committed_at": "2026-05-07T14:02:58+00:00", "message": "split schema bump", "repo": "ml-tooling", "sha": "91433d4726f2301c495dbed6abfe9b4d6946f4a9"}
+{"author": "frank@example.com", "committed_at": "2026-05-08T17:36:11+00:00", "message": "stabilize test helper", "repo": "ml-tooling", "sha": "a6a32e50a178ab75f508ecfdcc14f9ae241fa626"}
+{"author": "hugo@example.com", "committed_at": "2026-05-09T05:52:07+00:00", "message": "wire up race condition", "repo": "platform", "sha": "b4c431f92887030c289b4c9be98662f33b7778e5"}
+{"author": "erin@example.com", "committed_at": "2026-05-04T04:00:49+00:00", "message": "add logging around test helper", "repo": "infra", "sha": "169799fbbd22fc143b4f86ed74f916635557a81e"}
+{"author": "alice@example.com", "committed_at": "2026-05-06T09:32:38+00:00", "message": "drop unused retry budget", "repo": "billing-svc", "sha": "96ce9eff80e07ccdbc00ec45435436d5f8e4d866"}
+{"author": "frank@example.com", "committed_at": "2026-05-08T23:38:43+00:00", "message": "stabilize retry budget", "repo": "billing-svc", "sha": "51ccc18b7356886a8239db348530c7e2f097c832"}
+{"author": "carol@example.com", "committed_at": "2026-05-09T23:07:38+00:00", "message": "rename test helper", "repo": "billing-svc", "sha": "bb8527f636d6caf5fcedfffb6bd2692f82b7095d"}
+{"author": "hugo@example.com", "committed_at": "2026-05-08T15:05:48+00:00", "message": "stabilize cache key", "repo": "billing-svc", "sha": "0fc3b0132273a909956d8f528020c3c8e092af70"}
+{"author": "hugo@example.com", "committed_at": "2026-05-09T15:53:27+00:00", "message": "rename schema bump", "repo": "billing-svc", "sha": "ce7ce51c3156e5d9751bce58bf3bbe65fe033a93"}
+{"author": "frank@example.com", "committed_at": "2026-05-04T22:48:30+00:00", "message": "guard against schema bump", "repo": "billing-svc", "sha": "d0dadd21af6bcf966d88f15c64fcfdbc8aecc88e"}
+{"author": "erin@example.com", "committed_at": "2026-05-08T14:37:02+00:00", "message": "document edge case", "repo": "billing-svc", "sha": "78e8a1480b7ef508ca78a07eb81f0b766bc6537d"}
+{"author": "hugo@example.com", "committed_at": "2026-05-10T22:08:02+00:00", "message": "drop unused race condition", "repo": "platform", "sha": "0f7e6182b0c6580a314db7ed669ce8d8cd1764f6"}
+{"author": "gina@example.com", "committed_at": "2026-05-06T05:25:33+00:00", "message": "wire up type signature", "repo": "platform", "sha": "a41921205fd1f3a3c98eff6670d2886aeb8f6a0b"}
+{"author": "gina@example.com", "committed_at": "2026-05-04T08:43:37+00:00", "message": "drop unused edge case", "repo": "platform", "sha": "e0cfadf1f23557c36346fe8b9367fde0a0f21cb3"}
+{"author": "alice@example.com", "committed_at": "2026-05-06T14:48:05+00:00", "message": "rename type signature", "repo": "mobile", "sha": "1e69e86078be6da90984f51063e7c872dfa8881a"}
+{"author": "frank@example.com", "committed_at": "2026-05-05T18:31:00+00:00", "message": "rename race condition", "repo": "mobile", "sha": "1ebd0a4d13b5614cc67057bcb8070e3b815e6503"}
+{"author": "erin@example.com", "committed_at": "2026-05-09T07:09:58+00:00", "message": "split cache key", "repo": "mobile", "sha": "a00946241c4193171b99e6befe648aa73b25f464"}
+{"author": "frank@example.com", "committed_at": "2026-05-08T09:10:53+00:00", "message": "guard against cache key", "repo": "mobile", "sha": "b3a5bbed2aa1713da98ec3a0993a0489d917a0ed"}
+{"author": "bob@example.com", "committed_at": "2026-05-05T14:36:51+00:00", "message": "extract helper for metric label", "repo": "billing-svc", "sha": "ba2144eea9eeff8b5b9346e497ff10f19ab99de8"}
+{"author": "frank@example.com", "committed_at": "2026-05-07T12:24:26+00:00", "message": "document test helper", "repo": "mobile", "sha": "6adf34ab7a05ede80c9344f4fcb629b3683f11a9"}
+{"author": "gina@example.com", "committed_at": "2026-05-10T23:42:01+00:00", "message": "wire up auth check", "repo": "platform", "sha": "bbabd53d66bfdd1b0920d1962f2bafa52e77cc17"}
+{"author": "dave@example.com", "committed_at": "2026-05-04T02:18:05+00:00", "message": "drop unused type signature", "repo": "infra", "sha": "b021bb6223b6515c911676d7f1507e52699e3ded"}
+{"author": "frank@example.com", "committed_at": "2026-05-07T23:15:22+00:00", "message": "rename race condition", "repo": "ml-tooling", "sha": "792595cd9f84d9808e65fdd7ea2fe9859ce298c6"}
+{"author": "erin@example.com", "committed_at": "2026-05-10T00:24:15+00:00", "message": "document retry budget", "repo": "infra", "sha": "adc946804c0c8ccd23544748cf4517e67f81c26d"}
+{"author": "alice@example.com", "committed_at": "2026-05-05T01:34:04+00:00", "message": "drop unused type signature", "repo": "platform", "sha": "718aacaecbec01ba24cfd8886d75e1bd38db6885"}
+{"author": "gina@example.com", "committed_at": "2026-05-04T22:33:01+00:00", "message": "wire up auth check", "repo": "platform", "sha": "de8e3b417a22b0adb377aa128655fdd65f184663"}
+{"author": "bob@example.com", "committed_at": "2026-05-09T12:45:14+00:00", "message": "extract helper for auth check", "repo": "web", "sha": "f11b4428be9db0a4f05bd3396a6190ffb371d204"}
+{"author": "carol@example.com", "committed_at": "2026-05-05T16:26:30+00:00", "message": "extract helper for feature flag", "repo": "mobile", "sha": "9a6e39e7419724e9725dddbc1576c2dba0d48eaa"}
+{"author": "hugo@example.com", "committed_at": "2026-05-07T14:26:57+00:00", "message": "wire up feature flag", "repo": "mobile", "sha": "17cf14ea300bdf1d0ae22522ce657b6770b89a2d"}
