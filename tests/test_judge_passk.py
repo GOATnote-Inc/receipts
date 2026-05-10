@@ -52,9 +52,7 @@ def test_all_fail_returns_zero() -> None:
         for trial in range(5):
             # Trial 0 always fails; remaining trials pass. Every task has a
             # failing trial, so pass^5 must be 0.0.
-            results.append(
-                TrialResult(task_id=f"task-{t}", trial=trial, passed=(trial != 0))
-            )
+            results.append(TrialResult(task_id=f"task-{t}", trial=trial, passed=(trial != 0)))
     assert compute_passk(results, k=5) == pytest.approx(0.0, abs=TOL)
 
 
@@ -67,9 +65,7 @@ def test_partial() -> None:
             results.append(TrialResult(task_id=f"task-{t}", trial=trial, passed=True))
     # Failing task: 4 passes + 1 fail.
     for trial in range(5):
-        results.append(
-            TrialResult(task_id="task-bad", trial=trial, passed=(trial != 2))
-        )
+        results.append(TrialResult(task_id="task-bad", trial=trial, passed=(trial != 2)))
     assert compute_passk(results, k=5) == pytest.approx(0.8, abs=TOL)
 
 
@@ -78,17 +74,13 @@ def test_excludes_wrong_k(caplog: pytest.LogCaptureFixture) -> None:
     # The short task is excluded; pass^5 = 2 / 2 = 1.0.
     results = _all_pass_results(2, 5)
     for trial in range(3):
-        results.append(
-            TrialResult(task_id="task-short", trial=trial, passed=True)
-        )
+        results.append(TrialResult(task_id="task-short", trial=trial, passed=True))
     with caplog.at_level(logging.WARNING, logger="receipts.judge.passk"):
         value = compute_passk(results, k=5)
     assert value == pytest.approx(1.0, abs=TOL)
     # Warning message identifies the excluded task and the trial-count mismatch.
     assert any("task-short" in rec.message for rec in caplog.records)
-    assert any(
-        ("3" in rec.message and "5" in rec.message) for rec in caplog.records
-    )
+    assert any(("3" in rec.message and "5" in rec.message) for rec in caplog.records)
 
 
 def test_compute_passk_detailed_breakdown() -> None:
@@ -99,13 +91,9 @@ def test_compute_passk_detailed_breakdown() -> None:
         for trial in range(5):
             results.append(TrialResult(task_id=f"task-{t}", trial=trial, passed=True))
     for trial in range(5):
-        results.append(
-            TrialResult(task_id="task-fail", trial=trial, passed=(trial != 0))
-        )
+        results.append(TrialResult(task_id="task-fail", trial=trial, passed=(trial != 0)))
     for trial in range(2):
-        results.append(
-            TrialResult(task_id="task-short", trial=trial, passed=True)
-        )
+        results.append(TrialResult(task_id="task-short", trial=trial, passed=True))
     detailed = compute_passk_detailed(results, k=5)
     assert isinstance(detailed, PasskResult)
     assert detailed.passk == pytest.approx(2.0 / 3.0, abs=TOL)
