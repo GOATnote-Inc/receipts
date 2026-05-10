@@ -9,10 +9,19 @@ from receipts.judge.passk import (
     compute_passk,
     compute_passk_detailed,
 )
+from receipts.judge.replay import (
+    JudgeCall,
+    JudgeRecording,
+    ReplayStore,
+    stable_hash,
+)
 
 __all__ = [
     "Issue",
+    "JudgeCall",
+    "JudgeRecording",
     "PasskResult",
+    "ReplayStore",
     "RuleRegistry",
     "StructuralResult",
     "TrialResult",
@@ -21,5 +30,6 @@ __all__ = [
     "compute_passk_detailed",
     "run_rules",
     "score_structure",
+    "stable_hash",
     "wilson_ci",
 ]
