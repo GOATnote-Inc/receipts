@@ -10,8 +10,11 @@ The drafter's LLM call is stubbed in S1; J4 will swap in the real model.
 
 from __future__ import annotations
 
+from receipts.drafter.encounter_contract import draft_encounter_contract
 from receipts.drafter.models import (
     Citation,
+    EncounterContract,
+    EncounterStub,
     Epic,
     Execution,
     MeetingRef,
@@ -20,10 +23,16 @@ from receipts.drafter.models import (
     ThreadRef,
 )
 from receipts.drafter.spec_drafter import draft_revised_spec
-from receipts.drafter.validator import ValidationError, validate_revised_spec
+from receipts.drafter.validator import (
+    ValidationError,
+    validate_encounter_contract,
+    validate_revised_spec,
+)
 
 __all__ = [
     "Citation",
+    "EncounterContract",
+    "EncounterStub",
     "Epic",
     "Execution",
     "MeetingRef",
@@ -31,6 +40,8 @@ __all__ = [
     "RevisedSpec",
     "ThreadRef",
     "ValidationError",
+    "draft_encounter_contract",
     "draft_revised_spec",
+    "validate_encounter_contract",
     "validate_revised_spec",
 ]
