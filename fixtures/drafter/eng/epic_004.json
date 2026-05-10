@@ -1,0 +1,49 @@
+{
+  "epic": {
+    "acceptance_criteria": [
+      "Linear connector reads issues and round-trips fields via fixtures."
+    ],
+    "external_id": "EPIC-004",
+    "id": 4,
+    "title": "Linear connector shim"
+  },
+  "execution": {
+    "meetings": [
+      {
+        "decisions": [
+          "Decision: replay fixture issues end-to-end."
+        ],
+        "external_id": "MTG-44"
+      }
+    ],
+    "prs": [
+      {
+        "diff_summary": "Linear connector fixture replay harness.",
+        "external_id": "PR-401",
+        "number": 401,
+        "repo": "receipts"
+      }
+    ],
+    "threads": []
+  },
+  "expected_revised_spec": {
+    "acceptance_criteria": [
+      "Linear connector replays a fixture issue and round-trips fields."
+    ],
+    "citations": {
+      "Linear connector replays a fixture issue and round-trips fields.": [
+        {
+          "artifact_kind": "pr",
+          "external_id": "PR-401",
+          "locator": null
+        },
+        {
+          "artifact_kind": "meeting",
+          "external_id": "MTG-44",
+          "locator": "2"
+        }
+      ]
+    },
+    "drift_summary": "Criterion rephrased from 'reads issues' to explicit fixture-replay + round-trip per MTG-44 decision #2."
+  }
+}

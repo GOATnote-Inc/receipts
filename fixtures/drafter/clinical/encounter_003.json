@@ -1,0 +1,51 @@
+{
+  "expected_contract": {
+    "acceptance_criteria": [
+      "Source-of-fever workup documented with age-appropriate differential.",
+      "Disposition decision linked to revised Yale Observation Score."
+    ],
+    "citations": {
+      "Caregiver return precautions documented and read-back confirmed.": [
+        {
+          "artifact_kind": "transcript",
+          "external_id": "TRX-003",
+          "locator": "00:18:02"
+        }
+      ],
+      "Disposition decision linked to revised Yale Observation Score.": [
+        {
+          "artifact_kind": "note",
+          "external_id": "NOTE-003",
+          "locator": "mdm"
+        }
+      ],
+      "Source-of-fever workup documented with age-appropriate differential.": [
+        {
+          "artifact_kind": "note",
+          "external_id": "NOTE-003",
+          "locator": "ros"
+        },
+        {
+          "artifact_kind": "order",
+          "external_id": "ORD-003-CBC",
+          "locator": null
+        }
+      ]
+    },
+    "drift_summary": "Workup expanded mid-encounter after exam revealed tachypnea; added CXR + UA beyond initial CBC-only plan documented in HPI.",
+    "external_id": "ENC-003",
+    "safety_criteria": [
+      "Caregiver return precautions documented and read-back confirmed."
+    ]
+  },
+  "stub": {
+    "audio_ref": "s3://receipts-audio/enc-003.wav",
+    "chief_complaint": "Pediatric fever, 24-hour history.",
+    "external_id": "ENC-003",
+    "presenting_features": [
+      "Tachycardia for age.",
+      "Mildly tachypneic on exam.",
+      "No focal source on initial exam."
+    ]
+  }
+}

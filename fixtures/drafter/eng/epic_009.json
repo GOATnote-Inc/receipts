@@ -1,0 +1,74 @@
+{
+  "epic": {
+    "acceptance_criteria": [
+      "EPIC-009: feature shipped with telemetry and a kill-switch."
+    ],
+    "external_id": "EPIC-009",
+    "id": 9,
+    "title": "Templated epic EPIC-009"
+  },
+  "execution": {
+    "meetings": [
+      {
+        "decisions": [
+          "EPIC-009: ship behind feature flag with kill-switch documented."
+        ],
+        "external_id": "MTG-009"
+      }
+    ],
+    "prs": [
+      {
+        "diff_summary": "Ship EPIC-009 feature flag + kill-switch.",
+        "external_id": "PR-00901",
+        "number": 901,
+        "repo": "receipts"
+      },
+      {
+        "diff_summary": "Wire EPIC-009 telemetry (success + error rates).",
+        "external_id": "PR-00902",
+        "number": 902,
+        "repo": "receipts"
+      }
+    ],
+    "threads": [
+      {
+        "channel": "#receipts-eng",
+        "external_id": "THR-009",
+        "summary": "EPIC-009: confirmed telemetry shape covers errors."
+      }
+    ]
+  },
+  "expected_revised_spec": {
+    "acceptance_criteria": [
+      "Onboarding welcome flow ships with feature-flag kill-switch documented.",
+      "Onboarding welcome flow emits success + error telemetry per call."
+    ],
+    "citations": {
+      "Onboarding welcome flow emits success + error telemetry per call.": [
+        {
+          "artifact_kind": "pr",
+          "external_id": "PR-00902",
+          "locator": null
+        },
+        {
+          "artifact_kind": "thread",
+          "external_id": "THR-009",
+          "locator": null
+        }
+      ],
+      "Onboarding welcome flow ships with feature-flag kill-switch documented.": [
+        {
+          "artifact_kind": "pr",
+          "external_id": "PR-00901",
+          "locator": null
+        },
+        {
+          "artifact_kind": "meeting",
+          "external_id": "MTG-009",
+          "locator": "0"
+        }
+      ]
+    },
+    "drift_summary": "EPIC-009: shipped as scoped \u2014 no drift."
+  }
+}

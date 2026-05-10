@@ -1,0 +1,74 @@
+{
+  "epic": {
+    "acceptance_criteria": [
+      "EPIC-029: feature shipped with telemetry and a kill-switch."
+    ],
+    "external_id": "EPIC-029",
+    "id": 29,
+    "title": "Templated epic EPIC-029"
+  },
+  "execution": {
+    "meetings": [
+      {
+        "decisions": [
+          "EPIC-029: ship behind feature flag with kill-switch documented."
+        ],
+        "external_id": "MTG-029"
+      }
+    ],
+    "prs": [
+      {
+        "diff_summary": "Ship EPIC-029 feature flag + kill-switch.",
+        "external_id": "PR-02901",
+        "number": 2901,
+        "repo": "receipts"
+      },
+      {
+        "diff_summary": "Wire EPIC-029 telemetry (success + error rates).",
+        "external_id": "PR-02902",
+        "number": 2902,
+        "repo": "receipts"
+      }
+    ],
+    "threads": [
+      {
+        "channel": "#receipts-eng",
+        "external_id": "THR-029",
+        "summary": "EPIC-029: confirmed telemetry shape covers errors."
+      }
+    ]
+  },
+  "expected_revised_spec": {
+    "acceptance_criteria": [
+      "Compliance SOC2 audit hook ships with feature-flag kill-switch documented.",
+      "Compliance SOC2 audit hook emits success + error telemetry per call."
+    ],
+    "citations": {
+      "Compliance SOC2 audit hook emits success + error telemetry per call.": [
+        {
+          "artifact_kind": "pr",
+          "external_id": "PR-02902",
+          "locator": null
+        },
+        {
+          "artifact_kind": "thread",
+          "external_id": "THR-029",
+          "locator": null
+        }
+      ],
+      "Compliance SOC2 audit hook ships with feature-flag kill-switch documented.": [
+        {
+          "artifact_kind": "pr",
+          "external_id": "PR-02901",
+          "locator": null
+        },
+        {
+          "artifact_kind": "meeting",
+          "external_id": "MTG-029",
+          "locator": "0"
+        }
+      ]
+    },
+    "drift_summary": "EPIC-029: shipped as scoped \u2014 no drift."
+  }
+}

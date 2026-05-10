@@ -1,0 +1,74 @@
+{
+  "epic": {
+    "acceptance_criteria": [
+      "EPIC-023: feature shipped with telemetry and a kill-switch."
+    ],
+    "external_id": "EPIC-023",
+    "id": 23,
+    "title": "Templated epic EPIC-023"
+  },
+  "execution": {
+    "meetings": [
+      {
+        "decisions": [
+          "EPIC-023: ship behind feature flag with kill-switch documented."
+        ],
+        "external_id": "MTG-023"
+      }
+    ],
+    "prs": [
+      {
+        "diff_summary": "Ship EPIC-023 feature flag + kill-switch.",
+        "external_id": "PR-02301",
+        "number": 2301,
+        "repo": "receipts"
+      },
+      {
+        "diff_summary": "Wire EPIC-023 telemetry (success + error rates).",
+        "external_id": "PR-02302",
+        "number": 2302,
+        "repo": "receipts"
+      }
+    ],
+    "threads": [
+      {
+        "channel": "#receipts-eng",
+        "external_id": "THR-023",
+        "summary": "EPIC-023: confirmed telemetry shape covers errors."
+      }
+    ]
+  },
+  "expected_revised_spec": {
+    "acceptance_criteria": [
+      "Tasks bulk reassign ships with feature-flag kill-switch documented.",
+      "Tasks bulk reassign emits success + error telemetry per call."
+    ],
+    "citations": {
+      "Tasks bulk reassign emits success + error telemetry per call.": [
+        {
+          "artifact_kind": "pr",
+          "external_id": "PR-02302",
+          "locator": null
+        },
+        {
+          "artifact_kind": "thread",
+          "external_id": "THR-023",
+          "locator": null
+        }
+      ],
+      "Tasks bulk reassign ships with feature-flag kill-switch documented.": [
+        {
+          "artifact_kind": "pr",
+          "external_id": "PR-02301",
+          "locator": null
+        },
+        {
+          "artifact_kind": "meeting",
+          "external_id": "MTG-023",
+          "locator": "0"
+        }
+      ]
+    },
+    "drift_summary": "EPIC-023: shipped as scoped \u2014 no drift."
+  }
+}

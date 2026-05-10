@@ -1,0 +1,74 @@
+{
+  "epic": {
+    "acceptance_criteria": [
+      "EPIC-011: feature shipped with telemetry and a kill-switch."
+    ],
+    "external_id": "EPIC-011",
+    "id": 11,
+    "title": "Templated epic EPIC-011"
+  },
+  "execution": {
+    "meetings": [
+      {
+        "decisions": [
+          "EPIC-011: ship behind feature flag with kill-switch documented."
+        ],
+        "external_id": "MTG-011"
+      }
+    ],
+    "prs": [
+      {
+        "diff_summary": "Ship EPIC-011 feature flag + kill-switch.",
+        "external_id": "PR-01101",
+        "number": 1101,
+        "repo": "receipts"
+      },
+      {
+        "diff_summary": "Wire EPIC-011 telemetry (success + error rates).",
+        "external_id": "PR-01102",
+        "number": 1102,
+        "repo": "receipts"
+      }
+    ],
+    "threads": [
+      {
+        "channel": "#receipts-eng",
+        "external_id": "THR-011",
+        "summary": "EPIC-011: confirmed telemetry shape covers errors."
+      }
+    ]
+  },
+  "expected_revised_spec": {
+    "acceptance_criteria": [
+      "Webhooks delivery retry ships with feature-flag kill-switch documented.",
+      "Webhooks delivery retry emits success + error telemetry per call."
+    ],
+    "citations": {
+      "Webhooks delivery retry emits success + error telemetry per call.": [
+        {
+          "artifact_kind": "pr",
+          "external_id": "PR-01102",
+          "locator": null
+        },
+        {
+          "artifact_kind": "thread",
+          "external_id": "THR-011",
+          "locator": null
+        }
+      ],
+      "Webhooks delivery retry ships with feature-flag kill-switch documented.": [
+        {
+          "artifact_kind": "pr",
+          "external_id": "PR-01101",
+          "locator": null
+        },
+        {
+          "artifact_kind": "meeting",
+          "external_id": "MTG-011",
+          "locator": "0"
+        }
+      ]
+    },
+    "drift_summary": "EPIC-011: shipped as scoped \u2014 no drift."
+  }
+}

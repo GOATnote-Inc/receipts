@@ -1,0 +1,47 @@
+{
+  "expected_contract": {
+    "acceptance_criteria": [
+      "Toothache: antibiotic stewardship choice documented with risk stratification."
+    ],
+    "citations": {
+      "Return precautions and red-flag escalation criteria documented for toothache.": [
+        {
+          "artifact_kind": "transcript",
+          "external_id": "TRX-026",
+          "locator": "00:15:00"
+        },
+        {
+          "artifact_kind": "note",
+          "external_id": "NOTE-026",
+          "locator": "dispo"
+        }
+      ],
+      "Toothache: antibiotic stewardship choice documented with risk stratification.": [
+        {
+          "artifact_kind": "note",
+          "external_id": "NOTE-026",
+          "locator": "mdm"
+        },
+        {
+          "artifact_kind": "order",
+          "external_id": "ORD-026-ABX",
+          "locator": null
+        }
+      ]
+    },
+    "drift_summary": "ENC-026: workup criterion rephrased from generic 'evaluated' to explicit 'documented with risk stratification' after TRX-026.",
+    "external_id": "ENC-026",
+    "safety_criteria": [
+      "Return precautions and red-flag escalation criteria documented for toothache."
+    ]
+  },
+  "stub": {
+    "audio_ref": "s3://receipts-audio/enc-026.wav",
+    "chief_complaint": "ENC-026: templated presenting complaint.",
+    "external_id": "ENC-026",
+    "presenting_features": [
+      "Vital signs documented on arrival.",
+      "Pertinent positives noted on exam."
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "expected_contract": {
+    "acceptance_criteria": [
+      "Ankle injury: Ottawa rule application documented with risk stratification."
+    ],
+    "citations": {
+      "Ankle injury: Ottawa rule application documented with risk stratification.": [
+        {
+          "artifact_kind": "note",
+          "external_id": "NOTE-007",
+          "locator": "mdm"
+        },
+        {
+          "artifact_kind": "order",
+          "external_id": "ORD-007-XR",
+          "locator": null
+        }
+      ],
+      "Return precautions and red-flag escalation criteria documented for ankle injury.": [
+        {
+          "artifact_kind": "transcript",
+          "external_id": "TRX-007",
+          "locator": "00:15:00"
+        },
+        {
+          "artifact_kind": "note",
+          "external_id": "NOTE-007",
+          "locator": "dispo"
+        }
+      ]
+    },
+    "drift_summary": "ENC-007: shipped as scoped \u2014 no drift.",
+    "external_id": "ENC-007",
+    "safety_criteria": [
+      "Return precautions and red-flag escalation criteria documented for ankle injury."
+    ]
+  },
+  "stub": {
+    "audio_ref": "s3://receipts-audio/enc-007.wav",
+    "chief_complaint": "ENC-007: templated presenting complaint.",
+    "external_id": "ENC-007",
+    "presenting_features": [
+      "Vital signs documented on arrival.",
+      "Pertinent positives noted on exam."
+    ]
+  }
+}

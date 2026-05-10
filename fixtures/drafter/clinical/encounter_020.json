@@ -1,0 +1,47 @@
+{
+  "expected_contract": {
+    "acceptance_criteria": [
+      "Ams: delirium vs psychiatric primary documented with risk stratification."
+    ],
+    "citations": {
+      "Ams: delirium vs psychiatric primary documented with risk stratification.": [
+        {
+          "artifact_kind": "note",
+          "external_id": "NOTE-020",
+          "locator": "mdm"
+        },
+        {
+          "artifact_kind": "order",
+          "external_id": "ORD-020-TOX",
+          "locator": null
+        }
+      ],
+      "Return precautions and red-flag escalation criteria documented for AMS.": [
+        {
+          "artifact_kind": "transcript",
+          "external_id": "TRX-020",
+          "locator": "00:15:00"
+        },
+        {
+          "artifact_kind": "note",
+          "external_id": "NOTE-020",
+          "locator": "dispo"
+        }
+      ]
+    },
+    "drift_summary": "ENC-020: workup criterion rephrased from generic 'evaluated' to explicit 'documented with risk stratification' after TRX-020.",
+    "external_id": "ENC-020",
+    "safety_criteria": [
+      "Return precautions and red-flag escalation criteria documented for AMS."
+    ]
+  },
+  "stub": {
+    "audio_ref": "s3://receipts-audio/enc-020.wav",
+    "chief_complaint": "ENC-020: templated presenting complaint.",
+    "external_id": "ENC-020",
+    "presenting_features": [
+      "Vital signs documented on arrival.",
+      "Pertinent positives noted on exam."
+    ]
+  }
+}

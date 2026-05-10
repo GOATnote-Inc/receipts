@@ -1,0 +1,47 @@
+{
+  "expected_contract": {
+    "acceptance_criteria": [
+      "Trauma: tertiary survey documentation documented with risk stratification."
+    ],
+    "citations": {
+      "Return precautions and red-flag escalation criteria documented for trauma.": [
+        {
+          "artifact_kind": "transcript",
+          "external_id": "TRX-015",
+          "locator": "00:15:00"
+        },
+        {
+          "artifact_kind": "note",
+          "external_id": "NOTE-015",
+          "locator": "dispo"
+        }
+      ],
+      "Trauma: tertiary survey documentation documented with risk stratification.": [
+        {
+          "artifact_kind": "note",
+          "external_id": "NOTE-015",
+          "locator": "mdm"
+        },
+        {
+          "artifact_kind": "order",
+          "external_id": "ORD-015-FAST",
+          "locator": null
+        }
+      ]
+    },
+    "drift_summary": "ENC-015: shipped as scoped \u2014 no drift.",
+    "external_id": "ENC-015",
+    "safety_criteria": [
+      "Return precautions and red-flag escalation criteria documented for trauma."
+    ]
+  },
+  "stub": {
+    "audio_ref": "s3://receipts-audio/enc-015.wav",
+    "chief_complaint": "ENC-015: templated presenting complaint.",
+    "external_id": "ENC-015",
+    "presenting_features": [
+      "Vital signs documented on arrival.",
+      "Pertinent positives noted on exam."
+    ]
+  }
+}

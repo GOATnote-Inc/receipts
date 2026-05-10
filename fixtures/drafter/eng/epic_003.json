@@ -1,0 +1,62 @@
+{
+  "epic": {
+    "acceptance_criteria": [
+      "L0 scorer flags missing-citation patterns and emits a failure-class label."
+    ],
+    "external_id": "EPIC-003",
+    "id": 3,
+    "title": "Judge L0 deterministic scorer"
+  },
+  "execution": {
+    "meetings": [],
+    "prs": [
+      {
+        "diff_summary": "Add L0 latency budget + label emission.",
+        "external_id": "PR-301",
+        "number": 301,
+        "repo": "receipts"
+      },
+      {
+        "diff_summary": "Stamp structured failure-class label per finding.",
+        "external_id": "PR-302",
+        "number": 302,
+        "repo": "receipts"
+      }
+    ],
+    "threads": [
+      {
+        "channel": "#receipts-judge",
+        "external_id": "THR-12",
+        "summary": "Ambiguity in 'flags' wording resolved."
+      }
+    ]
+  },
+  "expected_revised_spec": {
+    "acceptance_criteria": [
+      "L0 scorer flags missing-citation patterns in <50ms per criterion.",
+      "L0 scorer emits a structured failure-class label per finding."
+    ],
+    "citations": {
+      "L0 scorer emits a structured failure-class label per finding.": [
+        {
+          "artifact_kind": "pr",
+          "external_id": "PR-302",
+          "locator": null
+        },
+        {
+          "artifact_kind": "thread",
+          "external_id": "THR-12",
+          "locator": null
+        }
+      ],
+      "L0 scorer flags missing-citation patterns in <50ms per criterion.": [
+        {
+          "artifact_kind": "pr",
+          "external_id": "PR-301",
+          "locator": null
+        }
+      ]
+    },
+    "drift_summary": "Original single criterion split into latency + label criteria after THR-12 surfaced ambiguity in 'flags' wording."
+  }
+}

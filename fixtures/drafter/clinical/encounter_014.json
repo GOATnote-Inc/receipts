@@ -1,0 +1,47 @@
+{
+  "expected_contract": {
+    "acceptance_criteria": [
+      "Seizure: first-time event workup documented with risk stratification."
+    ],
+    "citations": {
+      "Return precautions and red-flag escalation criteria documented for seizure.": [
+        {
+          "artifact_kind": "transcript",
+          "external_id": "TRX-014",
+          "locator": "00:15:00"
+        },
+        {
+          "artifact_kind": "note",
+          "external_id": "NOTE-014",
+          "locator": "dispo"
+        }
+      ],
+      "Seizure: first-time event workup documented with risk stratification.": [
+        {
+          "artifact_kind": "note",
+          "external_id": "NOTE-014",
+          "locator": "mdm"
+        },
+        {
+          "artifact_kind": "order",
+          "external_id": "ORD-014-EEG",
+          "locator": null
+        }
+      ]
+    },
+    "drift_summary": "ENC-014: workup criterion rephrased from generic 'evaluated' to explicit 'documented with risk stratification' after TRX-014.",
+    "external_id": "ENC-014",
+    "safety_criteria": [
+      "Return precautions and red-flag escalation criteria documented for seizure."
+    ]
+  },
+  "stub": {
+    "audio_ref": "s3://receipts-audio/enc-014.wav",
+    "chief_complaint": "ENC-014: templated presenting complaint.",
+    "external_id": "ENC-014",
+    "presenting_features": [
+      "Vital signs documented on arrival.",
+      "Pertinent positives noted on exam."
+    ]
+  }
+}

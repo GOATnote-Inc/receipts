@@ -1,0 +1,47 @@
+{
+  "expected_contract": {
+    "acceptance_criteria": [
+      "Syncope: cardiac vs orthostatic differential documented with risk stratification."
+    ],
+    "citations": {
+      "Return precautions and red-flag escalation criteria documented for syncope.": [
+        {
+          "artifact_kind": "transcript",
+          "external_id": "TRX-008",
+          "locator": "00:15:00"
+        },
+        {
+          "artifact_kind": "note",
+          "external_id": "NOTE-008",
+          "locator": "dispo"
+        }
+      ],
+      "Syncope: cardiac vs orthostatic differential documented with risk stratification.": [
+        {
+          "artifact_kind": "note",
+          "external_id": "NOTE-008",
+          "locator": "mdm"
+        },
+        {
+          "artifact_kind": "order",
+          "external_id": "ORD-008-EKG",
+          "locator": null
+        }
+      ]
+    },
+    "drift_summary": "ENC-008: workup criterion rephrased from generic 'evaluated' to explicit 'documented with risk stratification' after TRX-008.",
+    "external_id": "ENC-008",
+    "safety_criteria": [
+      "Return precautions and red-flag escalation criteria documented for syncope."
+    ]
+  },
+  "stub": {
+    "audio_ref": "s3://receipts-audio/enc-008.wav",
+    "chief_complaint": "ENC-008: templated presenting complaint.",
+    "external_id": "ENC-008",
+    "presenting_features": [
+      "Vital signs documented on arrival.",
+      "Pertinent positives noted on exam."
+    ]
+  }
+}

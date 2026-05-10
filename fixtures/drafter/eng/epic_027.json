@@ -1,0 +1,74 @@
+{
+  "epic": {
+    "acceptance_criteria": [
+      "EPIC-027: feature shipped with telemetry and a kill-switch."
+    ],
+    "external_id": "EPIC-027",
+    "id": 27,
+    "title": "Templated epic EPIC-027"
+  },
+  "execution": {
+    "meetings": [
+      {
+        "decisions": [
+          "EPIC-027: ship behind feature flag with kill-switch documented."
+        ],
+        "external_id": "MTG-027"
+      }
+    ],
+    "prs": [
+      {
+        "diff_summary": "Ship EPIC-027 feature flag + kill-switch.",
+        "external_id": "PR-02701",
+        "number": 2701,
+        "repo": "receipts"
+      },
+      {
+        "diff_summary": "Wire EPIC-027 telemetry (success + error rates).",
+        "external_id": "PR-02702",
+        "number": 2702,
+        "repo": "receipts"
+      }
+    ],
+    "threads": [
+      {
+        "channel": "#receipts-eng",
+        "external_id": "THR-027",
+        "summary": "EPIC-027: confirmed telemetry shape covers errors."
+      }
+    ]
+  },
+  "expected_revised_spec": {
+    "acceptance_criteria": [
+      "Telemetry p95 dashboard ships with feature-flag kill-switch documented.",
+      "Telemetry p95 dashboard emits success + error telemetry per call."
+    ],
+    "citations": {
+      "Telemetry p95 dashboard emits success + error telemetry per call.": [
+        {
+          "artifact_kind": "pr",
+          "external_id": "PR-02702",
+          "locator": null
+        },
+        {
+          "artifact_kind": "thread",
+          "external_id": "THR-027",
+          "locator": null
+        }
+      ],
+      "Telemetry p95 dashboard ships with feature-flag kill-switch documented.": [
+        {
+          "artifact_kind": "pr",
+          "external_id": "PR-02701",
+          "locator": null
+        },
+        {
+          "artifact_kind": "meeting",
+          "external_id": "MTG-027",
+          "locator": "0"
+        }
+      ]
+    },
+    "drift_summary": "EPIC-027: shipped as scoped \u2014 no drift."
+  }
+}

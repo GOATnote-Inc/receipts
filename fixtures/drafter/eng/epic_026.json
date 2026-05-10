@@ -1,0 +1,74 @@
+{
+  "epic": {
+    "acceptance_criteria": [
+      "EPIC-026: feature shipped with telemetry and a kill-switch."
+    ],
+    "external_id": "EPIC-026",
+    "id": 26,
+    "title": "Templated epic EPIC-026"
+  },
+  "execution": {
+    "meetings": [
+      {
+        "decisions": [
+          "EPIC-026: ship behind feature flag with kill-switch documented."
+        ],
+        "external_id": "MTG-026"
+      }
+    ],
+    "prs": [
+      {
+        "diff_summary": "Ship EPIC-026 feature flag + kill-switch.",
+        "external_id": "PR-02601",
+        "number": 2601,
+        "repo": "receipts"
+      },
+      {
+        "diff_summary": "Wire EPIC-026 telemetry (success + error rates).",
+        "external_id": "PR-02602",
+        "number": 2602,
+        "repo": "receipts"
+      }
+    ],
+    "threads": [
+      {
+        "channel": "#receipts-eng",
+        "external_id": "THR-026",
+        "summary": "EPIC-026: confirmed telemetry shape covers errors."
+      }
+    ]
+  },
+  "expected_revised_spec": {
+    "acceptance_criteria": [
+      "Sandbox fresh-tenant reset ships with feature-flag kill-switch documented.",
+      "Sandbox fresh-tenant reset emits success + error telemetry per call."
+    ],
+    "citations": {
+      "Sandbox fresh-tenant reset emits success + error telemetry per call.": [
+        {
+          "artifact_kind": "pr",
+          "external_id": "PR-02602",
+          "locator": null
+        },
+        {
+          "artifact_kind": "thread",
+          "external_id": "THR-026",
+          "locator": null
+        }
+      ],
+      "Sandbox fresh-tenant reset ships with feature-flag kill-switch documented.": [
+        {
+          "artifact_kind": "pr",
+          "external_id": "PR-02601",
+          "locator": null
+        },
+        {
+          "artifact_kind": "meeting",
+          "external_id": "MTG-026",
+          "locator": "0"
+        }
+      ]
+    },
+    "drift_summary": "EPIC-026: criterion (b) rephrased from generic 'instrumented' to explicit 'success + error telemetry per call' after THR-026."
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "expected_contract": {
+    "acceptance_criteria": [
+      "Post-op fever: differential breadth check documented with risk stratification."
+    ],
+    "citations": {
+      "Post-op fever: differential breadth check documented with risk stratification.": [
+        {
+          "artifact_kind": "note",
+          "external_id": "NOTE-030",
+          "locator": "mdm"
+        },
+        {
+          "artifact_kind": "order",
+          "external_id": "ORD-030-BCX",
+          "locator": null
+        }
+      ],
+      "Return precautions and red-flag escalation criteria documented for post-op fever.": [
+        {
+          "artifact_kind": "transcript",
+          "external_id": "TRX-030",
+          "locator": "00:15:00"
+        },
+        {
+          "artifact_kind": "note",
+          "external_id": "NOTE-030",
+          "locator": "dispo"
+        }
+      ]
+    },
+    "drift_summary": "ENC-030: workup criterion rephrased from generic 'evaluated' to explicit 'documented with risk stratification' after TRX-030.",
+    "external_id": "ENC-030",
+    "safety_criteria": [
+      "Return precautions and red-flag escalation criteria documented for post-op fever."
+    ]
+  },
+  "stub": {
+    "audio_ref": "s3://receipts-audio/enc-030.wav",
+    "chief_complaint": "ENC-030: templated presenting complaint.",
+    "external_id": "ENC-030",
+    "presenting_features": [
+      "Vital signs documented on arrival.",
+      "Pertinent positives noted on exam."
+    ]
+  }
+}

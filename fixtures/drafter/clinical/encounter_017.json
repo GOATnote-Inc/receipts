@@ -1,0 +1,47 @@
+{
+  "expected_contract": {
+    "acceptance_criteria": [
+      "Dental pain: facial-space infection screen documented with risk stratification."
+    ],
+    "citations": {
+      "Dental pain: facial-space infection screen documented with risk stratification.": [
+        {
+          "artifact_kind": "note",
+          "external_id": "NOTE-017",
+          "locator": "mdm"
+        },
+        {
+          "artifact_kind": "order",
+          "external_id": "ORD-017-PAN",
+          "locator": null
+        }
+      ],
+      "Return precautions and red-flag escalation criteria documented for dental pain.": [
+        {
+          "artifact_kind": "transcript",
+          "external_id": "TRX-017",
+          "locator": "00:15:00"
+        },
+        {
+          "artifact_kind": "note",
+          "external_id": "NOTE-017",
+          "locator": "dispo"
+        }
+      ]
+    },
+    "drift_summary": "ENC-017: shipped as scoped \u2014 no drift.",
+    "external_id": "ENC-017",
+    "safety_criteria": [
+      "Return precautions and red-flag escalation criteria documented for dental pain."
+    ]
+  },
+  "stub": {
+    "audio_ref": "s3://receipts-audio/enc-017.wav",
+    "chief_complaint": "ENC-017: templated presenting complaint.",
+    "external_id": "ENC-017",
+    "presenting_features": [
+      "Vital signs documented on arrival.",
+      "Pertinent positives noted on exam."
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "expected_contract": {
+    "acceptance_criteria": [
+      "Eye pain: globe rupture exclusion documented with risk stratification."
+    ],
+    "citations": {
+      "Eye pain: globe rupture exclusion documented with risk stratification.": [
+        {
+          "artifact_kind": "note",
+          "external_id": "NOTE-018",
+          "locator": "mdm"
+        },
+        {
+          "artifact_kind": "order",
+          "external_id": "ORD-018-SLT",
+          "locator": null
+        }
+      ],
+      "Return precautions and red-flag escalation criteria documented for eye pain.": [
+        {
+          "artifact_kind": "transcript",
+          "external_id": "TRX-018",
+          "locator": "00:15:00"
+        },
+        {
+          "artifact_kind": "note",
+          "external_id": "NOTE-018",
+          "locator": "dispo"
+        }
+      ]
+    },
+    "drift_summary": "ENC-018: workup criterion rephrased from generic 'evaluated' to explicit 'documented with risk stratification' after TRX-018.",
+    "external_id": "ENC-018",
+    "safety_criteria": [
+      "Return precautions and red-flag escalation criteria documented for eye pain."
+    ]
+  },
+  "stub": {
+    "audio_ref": "s3://receipts-audio/enc-018.wav",
+    "chief_complaint": "ENC-018: templated presenting complaint.",
+    "external_id": "ENC-018",
+    "presenting_features": [
+      "Vital signs documented on arrival.",
+      "Pertinent positives noted on exam."
+    ]
+  }
+}

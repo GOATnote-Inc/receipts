@@ -1,0 +1,74 @@
+{
+  "epic": {
+    "acceptance_criteria": [
+      "EPIC-006: feature shipped with telemetry and a kill-switch."
+    ],
+    "external_id": "EPIC-006",
+    "id": 6,
+    "title": "Templated epic EPIC-006"
+  },
+  "execution": {
+    "meetings": [
+      {
+        "decisions": [
+          "EPIC-006: ship behind feature flag with kill-switch documented."
+        ],
+        "external_id": "MTG-006"
+      }
+    ],
+    "prs": [
+      {
+        "diff_summary": "Ship EPIC-006 feature flag + kill-switch.",
+        "external_id": "PR-00601",
+        "number": 601,
+        "repo": "receipts"
+      },
+      {
+        "diff_summary": "Wire EPIC-006 telemetry (success + error rates).",
+        "external_id": "PR-00602",
+        "number": 602,
+        "repo": "receipts"
+      }
+    ],
+    "threads": [
+      {
+        "channel": "#receipts-eng",
+        "external_id": "THR-006",
+        "summary": "EPIC-006: confirmed telemetry shape covers errors."
+      }
+    ]
+  },
+  "expected_revised_spec": {
+    "acceptance_criteria": [
+      "Billing invoice export ships with feature-flag kill-switch documented.",
+      "Billing invoice export emits success + error telemetry per call."
+    ],
+    "citations": {
+      "Billing invoice export emits success + error telemetry per call.": [
+        {
+          "artifact_kind": "pr",
+          "external_id": "PR-00602",
+          "locator": null
+        },
+        {
+          "artifact_kind": "thread",
+          "external_id": "THR-006",
+          "locator": null
+        }
+      ],
+      "Billing invoice export ships with feature-flag kill-switch documented.": [
+        {
+          "artifact_kind": "pr",
+          "external_id": "PR-00601",
+          "locator": null
+        },
+        {
+          "artifact_kind": "meeting",
+          "external_id": "MTG-006",
+          "locator": "0"
+        }
+      ]
+    },
+    "drift_summary": "EPIC-006: criterion (b) rephrased from generic 'instrumented' to explicit 'success + error telemetry per call' after THR-006."
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "expected_contract": {
+    "acceptance_criteria": [
+      "ACS workup documented with risk stratification (HEART score).",
+      "Initial troponin and ECG completed within 30 minutes of arrival."
+    ],
+    "citations": {
+      "ACS workup documented with risk stratification (HEART score).": [
+        {
+          "artifact_kind": "note",
+          "external_id": "NOTE-001",
+          "locator": "hpi"
+        },
+        {
+          "artifact_kind": "transcript",
+          "external_id": "TRX-001",
+          "locator": "00:04:12"
+        }
+      ],
+      "Initial troponin and ECG completed within 30 minutes of arrival.": [
+        {
+          "artifact_kind": "order",
+          "external_id": "ORD-001-TROP",
+          "locator": null
+        },
+        {
+          "artifact_kind": "order",
+          "external_id": "ORD-001-ECG",
+          "locator": null
+        }
+      ],
+      "Repeat troponin recheck refusal documented with patient capacity attested.": [
+        {
+          "artifact_kind": "transcript",
+          "external_id": "TRX-001",
+          "locator": "00:11:48"
+        },
+        {
+          "artifact_kind": "note",
+          "external_id": "NOTE-001",
+          "locator": "mdm"
+        }
+      ]
+    },
+    "drift_summary": "Planned 3-hour repeat troponin declined by patient against medical advice; documented capacity and refusal rather than escalating to admission. Original presenting picture (chest pain, diaphoresis, low initial troponin) did not change.",
+    "external_id": "ENC-001",
+    "safety_criteria": [
+      "Repeat troponin recheck refusal documented with patient capacity attested."
+    ]
+  },
+  "stub": {
+    "audio_ref": "s3://receipts-audio/enc-001.wav",
+    "chief_complaint": "Chest pain, 2-hour onset.",
+    "external_id": "ENC-001",
+    "presenting_features": [
+      "Substernal pressure radiating to left arm.",
+      "Diaphoresis on arrival.",
+      "Initial troponin 0.02 ng/mL."
+    ]
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "epic": {
+    "acceptance_criteria": [
+      "EPIC-024: feature shipped with telemetry and a kill-switch."
+    ],
+    "external_id": "EPIC-024",
+    "id": 24,
+    "title": "Templated epic EPIC-024"
+  },
+  "execution": {
+    "meetings": [
+      {
+        "decisions": [
+          "EPIC-024: ship behind feature flag with kill-switch documented."
+        ],
+        "external_id": "MTG-024"
+      }
+    ],
+    "prs": [
+      {
+        "diff_summary": "Ship EPIC-024 feature flag + kill-switch.",
+        "external_id": "PR-02401",
+        "number": 2401,
+        "repo": "receipts"
+      },
+      {
+        "diff_summary": "Wire EPIC-024 telemetry (success + error rates).",
+        "external_id": "PR-02402",
+        "number": 2402,
+        "repo": "receipts"
+      }
+    ],
+    "threads": [
+      {
+        "channel": "#receipts-eng",
+        "external_id": "THR-024",
+        "summary": "EPIC-024: confirmed telemetry shape covers errors."
+      }
+    ]
+  },
+  "expected_revised_spec": {
+    "acceptance_criteria": [
+      "Pricing annual toggle ships with feature-flag kill-switch documented.",
+      "Pricing annual toggle emits success + error telemetry per call."
+    ],
+    "citations": {
+      "Pricing annual toggle emits success + error telemetry per call.": [
+        {
+          "artifact_kind": "pr",
+          "external_id": "PR-02402",
+          "locator": null
+        },
+        {
+          "artifact_kind": "thread",
+          "external_id": "THR-024",
+          "locator": null
+        }
+      ],
+      "Pricing annual toggle ships with feature-flag kill-switch documented.": [
+        {
+          "artifact_kind": "pr",
+          "external_id": "PR-02401",
+          "locator": null
+        },
+        {
+          "artifact_kind": "meeting",
+          "external_id": "MTG-024",
+          "locator": "0"
+        }
+      ]
+    },
+    "drift_summary": "EPIC-024: criterion (b) rephrased from generic 'instrumented' to explicit 'success + error telemetry per call' after THR-024."
+  }
+}

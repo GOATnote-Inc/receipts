@@ -1,0 +1,47 @@
+{
+  "expected_contract": {
+    "acceptance_criteria": [
+      "Back pain: cauda equina screen documented with risk stratification."
+    ],
+    "citations": {
+      "Back pain: cauda equina screen documented with risk stratification.": [
+        {
+          "artifact_kind": "note",
+          "external_id": "NOTE-011",
+          "locator": "mdm"
+        },
+        {
+          "artifact_kind": "order",
+          "external_id": "ORD-011-MRI",
+          "locator": null
+        }
+      ],
+      "Return precautions and red-flag escalation criteria documented for back pain.": [
+        {
+          "artifact_kind": "transcript",
+          "external_id": "TRX-011",
+          "locator": "00:15:00"
+        },
+        {
+          "artifact_kind": "note",
+          "external_id": "NOTE-011",
+          "locator": "dispo"
+        }
+      ]
+    },
+    "drift_summary": "ENC-011: shipped as scoped \u2014 no drift.",
+    "external_id": "ENC-011",
+    "safety_criteria": [
+      "Return precautions and red-flag escalation criteria documented for back pain."
+    ]
+  },
+  "stub": {
+    "audio_ref": "s3://receipts-audio/enc-011.wav",
+    "chief_complaint": "ENC-011: templated presenting complaint.",
+    "external_id": "ENC-011",
+    "presenting_features": [
+      "Vital signs documented on arrival.",
+      "Pertinent positives noted on exam."
+    ]
+  }
+}
