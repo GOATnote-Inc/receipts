@@ -1,0 +1,26 @@
+name: test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v3
+      - name: Set up Python
+        run: uv python install 3.12
+      - name: Install
+        run: |
+          uv venv
+          uv pip install -e ".[dev]"
+      - name: Lint
+        run: uv run ruff check src tests && uv run ruff format --check src tests
+      - name: Test
+        run: |
+          uv run pytest -q
+          rc=$?
+          [ $rc -eq 0 ] || [ $rc -eq 5 ] || exit $rc

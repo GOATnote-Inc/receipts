@@ -1,0 +1,9 @@
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.6.0
+    hooks:
+      - id: ruff
+        args: [--fix]
+        exclude: '(?x)^(fixtures/|results/|alembic/versions/)'
+      - id: ruff-format
+        exclude: '(?x)^(fixtures/|results/|alembic/versions/)'
