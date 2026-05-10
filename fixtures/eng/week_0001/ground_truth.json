@@ -1,0 +1,152 @@
+{
+  "EPIC-0001": {
+    "drift_kind": "scope-creep",
+    "expected_pr_count": 5,
+    "notes": "EPIC-0001: team merged additional PRs not covered by the original spec."
+  },
+  "EPIC-0002": {
+    "drift_kind": "scope-creep",
+    "expected_pr_count": 3,
+    "notes": "EPIC-0002: team merged additional PRs not covered by the original spec."
+  },
+  "EPIC-0003": {
+    "drift_kind": "none",
+    "expected_pr_count": 3,
+    "notes": "EPIC-0003: PRs match scoped acceptance criteria \u2014 no drift signal."
+  },
+  "EPIC-0004": {
+    "drift_kind": "decision-not-reflected",
+    "expected_pr_count": 3,
+    "notes": "EPIC-0004: meeting decision (see linked MTG-* entries) is not reflected in any merged PR title or summary."
+  },
+  "EPIC-0005": {
+    "drift_kind": "scope-shrink",
+    "expected_pr_count": 6,
+    "notes": "EPIC-0005: team shipped fewer PRs than scoped \u2014 at least one acceptance criterion is unaddressed by merged work."
+  },
+  "EPIC-0006": {
+    "drift_kind": "none",
+    "expected_pr_count": 4,
+    "notes": "EPIC-0006: PRs match scoped acceptance criteria \u2014 no drift signal."
+  },
+  "EPIC-0007": {
+    "drift_kind": "none",
+    "expected_pr_count": 5,
+    "notes": "EPIC-0007: PRs match scoped acceptance criteria \u2014 no drift signal."
+  },
+  "EPIC-0008": {
+    "drift_kind": "scope-creep",
+    "expected_pr_count": 4,
+    "notes": "EPIC-0008: team merged additional PRs not covered by the original spec."
+  },
+  "EPIC-0009": {
+    "drift_kind": "none",
+    "expected_pr_count": 4,
+    "notes": "EPIC-0009: PRs match scoped acceptance criteria \u2014 no drift signal."
+  },
+  "EPIC-0010": {
+    "drift_kind": "scope-creep",
+    "expected_pr_count": 5,
+    "notes": "EPIC-0010: team merged additional PRs not covered by the original spec."
+  },
+  "EPIC-0011": {
+    "drift_kind": "none",
+    "expected_pr_count": 3,
+    "notes": "EPIC-0011: PRs match scoped acceptance criteria \u2014 no drift signal."
+  },
+  "EPIC-0012": {
+    "drift_kind": "scope-shrink",
+    "expected_pr_count": 5,
+    "notes": "EPIC-0012: team shipped fewer PRs than scoped \u2014 at least one acceptance criterion is unaddressed by merged work."
+  },
+  "EPIC-0013": {
+    "drift_kind": "decision-not-reflected",
+    "expected_pr_count": 4,
+    "notes": "EPIC-0013: meeting decision (see linked MTG-* entries) is not reflected in any merged PR title or summary."
+  },
+  "EPIC-0014": {
+    "drift_kind": "scope-shrink",
+    "expected_pr_count": 5,
+    "notes": "EPIC-0014: team shipped fewer PRs than scoped \u2014 at least one acceptance criterion is unaddressed by merged work."
+  },
+  "EPIC-0015": {
+    "drift_kind": "scope-creep",
+    "expected_pr_count": 5,
+    "notes": "EPIC-0015: team merged additional PRs not covered by the original spec."
+  },
+  "EPIC-0016": {
+    "drift_kind": "decision-not-reflected",
+    "expected_pr_count": 5,
+    "notes": "EPIC-0016: meeting decision (see linked MTG-* entries) is not reflected in any merged PR title or summary."
+  },
+  "EPIC-0017": {
+    "drift_kind": "none",
+    "expected_pr_count": 5,
+    "notes": "EPIC-0017: PRs match scoped acceptance criteria \u2014 no drift signal."
+  },
+  "EPIC-0018": {
+    "drift_kind": "scope-creep",
+    "expected_pr_count": 3,
+    "notes": "EPIC-0018: team merged additional PRs not covered by the original spec."
+  },
+  "EPIC-0019": {
+    "drift_kind": "scope-creep",
+    "expected_pr_count": 4,
+    "notes": "EPIC-0019: team merged additional PRs not covered by the original spec."
+  },
+  "EPIC-0020": {
+    "drift_kind": "none",
+    "expected_pr_count": 5,
+    "notes": "EPIC-0020: PRs match scoped acceptance criteria \u2014 no drift signal."
+  },
+  "EPIC-0021": {
+    "drift_kind": "scope-creep",
+    "expected_pr_count": 4,
+    "notes": "EPIC-0021: team merged additional PRs not covered by the original spec."
+  },
+  "EPIC-0022": {
+    "drift_kind": "decision-not-reflected",
+    "expected_pr_count": 5,
+    "notes": "EPIC-0022: meeting decision (see linked MTG-* entries) is not reflected in any merged PR title or summary."
+  },
+  "EPIC-0023": {
+    "drift_kind": "none",
+    "expected_pr_count": 4,
+    "notes": "EPIC-0023: PRs match scoped acceptance criteria \u2014 no drift signal."
+  },
+  "EPIC-0024": {
+    "drift_kind": "scope-shrink",
+    "expected_pr_count": 5,
+    "notes": "EPIC-0024: team shipped fewer PRs than scoped \u2014 at least one acceptance criterion is unaddressed by merged work."
+  },
+  "EPIC-0025": {
+    "drift_kind": "none",
+    "expected_pr_count": 4,
+    "notes": "EPIC-0025: PRs match scoped acceptance criteria \u2014 no drift signal."
+  },
+  "EPIC-0026": {
+    "drift_kind": "none",
+    "expected_pr_count": 4,
+    "notes": "EPIC-0026: PRs match scoped acceptance criteria \u2014 no drift signal."
+  },
+  "EPIC-0027": {
+    "drift_kind": "scope-shrink",
+    "expected_pr_count": 4,
+    "notes": "EPIC-0027: team shipped fewer PRs than scoped \u2014 at least one acceptance criterion is unaddressed by merged work."
+  },
+  "EPIC-0028": {
+    "drift_kind": "none",
+    "expected_pr_count": 4,
+    "notes": "EPIC-0028: PRs match scoped acceptance criteria \u2014 no drift signal."
+  },
+  "EPIC-0029": {
+    "drift_kind": "none",
+    "expected_pr_count": 4,
+    "notes": "EPIC-0029: PRs match scoped acceptance criteria \u2014 no drift signal."
+  },
+  "EPIC-0030": {
+    "drift_kind": "scope-creep",
+    "expected_pr_count": 5,
+    "notes": "EPIC-0030: team merged additional PRs not covered by the original spec."
+  }
+}
