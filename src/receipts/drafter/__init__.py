@@ -12,7 +12,9 @@ from __future__ import annotations
 
 from receipts.drafter.encounter_contract import draft_encounter_contract
 from receipts.drafter.llm_path import (
+    ENCOUNTER_CONTRACT_PROMPT_TEMPLATE,
     REVISED_SPEC_PROMPT_TEMPLATE,
+    draft_encounter_contract_llm,
     draft_revised_spec_llm,
 )
 from receipts.drafter.models import (
@@ -35,6 +37,7 @@ from receipts.drafter.validator import (
 
 __all__ = [
     "Citation",
+    "ENCOUNTER_CONTRACT_PROMPT_TEMPLATE",
     "EncounterContract",
     "EncounterStub",
     "Epic",
@@ -46,6 +49,7 @@ __all__ = [
     "ThreadRef",
     "ValidationError",
     "draft_encounter_contract",
+    "draft_encounter_contract_llm",
     "draft_revised_spec",
     "draft_revised_spec_llm",
     "validate_encounter_contract",

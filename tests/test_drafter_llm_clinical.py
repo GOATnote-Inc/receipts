@@ -150,7 +150,9 @@ def test_llm_clinical_path_produces_valid_encounter_contract(
     )
     store.record(
         call,
-        response={"text": _judge_output_with_encounter_contract(_valid_encounter_contract_rationale())},
+        response={
+            "text": _judge_output_with_encounter_contract(_valid_encounter_contract_rationale())
+        },
         latency_ms=15,
         cost_usd=0.0,
     )
