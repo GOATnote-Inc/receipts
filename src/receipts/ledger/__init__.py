@@ -27,6 +27,7 @@ from receipts.ledger.models import (
     Meeting,
     Thread,
 )
+from receipts.ledger.object_lock import ObjectLockStore
 from receipts.ledger.run_log import RunLog
 
 __all__ = [
@@ -41,6 +42,7 @@ __all__ = [
     "JudgeRationale",
     "Meeting",
     "MerkleLog",
+    "ObjectLockStore",
     "RunLog",
     "Thread",
     "compute_hash",
