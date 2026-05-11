@@ -11,6 +11,10 @@ The drafter's LLM call is stubbed in S1; J4 will swap in the real model.
 from __future__ import annotations
 
 from receipts.drafter.encounter_contract import draft_encounter_contract
+from receipts.drafter.llm_path import (
+    REVISED_SPEC_PROMPT_TEMPLATE,
+    draft_revised_spec_llm,
+)
 from receipts.drafter.models import (
     Citation,
     EncounterContract,
@@ -37,11 +41,13 @@ __all__ = [
     "Execution",
     "MeetingRef",
     "PRRef",
+    "REVISED_SPEC_PROMPT_TEMPLATE",
     "RevisedSpec",
     "ThreadRef",
     "ValidationError",
     "draft_encounter_contract",
     "draft_revised_spec",
+    "draft_revised_spec_llm",
     "validate_encounter_contract",
     "validate_revised_spec",
 ]

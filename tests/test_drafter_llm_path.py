@@ -25,7 +25,6 @@ from unittest.mock import MagicMock
 import pytest
 
 from receipts.drafter import (
-    Citation,
     Epic,
     Execution,
     MeetingRef,
@@ -272,9 +271,7 @@ def test_stub_registry_still_takes_precedence(tmp_path: Path) -> None:
     # Stub was used; judge was never invoked.
     judge.evaluate.assert_not_called()
     # Canonical stub criterion text is the marker.
-    assert any(
-        "GET /v1/spec" in criterion for criterion in spec.acceptance_criteria
-    )
+    assert any("GET /v1/spec" in criterion for criterion in spec.acceptance_criteria)
 
 
 def test_unknown_epic_without_judge_raises_not_implemented() -> None:
