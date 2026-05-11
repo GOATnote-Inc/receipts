@@ -27,6 +27,7 @@ from receipts.ledger.models import (
     Meeting,
     Thread,
 )
+from receipts.ledger.queries import LineageGraph, LineageQuery
 from receipts.ledger.run_log import RunLog
 
 __all__ = [
@@ -39,6 +40,8 @@ __all__ = [
     "Edge",
     "Epic",
     "JudgeRationale",
+    "LineageGraph",
+    "LineageQuery",
     "Meeting",
     "MerkleLog",
     "RunLog",
