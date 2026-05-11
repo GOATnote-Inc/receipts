@@ -12,6 +12,7 @@ from __future__ import annotations
 
 from receipts.connectors.github import GitHubCommit, GitHubConnector, GitHubPR
 from receipts.connectors.linear import LinearConnector, LinearEpic
+from receipts.connectors.slack import SlackConnector, SlackThread
 
 __all__ = [
     "GitHubCommit",
@@ -19,4 +20,6 @@ __all__ = [
     "GitHubPR",
     "LinearConnector",
     "LinearEpic",
+    "SlackConnector",
+    "SlackThread",
 ]
