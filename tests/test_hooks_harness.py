@@ -28,7 +28,6 @@ from tests._hooks_harness import (
     synthetic_stop,
 )
 
-
 # -- core invocation --------------------------------------------------------
 
 
@@ -62,8 +61,7 @@ def test_invoke_hook_passes_stdin_json(tmp_path: Path) -> None:
     # Script reads the JSON payload and echoes back tool_input.command.
     script = _write_script(
         tmp_path,
-        'payload=$(cat)\nprintf "%s" "$payload" | '
-        "jq -r '.tool_input.command'",
+        'payload=$(cat)\nprintf "%s" "$payload" | jq -r \'.tool_input.command\'',
     )
     payload = synthetic_pretooluse("Bash", command="echo round-trip")
     result = invoke_hook(script, payload)
