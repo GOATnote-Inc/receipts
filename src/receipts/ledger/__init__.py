@@ -15,6 +15,12 @@ from receipts.ledger.db import (
     make_session_factory,
     session_factory,
 )
+from receipts.ledger.exports import (
+    generate_csv,
+    generate_fhir_bundle,
+    generate_markdown,
+    generate_sarif,
+)
 from receipts.ledger.merkle import MerkleLog, compute_hash
 from receipts.ledger.models import (
     PR,
@@ -50,6 +56,10 @@ __all__ = [
     "Thread",
     "compute_hash",
     "engine",
+    "generate_csv",
+    "generate_fhir_bundle",
+    "generate_markdown",
+    "generate_sarif",
     "get_database_url",
     "make_engine",
     "make_session_factory",
