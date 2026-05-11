@@ -1,36 +1,46 @@
 # Active
 
 ## Phase
-Phase 0 — substrate. **COMPLETE.** 24/24 tasks merged. 328 passing tests, 1 skipped (V5 ground-truth gate awaits real-LLM drafter from P1-5).
+Phase 0 — substrate. **COMPLETE.** 24/24 tasks merged.
 
-Phase 1 — Engineering Receipts vertical. **COMPLETE.** 9/9 tasks merged. 384 passing tests, 1 skipped (same V5 gate). End-to-end pipeline proven against `fixtures/eng/week_0001` with MagicMocked connectors; markdown byte-stable across runs; merkle chain intact; pass^1 = 1.0 on the stub corpus.
+Phase 1 — Engineering Receipts vertical. **COMPLETE.** 9/9 tasks merged. 384 passing tests, 1 skipped. End-to-end pipeline proven against `fixtures/eng/week_0001` with MagicMocked connectors; markdown byte-stable; Merkle intact; pass^1 = 1.0.
 
-Phase 2 — Clinical Audit Ledger vertical. **NOT YET STARTED.**
+Phase 2 — Clinical Audit Ledger vertical. **STARTING.**
 
-## Phase 1 tasks (IDs assigned at creation)
-- P1-1 (#25) Linear connector — **MERGED**
-- P1-2 (#26) GitHub connector — **MERGED**
-- P1-3 (#27) Slack connector — **MERGED**
-- P1-4 (#28) Granola connector — **MERGED**
-- P1-5 (#29) Real-LLM drafter path — **MERGED**
-- P1-6 (#30) Reconciler core — **MERGED**
-- P1-7 (#31) Output emitter — **MERGED**
-- P1-8 (#32) receipts-eng CLI entrypoint — **MERGED**
-- P1-9 (#33) Phase 1 E2E weekly-cycle test — **MERGED**
+## Phase 2 tasks (IDs assigned at creation)
+- P2-1 (#34) Clinical schema extensions (encounter / clinical_artifact / clinical_drift_finding + alembic 0002_clinical) — claimable
+- P2-2 (#35) ScribeConnector (interface + Ambience impl) — claimable
+- P2-3 (#36) FHIRConnector (read Composition + write attestation extension) — claimable
+- P2-4 (#37) LLM-backed clinical drafter path (analog of P1-5 for unknown ENC IDs) — claimable
+- P2-5 (#38) Synthetic clinical encounter fixture generator + clinical-week_0001 — blockedBy [34]
+- P2-6 (#39) Clinical reconciler core — blockedBy [34, 35, 36, 37, 38]
+- P2-7 (#40) Clinical PHI-aware output emitter (FHIR Bundle + Markdown + PDF; NO Slack PHI) — blockedBy [35, 36, 39]
+- P2-8 (#41) receipts-clin CLI entrypoint — blockedBy [39, 40]
+- P2-9 (#42) Phase 2 E2E test — blockedBy [34–41]
 
-## Exit criteria (Phase 1 done)
-- [x] `receipts-eng run --week fixtures/eng/week_0001` succeeds end-to-end against mocked connector replays
-- [x] Merkle chain intact; pass^k ≥ 0.95 on the eng fixture (pass^1 = 1.0 measured); κ ≥ 0.40 deferred to Phase 2 with real-LLM dual-judge (stub path is single-judge)
-- [x] Markdown + Linear-comment + Slack-DM outputs generated, byte-stable across two consecutive runs
-- [x] All Phase 1 tests green; lint clean; substrate suite still passes (384 passed, 1 skipped)
+## Exit criteria (Phase 2 done)
+- `receipts-clin run --week-fixture fixtures/clinical/week_0001 --dry-run` succeeds end-to-end with mocked Scribe + FHIR connectors
+- Merkle chain intact; pass^k ≥ 0.95 on clinical fixture; κ ≥ 0.40 across dual-judge runs (real-LLM path)
+- FHIR R4 Bundle output validated; PHI-aware emitter NEVER sends patient text to Slack
+- Hallucination flag rate ≤ 5% on stub citations
+- All P2 tests green; lint clean; substrate + Phase 1 suites unchanged (384+ passed)
+
+## Hard rules — clinical specific (additions)
+- **NEVER store plaintext patient IDs in DB.** `encounter.patient_id_hash` only. Re-identification via separate (out-of-scope) mapping store.
+- **NEVER post PHI to Slack DMs.** PHI-aware emitter routes everything sensitive to FHIR write-back + Markdown PR + PDF in-place.
+- **Audio + note content** stored as `content_ref` (path) + `content_hash` only. Bodies go to L5 ObjectLockStore on HIPAA-compliant bucket.
 
 ## Verify command
 `make venv && make lint && make test`
 
 ## Substrate quick-reference (don't touch unless deliberately)
-- `src/receipts/ledger/` — L1 schema, Merkle log, run_log, queries, S3 Object Lock, exports
+- `src/receipts/ledger/` — L1 schema (eng tables shipped; P2-1 adds clinical tables), L2 Merkle, L3 run_log, L4 queries, L5 Object Lock, L6 exports (incl. FHIR R4 Bundle)
 - `src/receipts/judge/` — kappa, L0/L1/L2, dual-judge, hallucination guard, passk, replay
-- `src/receipts/drafter/` — revised-spec drafter + encounter-contract (stub LLM; P1-5 wires real LLM)
+- `src/receipts/drafter/` — revised-spec drafter (eng) + encounter-contract drafter (clinical, ENC-001..030 stub) + validator
+- `src/receipts/connectors/` — Linear, GitHub, Slack, Granola (eng); P2-2/P2-3 add Scribe + FHIR (clinical)
+- `src/receipts/eng/` — reconciler + emitter + CLI (Phase 1)
+- `src/receipts/clinical/` — P2 work lands here (reconciler + emitter)
+- `src/receipts/cli/` — eng CLI shipped; P2-8 adds clin CLI
 - `.claude/hooks/` — block-external-writeback, block-phi-export, stamp-judge-call, stop-regression
-- `scripts/` — verify_passk.py, verify_kappa.py, gen_eng_fixture.py, gen_drafter_fixtures.py
-- `fixtures/eng/week_0001/` — 30 epics, 200 PRs, 30 meetings, 500 threads with ground-truth drift
+- `fixtures/eng/week_0001/` — eng fixture
+- `fixtures/clinical/week_0001/` — P2-5 generates this
