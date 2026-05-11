@@ -83,9 +83,7 @@ def _contract(external_id: str, drift_summary: str) -> EncounterContract:
         acceptance_criteria=[f"{external_id} criterion"],
         safety_criteria=[f"{external_id} safety floor"],
         citations={
-            f"{external_id} criterion": [
-                Citation(artifact_kind="note", external_id="NOTE-1")
-            ],
+            f"{external_id} criterion": [Citation(artifact_kind="note", external_id="NOTE-1")],
             f"{external_id} safety floor": [
                 Citation(artifact_kind="transcript", external_id="TX-1")
             ],
@@ -201,8 +199,7 @@ def test_emit_fhir_calls_one_per_encounter_when_not_dry_run(
 ) -> None:
     """One FHIR attestation write per draft; 30-draft fixture → 30 calls."""
     drafts = [
-        (f"ENC-{i:04d}", _contract(f"ENC-{i:03d}", f"ENC-{i:04d}: clean."))
-        for i in range(1, 31)
+        (f"ENC-{i:04d}", _contract(f"ENC-{i:03d}", f"ENC-{i:04d}: clean.")) for i in range(1, 31)
     ]
     result = _result_with_drafts(drafts, passk=1.0, kappa=None, hallucination_flag_rate=None)
     fhir = _mock_fhir()
@@ -246,9 +243,9 @@ def test_emit_no_slack_handle_in_signature() -> None:
     """
     sig = inspect.signature(emit_clinical_outputs)
     param_names = list(sig.parameters)
-    assert not any(
-        "slack" in name.lower() for name in param_names
-    ), f"emitter signature must not carry a slack parameter; got {param_names}"
+    assert not any("slack" in name.lower() for name in param_names), (
+        f"emitter signature must not carry a slack parameter; got {param_names}"
+    )
 
 
 def test_emit_redacts_phi_patterns(session: Session) -> None:

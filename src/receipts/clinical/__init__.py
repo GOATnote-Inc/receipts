@@ -16,9 +16,18 @@ into this DB.
 
 from __future__ import annotations
 
+from receipts.clinical.emitter import (
+    ClinicalEmitterResult,
+    emit_clinical_outputs,
+)
 from receipts.clinical.reconciler import (
     ClinicalReconcilerResult,
     reconcile_clinical_week,
 )
 
-__all__ = ["ClinicalReconcilerResult", "reconcile_clinical_week"]
+__all__ = [
+    "ClinicalEmitterResult",
+    "ClinicalReconcilerResult",
+    "emit_clinical_outputs",
+    "reconcile_clinical_week",
+]
