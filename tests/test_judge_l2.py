@@ -25,12 +25,10 @@ from pathlib import Path
 from unittest.mock import MagicMock
 
 import pytest
-from alembic.config import Config
 from pydantic import ValidationError
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session, sessionmaker
 
-from alembic import command
 from receipts.judge import (
     AnthropicAdapter,
     JudgeCall,
@@ -40,12 +38,9 @@ from receipts.judge import (
     OpenAIAdapter,
     ReplayStore,
 )
+from receipts.ledger.db import Base
 from receipts.ledger.merkle import MerkleLog
 from receipts.ledger.models import Attestation
-
-REPO_ROOT = Path(__file__).resolve().parent.parent
-ALEMBIC_INI = REPO_ROOT / "alembic.ini"
-
 
 # --------------------------- helpers / fixtures ---------------------------
 
@@ -102,29 +97,23 @@ def replay_store(tmp_path: Path) -> ReplayStore:
 
 
 @pytest.fixture
-def db_url(tmp_path: Path) -> str:
-    return f"sqlite:///{tmp_path / 'receipts.db'}"
+def session(tmp_path: Path) -> Session:
+    """In-memory sqlite session backed by ``Base.metadata.create_all``.
 
-
-@pytest.fixture
-def upgraded_engine(db_url: str, monkeypatch: pytest.MonkeyPatch):
-    monkeypatch.setenv("DATABASE_URL", db_url)
-    cfg = Config(str(ALEMBIC_INI))
-    cfg.set_main_option("sqlalchemy.url", db_url)
-    cfg.set_main_option("script_location", str(REPO_ROOT / "alembic"))
-    command.upgrade(cfg, "head")
-    engine = create_engine(db_url)
+    We deliberately avoid alembic here: alembic's ``env.py`` calls
+    ``fileConfig`` which disables existing loggers, and that leaks into
+    the next test's ``caplog`` capture (passk's warning test).
+    ``create_all`` is sufficient because the wrapper only touches the
+    ``attestation`` table.
+    """
+    engine = create_engine(f"sqlite:///{tmp_path / 'receipts.db'}")
+    Base.metadata.create_all(engine)
+    SessionFactory = sessionmaker(bind=engine, expire_on_commit=False)
     try:
-        yield engine
+        with SessionFactory() as s:
+            yield s
     finally:
         engine.dispose()
-
-
-@pytest.fixture
-def session(upgraded_engine) -> Session:
-    SessionFactory = sessionmaker(bind=upgraded_engine, expire_on_commit=False)
-    with SessionFactory() as s:
-        yield s
 
 
 # ------------------------------ tests ------------------------------
@@ -254,10 +243,7 @@ def test_evaluate_appends_merkle_log_row(
     assert row.kind == "judge_call"
     assert row.target_kind == "judge"
     assert row.payload["model"] == "claude-opus-4-7"
-    assert (
-        row.payload["prompt_sha"]
-        == hashlib.sha256(PROMPT_TEMPLATE.encode("utf-8")).hexdigest()
-    )
+    assert row.payload["prompt_sha"] == hashlib.sha256(PROMPT_TEMPLATE.encode("utf-8")).hexdigest()
     # request_hash is the stable_hash over the JudgeCall, 64-char sha256 hex.
     assert len(row.payload["request_hash"]) == 64
 

@@ -3,6 +3,12 @@
 from receipts.judge.kappa import cohen_kappa, wilson_ci
 from receipts.judge.l0 import Issue, RuleRegistry, run_rules
 from receipts.judge.l1 import StructuralResult, score_structure
+from receipts.judge.l2 import (
+    AnthropicAdapter,
+    JudgeOutput,
+    LLMJudge,
+    OpenAIAdapter,
+)
 from receipts.judge.passk import (
     PasskResult,
     TrialResult,
@@ -17,9 +23,13 @@ from receipts.judge.replay import (
 )
 
 __all__ = [
+    "AnthropicAdapter",
     "Issue",
     "JudgeCall",
+    "JudgeOutput",
     "JudgeRecording",
+    "LLMJudge",
+    "OpenAIAdapter",
     "PasskResult",
     "ReplayStore",
     "RuleRegistry",
