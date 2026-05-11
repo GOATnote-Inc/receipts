@@ -213,8 +213,10 @@ def test_emit_outputs_linear_comments_only_on_drift(
     out = emit_outputs(seeded_result, session, linear=linear, dry_run=False)
 
     assert linear.add_comment.call_count == 2
-    posted_ids = sorted(call.kwargs.get("epic_external_id") or call.args[0]
-                        for call in linear.add_comment.call_args_list)
+    posted_ids = sorted(
+        call.kwargs.get("epic_external_id") or call.args[0]
+        for call in linear.add_comment.call_args_list
+    )
     assert posted_ids == ["EPIC-0001", "EPIC-0002"]
     assert out.linear_comment_ids == ["comment-EPIC-0001", "comment-EPIC-0002"]
 

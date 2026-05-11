@@ -10,6 +10,7 @@ draft to a Merkle log + runs the dual-judge / hallucination-guard gates.
 
 from __future__ import annotations
 
+from receipts.eng.emitter import EmitterResult, emit_outputs
 from receipts.eng.reconciler import ReconcilerResult, reconcile_week
 
-__all__ = ["ReconcilerResult", "reconcile_week"]
+__all__ = ["EmitterResult", "ReconcilerResult", "emit_outputs", "reconcile_week"]
