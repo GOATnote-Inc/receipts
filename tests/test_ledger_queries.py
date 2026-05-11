@@ -112,17 +112,47 @@ def _seed_lineage(s: Session) -> dict:
     s.flush()
 
     edges = [
-        Edge(src_kind="epic", src_id=epic_a.id, dst_kind="pr", dst_id=pr1.id, relation="implements"),
-        Edge(src_kind="epic", src_id=epic_a.id, dst_kind="pr", dst_id=pr2.id, relation="implements"),
-        Edge(src_kind="epic", src_id=epic_b.id, dst_kind="pr", dst_id=pr3.id, relation="implements"),
+        Edge(
+            src_kind="epic", src_id=epic_a.id, dst_kind="pr", dst_id=pr1.id, relation="implements"
+        ),
+        Edge(
+            src_kind="epic", src_id=epic_a.id, dst_kind="pr", dst_id=pr2.id, relation="implements"
+        ),
+        Edge(
+            src_kind="epic", src_id=epic_b.id, dst_kind="pr", dst_id=pr3.id, relation="implements"
+        ),
         Edge(src_kind="pr", src_id=pr1.id, dst_kind="commit", dst_id=c1.id, relation="contains"),
         Edge(src_kind="pr", src_id=pr1.id, dst_kind="commit", dst_id=c2.id, relation="contains"),
         Edge(src_kind="pr", src_id=pr2.id, dst_kind="commit", dst_id=c3.id, relation="contains"),
         Edge(src_kind="pr", src_id=pr3.id, dst_kind="commit", dst_id=c4.id, relation="contains"),
-        Edge(src_kind="meeting", src_id=m1.id, dst_kind="epic", dst_id=epic_a.id, relation="discusses"),
-        Edge(src_kind="meeting", src_id=m2.id, dst_kind="epic", dst_id=epic_b.id, relation="discusses"),
-        Edge(src_kind="thread", src_id=th1.id, dst_kind="epic", dst_id=epic_a.id, relation="discusses"),
-        Edge(src_kind="thread", src_id=th2.id, dst_kind="epic", dst_id=epic_b.id, relation="discusses"),
+        Edge(
+            src_kind="meeting",
+            src_id=m1.id,
+            dst_kind="epic",
+            dst_id=epic_a.id,
+            relation="discusses",
+        ),
+        Edge(
+            src_kind="meeting",
+            src_id=m2.id,
+            dst_kind="epic",
+            dst_id=epic_b.id,
+            relation="discusses",
+        ),
+        Edge(
+            src_kind="thread",
+            src_id=th1.id,
+            dst_kind="epic",
+            dst_id=epic_a.id,
+            relation="discusses",
+        ),
+        Edge(
+            src_kind="thread",
+            src_id=th2.id,
+            dst_kind="epic",
+            dst_id=epic_b.id,
+            relation="discusses",
+        ),
     ]
     s.add_all(edges)
     s.commit()
