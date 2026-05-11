@@ -20,8 +20,12 @@ safety_criterion that satisfy ``validate_encounter_contract``.
 from __future__ import annotations
 
 from collections.abc import Callable
+from typing import TYPE_CHECKING
 
 from receipts.drafter.models import Citation, EncounterContract, EncounterStub
+
+if TYPE_CHECKING:
+    from receipts.judge.l2 import LLMJudge
 
 
 def _draft_enc_001(_stub: EncounterStub) -> EncounterContract:
@@ -269,17 +273,41 @@ for _n in range(6, 31):
 del _n, _ext
 
 
-def draft_encounter_contract(stub: EncounterStub) -> EncounterContract:
-    """Return a canned EncounterContract for known stub external_ids.
+def draft_encounter_contract(
+    stub: EncounterStub,
+    *,
+    judge: LLMJudge | None = None,
+) -> EncounterContract:
+    """Return an EncounterContract for ``stub``.
 
-    Raises NotImplementedError for any encounter outside the stub registry —
-    J4 will replace this with a real LLM dispatch.
+    Dispatch order (deliberate, do not swap):
+
+    1. **Stub registry** — ``ENC-001..030`` always return canned values
+       so substrate fixtures stay byte-stable. The ``judge`` kwarg is
+       ignored for these encounters.
+    2. **LLM path** — for encounters outside the registry, if a
+       ``judge`` is provided we route through
+       :func:`draft_encounter_contract_llm`. The judge handles
+       record/replay + Merkle attestation.
+    3. **Unimplemented** — no stub + no judge raises
+       ``NotImplementedError``, matching the pre-P2-4 behaviour so
+       callers that never opted in see no change.
     """
-    try:
-        builder = _STUB_REGISTRY[stub.external_id]
-    except KeyError as exc:
-        raise NotImplementedError(
-            f"S2 stub has no canned EncounterContract for stub external_id="
-            f"{stub.external_id!r}; real LLM dispatch is J4's responsibility."
-        ) from exc
-    return builder(stub)
+    builder = _STUB_REGISTRY.get(stub.external_id)
+    if builder is not None:
+        return builder(stub)
+
+    if judge is not None:
+        # Imported lazily to keep the substrate import graph minimal:
+        # ``llm_path`` pulls in ``receipts.judge.l2`` which transitively
+        # depends on the Merkle log. Substrate consumers that never use
+        # the LLM path should not pay that import cost.
+        from receipts.drafter.llm_path import draft_encounter_contract_llm
+
+        return draft_encounter_contract_llm(stub, judge)
+
+    raise NotImplementedError(
+        f"S2 stub has no canned EncounterContract for stub external_id="
+        f"{stub.external_id!r}; pass `judge=LLMJudge(...)` to dispatch via "
+        "the real-LLM path (P2-4)."
+    )

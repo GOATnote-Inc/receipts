@@ -36,9 +36,12 @@ Failure modes
 from __future__ import annotations
 
 import json
+from pathlib import Path
 
-from receipts.drafter.models import Epic, Execution, RevisedSpec
+from receipts.drafter.models import EncounterContract, EncounterStub, Epic, Execution, RevisedSpec
 from receipts.judge.l2 import LLMJudge
+
+_PROMPTS_DIR = Path(__file__).parent / "prompts"
 
 #: Prompt template used by ``draft_revised_spec_llm``.
 #:
@@ -85,6 +88,20 @@ REVISED_SPEC_PROMPT_TEMPLATE = (
     "4. Do not invent PRs / meetings / threads that are not in the input.\n"
     "5. The outer JudgeOutput fields (score, flags) are not used by the "
     "drafter; set score=1.0 and flags=[] unless instructed otherwise."
+)
+
+
+#: Prompt template used by ``draft_encounter_contract_llm``.
+#:
+#: Loaded from ``prompts/encounter_contract.txt`` at module-load time so the
+#: source-of-truth lives in a reviewable, diffable file alongside the other
+#: drafter assets rather than as an inline string. The ``LLMJudge.prompt_sha``
+#: for this template is ``sha256(ENCOUNTER_CONTRACT_PROMPT_TEMPLATE.encode())``;
+#: auditors recompute that hex against every Merkle-logged judge_call row to
+#: confirm the deployed prompt matches what was attested. Any non-cosmetic
+#: edit to the txt file invalidates existing recordings — by design.
+ENCOUNTER_CONTRACT_PROMPT_TEMPLATE = (_PROMPTS_DIR / "encounter_contract.txt").read_text(
+    encoding="utf-8"
 )
 
 
@@ -140,7 +157,62 @@ def draft_revised_spec_llm(
     return _parse_rationale_to_revised_spec(judge_output.rationale)
 
 
+def _parse_rationale_to_encounter_contract(rationale: str) -> EncounterContract:
+    """Decode ``rationale`` (a JSON string) into an ``EncounterContract``.
+
+    Mirrors ``_parse_rationale_to_revised_spec`` on the clinical side:
+    the judge schema requires ``rationale`` to be a string; the drafter
+    further requires that string to be valid JSON matching the
+    EncounterContract schema. ``ValueError`` (with the offending prefix
+    elided) surfaces "model emitted prose"; ``pydantic.ValidationError``
+    propagates for deeper schema bugs. The safety-floor check
+    (``safety_criteria`` non-empty) is enforced downstream by
+    ``validate_encounter_contract``, not here — this parser refuses to
+    silently mutate model output.
+    """
+    try:
+        decoded = json.loads(rationale)
+    except json.JSONDecodeError as exc:
+        snippet = rationale if len(rationale) <= 120 else rationale[:120] + "..."
+        raise ValueError(
+            f"LLM judge rationale is not valid JSON; cannot parse as "
+            f"EncounterContract. snippet={snippet!r}"
+        ) from exc
+
+    if not isinstance(decoded, dict):
+        raise ValueError(
+            "LLM judge rationale parsed to a non-object JSON value; "
+            f"expected an EncounterContract object, got {type(decoded).__name__}."
+        )
+
+    return EncounterContract.model_validate(decoded)
+
+
+def draft_encounter_contract_llm(
+    stub: EncounterStub,
+    judge: LLMJudge,
+) -> EncounterContract:
+    """Draft an EncounterContract by routing through an ``LLMJudge``.
+
+    Build a canonical ``input_payload`` from ``stub``, call
+    ``judge.evaluate`` (which handles replay vs record + Merkle
+    attestation), and parse the ``rationale`` JSON into an
+    EncounterContract.
+
+    The returned contract is **not** pre-validated — callers should
+    invoke ``validate_encounter_contract`` themselves so missing safety
+    criteria, phantom artifact kinds, and uncited criteria surface as
+    a ValidationError (matching the behavior of the stub registry path
+    through ``draft_encounter_contract``).
+    """
+    input_payload = {"stub": stub.model_dump()}
+    judge_output = judge.evaluate(input_payload)
+    return _parse_rationale_to_encounter_contract(judge_output.rationale)
+
+
 __all__ = [
+    "ENCOUNTER_CONTRACT_PROMPT_TEMPLATE",
     "REVISED_SPEC_PROMPT_TEMPLATE",
+    "draft_encounter_contract_llm",
     "draft_revised_spec_llm",
 ]
