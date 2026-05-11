@@ -11,6 +11,11 @@ and `make test` stays hermetic.
 from __future__ import annotations
 
 from receipts.connectors.github import GitHubCommit, GitHubConnector, GitHubPR
+from receipts.connectors.granola import (
+    GranolaConnector,
+    GranolaDecision,
+    GranolaMeeting,
+)
 from receipts.connectors.linear import LinearConnector, LinearEpic
 from receipts.connectors.slack import SlackConnector, SlackThread
 
@@ -18,6 +23,9 @@ __all__ = [
     "GitHubCommit",
     "GitHubConnector",
     "GitHubPR",
+    "GranolaConnector",
+    "GranolaDecision",
+    "GranolaMeeting",
     "LinearConnector",
     "LinearEpic",
     "SlackConnector",
