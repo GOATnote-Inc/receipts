@@ -27,7 +27,12 @@ config = context.config
 
 if config.config_file_name is not None:
     try:
-        fileConfig(config.config_file_name)
+        # ``disable_existing_loggers=False`` is mandatory under pytest:
+        # ``fileConfig`` defaults to True, which would silently disable every
+        # already-instantiated logger (e.g. ``receipts.judge.passk``) the
+        # moment a test fixture calls ``alembic upgrade head``. That breaks
+        # any later test that reads from those loggers via ``caplog``.
+        fileConfig(config.config_file_name, disable_existing_loggers=False)
     except Exception:
         # Some test invocations construct Config(ini_path) but the logging
         # section may be absent; fail open rather than break migrations.
