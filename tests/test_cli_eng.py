@@ -57,9 +57,7 @@ def test_dry_run_returncode_zero() -> None:
         str(WEEK_DIR),
         "--dry-run",
     )
-    assert result.returncode == 0, (
-        f"stdout={result.stdout!r} stderr={result.stderr!r}"
-    )
+    assert result.returncode == 0, f"stdout={result.stdout!r} stderr={result.stderr!r}"
 
 
 def test_dry_run_prints_summary() -> None:
@@ -84,9 +82,7 @@ def test_missing_week_fixture_returncode_two() -> None:
         str(REPO_ROOT / "fixtures" / "eng" / "does_not_exist"),
         "--dry-run",
     )
-    assert result.returncode == 2, (
-        f"stdout={result.stdout!r} stderr={result.stderr!r}"
-    )
+    assert result.returncode == 2, f"stdout={result.stdout!r} stderr={result.stderr!r}"
 
 
 def test_failing_threshold_returncode_one() -> None:
@@ -104,6 +100,4 @@ def test_failing_threshold_returncode_one() -> None:
         "--passk-threshold",
         "1.5",
     )
-    assert result.returncode == 1, (
-        f"stdout={result.stdout!r} stderr={result.stderr!r}"
-    )
+    assert result.returncode == 1, f"stdout={result.stdout!r} stderr={result.stderr!r}"
