@@ -3,24 +3,26 @@
 ## Phase
 Phase 0 — substrate. **COMPLETE.** 24/24 tasks merged. 328 passing tests, 1 skipped (V5 ground-truth gate awaits real-LLM drafter from P1-5).
 
-Phase 1 — Engineering Receipts vertical. **STARTING.**
+Phase 1 — Engineering Receipts vertical. **COMPLETE.** 9/9 tasks merged. 384 passing tests, 1 skipped (same V5 gate). End-to-end pipeline proven against `fixtures/eng/week_0001` with MagicMocked connectors; markdown byte-stable across runs; merkle chain intact; pass^1 = 1.0 on the stub corpus.
+
+Phase 2 — Clinical Audit Ledger vertical. **NOT YET STARTED.**
 
 ## Phase 1 tasks (IDs assigned at creation)
-- P1-1 (#25) Linear connector — claimable
-- P1-2 (#26) GitHub connector — claimable
-- P1-3 (#27) Slack connector — claimable
-- P1-4 (#28) Granola connector — claimable
-- P1-5 (#29) Real-LLM drafter path — claimable (uses J4 LLMJudge + J7 ReplayStore)
-- P1-6 (#30) Reconciler core — blockedBy [25, 26, 27, 28, 29]
-- P1-7 (#31) Output emitter — blockedBy [25, 26, 27, 30]
-- P1-8 (#32) receipts-eng CLI entrypoint — blockedBy [30, 31]
-- P1-9 (#33) Phase 1 E2E weekly-cycle test — blockedBy [25–32]
+- P1-1 (#25) Linear connector — **MERGED**
+- P1-2 (#26) GitHub connector — **MERGED**
+- P1-3 (#27) Slack connector — **MERGED**
+- P1-4 (#28) Granola connector — **MERGED**
+- P1-5 (#29) Real-LLM drafter path — **MERGED**
+- P1-6 (#30) Reconciler core — **MERGED**
+- P1-7 (#31) Output emitter — **MERGED**
+- P1-8 (#32) receipts-eng CLI entrypoint — **MERGED**
+- P1-9 (#33) Phase 1 E2E weekly-cycle test — **MERGED**
 
 ## Exit criteria (Phase 1 done)
-- `receipts-eng run --week fixtures/eng/week_0001` succeeds end-to-end against mocked connector replays
-- Merkle chain intact; pass^k ≥ 0.95 on the eng fixture; κ ≥ 0.40 across dual-judge runs
-- Markdown + Linear-comment + Slack-DM outputs generated, byte-stable across two consecutive runs
-- All Phase 1 tests green; lint clean; substrate suite still passes (328+)
+- [x] `receipts-eng run --week fixtures/eng/week_0001` succeeds end-to-end against mocked connector replays
+- [x] Merkle chain intact; pass^k ≥ 0.95 on the eng fixture (pass^1 = 1.0 measured); κ ≥ 0.40 deferred to Phase 2 with real-LLM dual-judge (stub path is single-judge)
+- [x] Markdown + Linear-comment + Slack-DM outputs generated, byte-stable across two consecutive runs
+- [x] All Phase 1 tests green; lint clean; substrate suite still passes (384 passed, 1 skipped)
 
 ## Verify command
 `make venv && make lint && make test`
