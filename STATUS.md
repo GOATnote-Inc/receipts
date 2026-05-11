@@ -5,18 +5,18 @@ Phase 0 — substrate. **COMPLETE.** 24/24 tasks merged.
 
 Phase 1 — Engineering Receipts vertical. **COMPLETE.** 9/9 tasks merged. 384 passing tests, 1 skipped. End-to-end pipeline proven against `fixtures/eng/week_0001` with MagicMocked connectors; markdown byte-stable; Merkle intact; pass^1 = 1.0.
 
-Phase 2 — Clinical Audit Ledger vertical. **STARTING.**
+Phase 2 — Clinical Audit Ledger vertical. **COMPLETE.** 9/9 tasks merged. 441 passing tests, 1 skipped. End-to-end pipeline proven against `fixtures/clinical/week_0001` with MagicMocked Scribe + FHIR connectors; markdown byte-stable; Merkle intact across 30 attestations; pass^1 = 1.0; PHI scrub verified on the emitted body; CLI dry-run exit 0 with a canonical summary.
 
-## Phase 2 tasks (IDs assigned at creation)
-- P2-1 (#34) Clinical schema extensions (encounter / clinical_artifact / clinical_drift_finding + alembic 0002_clinical) — claimable
-- P2-2 (#35) ScribeConnector (interface + Ambience impl) — claimable
-- P2-3 (#36) FHIRConnector (read Composition + write attestation extension) — claimable
-- P2-4 (#37) LLM-backed clinical drafter path (analog of P1-5 for unknown ENC IDs) — claimable
-- P2-5 (#38) Synthetic clinical encounter fixture generator + clinical-week_0001 — blockedBy [34]
-- P2-6 (#39) Clinical reconciler core — blockedBy [34, 35, 36, 37, 38]
-- P2-7 (#40) Clinical PHI-aware output emitter (FHIR Bundle + Markdown + PDF; NO Slack PHI) — blockedBy [35, 36, 39]
-- P2-8 (#41) receipts-clin CLI entrypoint — blockedBy [39, 40]
-- P2-9 (#42) Phase 2 E2E test — blockedBy [34–41]
+## Phase 2 tasks (all merged)
+- P2-1 (#34) Clinical schema extensions (encounter / clinical_artifact / clinical_drift_finding + alembic 0002_clinical) — **merged**
+- P2-2 (#35) ScribeConnector (interface + Ambience impl) — **merged**
+- P2-3 (#36) FHIRConnector (read Composition + write attestation extension) — **merged**
+- P2-4 (#37) LLM-backed clinical drafter path (analog of P1-5 for unknown ENC IDs) — **merged**
+- P2-5 (#38) Synthetic clinical encounter fixture generator + clinical-week_0001 — **merged**
+- P2-6 (#39) Clinical reconciler core — **merged**
+- P2-7 (#40) Clinical PHI-aware output emitter (FHIR Bundle + Markdown + PDF; NO Slack PHI) — **merged**
+- P2-8 (#41) receipts-clin CLI entrypoint — **merged**
+- P2-9 (#42) Phase 2 E2E test — **merged**
 
 ## Exit criteria (Phase 2 done)
 - `receipts-clin run --week-fixture fixtures/clinical/week_0001 --dry-run` succeeds end-to-end with mocked Scribe + FHIR connectors
