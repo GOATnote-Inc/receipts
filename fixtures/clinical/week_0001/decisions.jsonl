@@ -1,0 +1,30 @@
+{"confidence": 0.599, "decision_text": "admit to observation for serial troponin draws", "encounter_external_id": "ENC-0001", "tagged_encounter_external_ids": ["ENC-0001"]}
+{"confidence": 0.916, "decision_text": "admit to observation for serial troponin draws", "encounter_external_id": "ENC-0002", "tagged_encounter_external_ids": ["ENC-0002"]}
+{"confidence": 0.656, "decision_text": "discharge home with primary care follow-up in 48 hours", "encounter_external_id": "ENC-0003", "tagged_encounter_external_ids": ["ENC-0003"]}
+{"confidence": 0.588, "decision_text": "splint the affected extremity and refer to orthopedics", "encounter_external_id": "ENC-0004", "tagged_encounter_external_ids": ["ENC-0004"]}
+{"confidence": 0.98, "decision_text": "image with non-contrast CT to rule out intracranial bleed", "encounter_external_id": "ENC-0005", "tagged_encounter_external_ids": ["ENC-0005"]}
+{"confidence": 0.606, "decision_text": "trial of bronchodilator therapy, recheck oxygenation", "encounter_external_id": "ENC-0006", "tagged_encounter_external_ids": ["ENC-0006"]}
+{"confidence": 0.623, "decision_text": "image with non-contrast CT to rule out intracranial bleed", "encounter_external_id": "ENC-0007", "tagged_encounter_external_ids": ["ENC-0007"]}
+{"confidence": 0.736, "decision_text": "trial of bronchodilator therapy, recheck oxygenation", "encounter_external_id": "ENC-0008", "tagged_encounter_external_ids": ["ENC-0008"]}
+{"confidence": 0.882, "decision_text": "consult cardiology for stress test scheduling", "encounter_external_id": "ENC-0009", "tagged_encounter_external_ids": ["ENC-0009"]}
+{"confidence": 0.726, "decision_text": "consult cardiology for stress test scheduling", "encounter_external_id": "ENC-0010", "tagged_encounter_external_ids": ["ENC-0010"]}
+{"confidence": 0.778, "decision_text": "admit to observation for serial troponin draws", "encounter_external_id": "ENC-0011", "tagged_encounter_external_ids": ["ENC-0011"]}
+{"confidence": 0.578, "decision_text": "obtain a 12-lead EKG and basic metabolic panel", "encounter_external_id": "ENC-0012", "tagged_encounter_external_ids": ["ENC-0012"]}
+{"confidence": 0.651, "decision_text": "start IV fluids and reassess in 30 minutes", "encounter_external_id": "ENC-0013", "tagged_encounter_external_ids": ["ENC-0013"]}
+{"confidence": 0.828, "decision_text": "consult cardiology for stress test scheduling", "encounter_external_id": "ENC-0014", "tagged_encounter_external_ids": ["ENC-0014", "ENC-0023"]}
+{"confidence": 0.928, "decision_text": "consult cardiology for stress test scheduling", "encounter_external_id": "ENC-0015", "tagged_encounter_external_ids": ["ENC-0015", "ENC-0002"]}
+{"confidence": 0.673, "decision_text": "obtain a 12-lead EKG and basic metabolic panel", "encounter_external_id": "ENC-0016", "tagged_encounter_external_ids": ["ENC-0016"]}
+{"confidence": 0.608, "decision_text": "image with non-contrast CT to rule out intracranial bleed", "encounter_external_id": "ENC-0017", "tagged_encounter_external_ids": ["ENC-0017"]}
+{"confidence": 0.657, "decision_text": "splint the affected extremity and refer to orthopedics", "encounter_external_id": "ENC-0018", "tagged_encounter_external_ids": ["ENC-0018"]}
+{"confidence": 0.634, "decision_text": "image with non-contrast CT to rule out intracranial bleed", "encounter_external_id": "ENC-0019", "tagged_encounter_external_ids": ["ENC-0019"]}
+{"confidence": 0.706, "decision_text": "obtain a 12-lead EKG and basic metabolic panel", "encounter_external_id": "ENC-0020", "tagged_encounter_external_ids": ["ENC-0020"]}
+{"confidence": 0.871, "decision_text": "place patient on continuous cardiac monitoring", "encounter_external_id": "ENC-0021", "tagged_encounter_external_ids": ["ENC-0021"]}
+{"confidence": 0.699, "decision_text": "obtain a 12-lead EKG and basic metabolic panel", "encounter_external_id": "ENC-0022", "tagged_encounter_external_ids": ["ENC-0022", "ENC-0024"]}
+{"confidence": 0.634, "decision_text": "obtain a 12-lead EKG and basic metabolic panel", "encounter_external_id": "ENC-0023", "tagged_encounter_external_ids": ["ENC-0023"]}
+{"confidence": 0.673, "decision_text": "image with non-contrast CT to rule out intracranial bleed", "encounter_external_id": "ENC-0024", "tagged_encounter_external_ids": ["ENC-0024", "ENC-0006"]}
+{"confidence": 0.583, "decision_text": "consult cardiology for stress test scheduling", "encounter_external_id": "ENC-0025", "tagged_encounter_external_ids": ["ENC-0025"]}
+{"confidence": 0.99, "decision_text": "trial of bronchodilator therapy, recheck oxygenation", "encounter_external_id": "ENC-0026", "tagged_encounter_external_ids": ["ENC-0026", "ENC-0021"]}
+{"confidence": 0.958, "decision_text": "start IV fluids and reassess in 30 minutes", "encounter_external_id": "ENC-0027", "tagged_encounter_external_ids": ["ENC-0027"]}
+{"confidence": 0.762, "decision_text": "consult cardiology for stress test scheduling", "encounter_external_id": "ENC-0028", "tagged_encounter_external_ids": ["ENC-0028", "ENC-0016"]}
+{"confidence": 0.622, "decision_text": "place patient on continuous cardiac monitoring", "encounter_external_id": "ENC-0029", "tagged_encounter_external_ids": ["ENC-0029"]}
+{"confidence": 0.667, "decision_text": "start IV fluids and reassess in 30 minutes", "encounter_external_id": "ENC-0030", "tagged_encounter_external_ids": ["ENC-0030"]}
