@@ -1,4 +1,5 @@
-"""External-service connectors for the Engineering Receipts vertical.
+"""External-service connectors for the Engineering Receipts and Clinical
+Audit Ledger verticals.
 
 Each connector is a thin, dependency-injected adapter over a vendor API
 (REST, GraphQL, or MCP shim). Connectors return pydantic v2 models pinned
@@ -10,6 +11,14 @@ and `make test` stays hermetic.
 
 from __future__ import annotations
 
+from receipts.connectors.fhir import (
+    ATTESTATION_EXTENSION_URL,
+    AttestationExtension,
+    FhirComposition,
+    FHIRConnector,
+    FhirReference,
+    FhirSection,
+)
 from receipts.connectors.github import GitHubCommit, GitHubConnector, GitHubPR
 from receipts.connectors.granola import (
     GranolaConnector,
@@ -26,7 +35,13 @@ from receipts.connectors.scribe import (
 from receipts.connectors.slack import SlackConnector, SlackThread
 
 __all__ = [
+    "ATTESTATION_EXTENSION_URL",
     "AmbienceScribeConnector",
+    "AttestationExtension",
+    "FHIRConnector",
+    "FhirComposition",
+    "FhirReference",
+    "FhirSection",
     "GitHubCommit",
     "GitHubConnector",
     "GitHubPR",
