@@ -10,6 +10,14 @@ and `make test` stays hermetic.
 
 from __future__ import annotations
 
+from receipts.connectors.fhir import (
+    ATTESTATION_EXTENSION_URL,
+    AttestationExtension,
+    FhirComposition,
+    FHIRConnector,
+    FhirReference,
+    FhirSection,
+)
 from receipts.connectors.github import GitHubCommit, GitHubConnector, GitHubPR
 from receipts.connectors.granola import (
     GranolaConnector,
@@ -20,6 +28,12 @@ from receipts.connectors.linear import LinearConnector, LinearEpic
 from receipts.connectors.slack import SlackConnector, SlackThread
 
 __all__ = [
+    "ATTESTATION_EXTENSION_URL",
+    "AttestationExtension",
+    "FHIRConnector",
+    "FhirComposition",
+    "FhirReference",
+    "FhirSection",
     "GitHubCommit",
     "GitHubConnector",
     "GitHubPR",
