@@ -19,6 +19,13 @@
           { "type": "command", "command": ".claude/hooks/stamp-judge-call.sh" }
         ]
       }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          { "type": "command", "command": ".claude/hooks/stop-regression.sh" }
+        ]
+      }
     ]
   }
 }
