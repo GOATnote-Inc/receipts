@@ -1,5 +1,6 @@
 """Judge subsystem: CEIS scoring layers, kappa, dual-judge orchestration."""
 
+from receipts.judge.dual_judge import AgreementRecord, DualJudge, DualJudgeResult
 from receipts.judge.kappa import cohen_kappa, wilson_ci
 from receipts.judge.l0 import Issue, RuleRegistry, run_rules
 from receipts.judge.l1 import StructuralResult, score_structure
@@ -23,7 +24,10 @@ from receipts.judge.replay import (
 )
 
 __all__ = [
+    "AgreementRecord",
     "AnthropicAdapter",
+    "DualJudge",
+    "DualJudgeResult",
     "Issue",
     "JudgeCall",
     "JudgeOutput",

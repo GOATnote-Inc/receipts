@@ -72,9 +72,7 @@ def _record_output(
         seed=None,
         input_payload=input_payload,
     )
-    response_text = json.dumps(
-        {"score": score, "rationale": rationale, "flags": flags}
-    )
+    response_text = json.dumps({"score": score, "rationale": rationale, "flags": flags})
     store.record(
         call,
         response={"text": response_text},
@@ -122,12 +120,8 @@ def test_evaluate_pair_returns_record(replay_store: ReplayStore) -> None:
     True, and the buckets must equal the rounded scores.
     """
     payload = {"trajectory_id": "case-pair"}
-    _record_output(
-        replay_store, MODEL_A, PROMPT_A, payload, 0.80, flags=["a-flag"]
-    )
-    _record_output(
-        replay_store, MODEL_B, PROMPT_B, payload, 0.80, flags=["b-flag"]
-    )
+    _record_output(replay_store, MODEL_A, PROMPT_A, payload, 0.80, flags=["a-flag"])
+    _record_output(replay_store, MODEL_B, PROMPT_B, payload, 0.80, flags=["b-flag"])
 
     dual = _make_dual(replay_store)
     record = dual.evaluate_pair("case-pair", payload)
