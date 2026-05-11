@@ -17,7 +17,7 @@ and to avoid leaking the (hypothetical) API key.
 
 from __future__ import annotations
 
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from unittest.mock import MagicMock
 
 import pytest
@@ -124,7 +124,7 @@ def test_fetch_meetings_filters_by_since() -> None:
     client.get.return_value = _make_response({"meetings": []})
 
     connector = GranolaConnector(api_key="sk-test", client=client)
-    cutoff = datetime(2026, 5, 1, 0, 0, 0, tzinfo=timezone.utc)
+    cutoff = datetime(2026, 5, 1, 0, 0, 0, tzinfo=UTC)
     connector.fetch_meetings(since=cutoff)
 
     call = client.get.call_args
