@@ -17,9 +17,16 @@ from receipts.connectors.granola import (
     GranolaMeeting,
 )
 from receipts.connectors.linear import LinearConnector, LinearEpic
+from receipts.connectors.scribe import (
+    AmbienceScribeConnector,
+    ScribeArtifactVersion,
+    ScribeConnector,
+    ScribeEncounter,
+)
 from receipts.connectors.slack import SlackConnector, SlackThread
 
 __all__ = [
+    "AmbienceScribeConnector",
     "GitHubCommit",
     "GitHubConnector",
     "GitHubPR",
@@ -28,6 +35,9 @@ __all__ = [
     "GranolaMeeting",
     "LinearConnector",
     "LinearEpic",
+    "ScribeArtifactVersion",
+    "ScribeConnector",
+    "ScribeEncounter",
     "SlackConnector",
     "SlackThread",
 ]
