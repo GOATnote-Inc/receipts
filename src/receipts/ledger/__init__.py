@@ -27,6 +27,7 @@ from receipts.ledger.models import (
     Meeting,
     Thread,
 )
+from receipts.ledger.object_lock import ObjectLockStore
 from receipts.ledger.queries import LineageGraph, LineageQuery
 from receipts.ledger.run_log import RunLog
 
@@ -44,6 +45,7 @@ __all__ = [
     "LineageQuery",
     "Meeting",
     "MerkleLog",
+    "ObjectLockStore",
     "RunLog",
     "Thread",
     "compute_hash",
