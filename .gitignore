@@ -17,3 +17,4 @@ htmlcov/
 .DS_Store
 results/
 fixtures/judge_recordings/cache/
+.claude/worktrees/
