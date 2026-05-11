@@ -40,8 +40,7 @@ def _run_cli(
 def test_perfect_agreement_passes(tmp_path: Path) -> None:
     # 10 identical pairs => kappa = 1.0, well above the 0.40 default gate.
     rows: list[dict[str, object]] = [
-        {"case_id": f"case-{i}", "rater_a": (i % 2), "rater_b": (i % 2)}
-        for i in range(10)
+        {"case_id": f"case-{i}", "rater_a": (i % 2), "rater_b": (i % 2)} for i in range(10)
     ]
     input_path = tmp_path / "perfect.jsonl"
     _write_jsonl(input_path, rows)
@@ -60,8 +59,7 @@ def test_low_agreement_fails(tmp_path: Path) -> None:
     a_labels = [1, 1, 1, 1, 1, 0, 0, 0, 0, 0]
     b_labels = [0, 0, 0, 0, 1, 1, 1, 1, 1, 0]
     rows: list[dict[str, object]] = [
-        {"case_id": f"case-{i}", "rater_a": a_labels[i], "rater_b": b_labels[i]}
-        for i in range(10)
+        {"case_id": f"case-{i}", "rater_a": a_labels[i], "rater_b": b_labels[i]} for i in range(10)
     ]
     input_path = tmp_path / "low.jsonl"
     _write_jsonl(input_path, rows)
@@ -82,8 +80,7 @@ def test_threshold_override_arg(tmp_path: Path) -> None:
     a_labels = [1, 1, 1, 1, 1, 0, 0, 0, 0, 0]
     b_labels = [1, 1, 1, 0, 0, 1, 1, 0, 0, 0]
     rows: list[dict[str, object]] = [
-        {"case_id": f"case-{i}", "rater_a": a_labels[i], "rater_b": b_labels[i]}
-        for i in range(10)
+        {"case_id": f"case-{i}", "rater_a": a_labels[i], "rater_b": b_labels[i]} for i in range(10)
     ]
     input_path = tmp_path / "borderline.jsonl"
     _write_jsonl(input_path, rows)
@@ -100,8 +97,7 @@ def test_invalid_jsonl_returncode_2(tmp_path: Path) -> None:
     # Malformed JSON line => exit 2 (input error, distinct from gate failure).
     input_path = tmp_path / "bad.jsonl"
     input_path.write_text(
-        '{"case_id": "ok", "rater_a": 1, "rater_b": 1}\n'
-        "this is not json\n",
+        '{"case_id": "ok", "rater_a": 1, "rater_b": 1}\nthis is not json\n',
         encoding="utf-8",
     )
     completed = _run_cli(input_path)
@@ -129,8 +125,7 @@ def test_stdout_includes_wilson_ci(tmp_path: Path) -> None:
     a_labels = [1, 1, 1, 1, 1, 0, 0, 0, 0, 0]
     b_labels = [1, 1, 1, 1, 1, 0, 0, 1, 1, 0]  # 8/10 agree
     rows: list[dict[str, object]] = [
-        {"case_id": f"case-{i}", "rater_a": a_labels[i], "rater_b": b_labels[i]}
-        for i in range(10)
+        {"case_id": f"case-{i}", "rater_a": a_labels[i], "rater_b": b_labels[i]} for i in range(10)
     ]
     input_path = tmp_path / "wilson.jsonl"
     _write_jsonl(input_path, rows)
