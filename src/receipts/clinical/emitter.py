@@ -45,7 +45,7 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass, field
 from datetime import UTC, datetime
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, Any
 
 from sqlalchemy.orm import Session
 
@@ -213,6 +213,11 @@ def _build_markdown(
         for ext_id, snippet in drifted:
             lines.append(f"- {ext_id}: {snippet}")
 
+    lines.append("")
+    lines.append(
+        "_Research software. This report and its attestations are not a substitute for "
+        "clinical judgement and are not for clinical decision-making._"
+    )
     body = "\n".join(lines)
     return _scrub_phi(body)
 
@@ -222,12 +227,52 @@ def _build_markdown(
 # ---------------------------------------------------------------------------
 
 
+_HEX64 = re.compile(r"^[0-9a-f]{64}$")
+_PLACEHOLDERS = {"stub", "todo", "tbd", "placeholder", ""}
+
+
+@dataclass(frozen=True)
+class AttestationProvenance:
+    """What the FHIR attestation extension asserts about a committed note.
+
+    ``merkle_hash`` must be the 64-hex hash of a real row in the receipts
+    ledger. ``model`` / ``prompt_sha`` / ``judge_run_id`` are ``None`` when no
+    LLM drafter or judge ran (the fixture-backed CLI path); a value of ``None``
+    is written as JSON ``null`` rather than inventing a model name.
+    """
+
+    merkle_hash: str
+    model: str | None = None
+    prompt_sha: str | None = None
+    judge_run_id: str | None = None
+
+    def validate(self) -> None:
+        if not isinstance(self.merkle_hash, str) or not _HEX64.match(self.merkle_hash):
+            raise ValueError(
+                "attestation provenance: merkle_hash must be a 64-hex ledger hash, "
+                f"got {self.merkle_hash!r}"
+            )
+        for name in ("model", "prompt_sha", "judge_run_id"):
+            value = getattr(self, name)
+            if value is not None and str(value).strip().lower() in _PLACEHOLDERS:
+                raise ValueError(f"attestation provenance: {name} is a placeholder ({value!r})")
+
+    def as_payload(self) -> dict[str, Any]:
+        return {
+            "model": self.model,
+            "prompt_sha": self.prompt_sha,
+            "judge_run_id": self.judge_run_id,
+            "merkle_hash": self.merkle_hash,
+        }
+
+
 def emit_clinical_outputs(
     result: ClinicalReconcilerResult,
     session: Session,
     fhir: FHIRConnector | None = None,
     cmio_email: str | None = None,
     dry_run: bool = False,
+    provenance: AttestationProvenance | None = None,
 ) -> ClinicalEmitterResult:
     """Emit the weekly CMIO digest + FHIR attestation fan-out.
 
@@ -273,14 +318,20 @@ def emit_clinical_outputs(
     if dry_run or fhir is None:
         return out
 
+    # Fail closed: a FHIR write is the one path that touches patient records.
+    # Refuse to stamp anything that is not real ledger provenance.
+    if provenance is None:
+        raise RuntimeError(
+            "emit_clinical_outputs: refusing non-dry-run FHIR attestation without "
+            "AttestationProvenance (a real ledger merkle_hash is required)"
+        )
+    provenance.validate()
+
     version_ids: list[str] = []
     for ext_id, _contract in result.drafts:
         composition_id = f"synth-{ext_id}"
         attestation_payload = {
-            "model": "claude-opus-4-7",
-            "prompt_sha": "stub",
-            "judge_run_id": "stub",
-            "merkle_hash": "stub",
+            **provenance.as_payload(),
             "recorded_at": datetime.now(UTC).isoformat(),
         }
         version_id = fhir.write_attestation_extension(composition_id, attestation_payload)

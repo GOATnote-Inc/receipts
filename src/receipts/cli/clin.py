@@ -55,6 +55,7 @@ from alembic.config import Config
 
 from alembic import command
 from receipts.clinical import emit_clinical_outputs, reconcile_clinical_week
+from receipts.clinical.emitter import AttestationProvenance
 from receipts.ledger.db import make_engine, make_session_factory
 from receipts.ledger.merkle import MerkleLog
 
@@ -299,12 +300,20 @@ def _run(args: argparse.Namespace) -> int:
                 merkle_log=merkle,
             )
 
+            # Provenance for the FHIR attestation: the ledger chain head after
+            # this week's rows were appended. No LLM drafter or judge runs on
+            # this fixture-backed path, so model / prompt_sha / judge_run_id
+            # are recorded as null rather than a made-up model name.
+            provenance = None
+            if not args.dry_run and fhir is not None:
+                provenance = AttestationProvenance(merkle_hash=merkle.head_hash())
             emitter_out = emit_clinical_outputs(
                 result,
                 session,
                 fhir=fhir,
                 cmio_email=args.cmio_email,
                 dry_run=args.dry_run,
+                provenance=provenance,
             )
 
         engine.dispose()

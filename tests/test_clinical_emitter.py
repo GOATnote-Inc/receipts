@@ -42,6 +42,7 @@ from sqlalchemy.orm import Session, sessionmaker
 
 from alembic import command
 from receipts.clinical import ClinicalEmitterResult, emit_clinical_outputs
+from receipts.clinical.emitter import AttestationProvenance
 from receipts.clinical.reconciler import ClinicalReconcilerResult
 from receipts.connectors.fhir import FHIRConnector
 from receipts.drafter.models import Citation, EncounterContract
@@ -204,7 +205,13 @@ def test_emit_fhir_calls_one_per_encounter_when_not_dry_run(
     result = _result_with_drafts(drafts, passk=1.0, kappa=None, hallucination_flag_rate=None)
     fhir = _mock_fhir()
 
-    out = emit_clinical_outputs(result, session, fhir=fhir, dry_run=False)
+    out = emit_clinical_outputs(
+        result,
+        session,
+        fhir=fhir,
+        dry_run=False,
+        provenance=AttestationProvenance(merkle_hash="a" * 64),
+    )
 
     assert fhir.write_attestation_extension.call_count == 30
     # Composition id maps to synth-ENC-NNNN.
@@ -228,6 +235,7 @@ def test_emit_returns_collected_version_ids(
         session,
         fhir=fhir,
         dry_run=False,
+        provenance=AttestationProvenance(merkle_hash="a" * 64),
     )
 
     assert out.fhir_attestation_version_ids == ["version-1", "version-2", "version-3"]
@@ -281,3 +289,63 @@ def test_emit_redacts_phi_patterns(session: Session) -> None:
     assert "John Smith" not in md
     # Encounter id preserved — the emitter only redacts PHI, not the ID.
     assert "ENC-0001" in md
+
+
+# ---------------------------------------------------------------------------
+# Fail-closed provenance (audit P0-2): the FHIR write path must never stamp
+# placeholder provenance into a patient record.
+# ---------------------------------------------------------------------------
+
+
+def test_emit_refuses_fhir_write_without_provenance(
+    session: Session, seeded_result: ClinicalReconcilerResult
+) -> None:
+    fhir = _mock_fhir()
+    with pytest.raises(RuntimeError, match="refusing non-dry-run FHIR attestation"):
+        emit_clinical_outputs(seeded_result, session, fhir=fhir, dry_run=False)
+    fhir.write_attestation_extension.assert_not_called()
+
+
+@pytest.mark.parametrize(
+    "bad",
+    [
+        AttestationProvenance(merkle_hash="stub"),
+        AttestationProvenance(merkle_hash=""),
+        AttestationProvenance(merkle_hash="A" * 64),
+        AttestationProvenance(merkle_hash="a" * 64, model="stub"),
+        AttestationProvenance(merkle_hash="a" * 64, judge_run_id="TODO"),
+    ],
+)
+def test_emit_refuses_placeholder_provenance(
+    session: Session, seeded_result: ClinicalReconcilerResult, bad: AttestationProvenance
+) -> None:
+    fhir = _mock_fhir()
+    with pytest.raises(ValueError, match="attestation provenance"):
+        emit_clinical_outputs(seeded_result, session, fhir=fhir, dry_run=False, provenance=bad)
+    fhir.write_attestation_extension.assert_not_called()
+
+
+def test_emit_writes_null_model_when_no_llm_ran(
+    session: Session, seeded_result: ClinicalReconcilerResult
+) -> None:
+    fhir = _mock_fhir()
+    emit_clinical_outputs(
+        seeded_result,
+        session,
+        fhir=fhir,
+        dry_run=False,
+        provenance=AttestationProvenance(merkle_hash="b" * 64),
+    )
+    payload = fhir.write_attestation_extension.call_args_list[0].args[1]
+    assert payload["merkle_hash"] == "b" * 64
+    assert payload["model"] is None
+    assert payload["prompt_sha"] is None
+    assert payload["judge_run_id"] is None
+    assert "stub" not in str(payload)
+
+
+def test_markdown_carries_research_disclaimer(
+    session: Session, seeded_result: ClinicalReconcilerResult
+) -> None:
+    out = emit_clinical_outputs(seeded_result, session, dry_run=True)
+    assert "not for clinical decision-making" in out.markdown_body
