@@ -40,6 +40,10 @@ class MerkleLog:
     def __init__(self, session: Session) -> None:
         self._session = session
 
+    def head_hash(self) -> str:
+        """Hash of the newest attestation row, or "" when the chain is empty."""
+        return self._last_hash()
+
     def _last_hash(self) -> str:
         """Hash of the most recent (by id DESC) row, or "" if none yet."""
         last = self._session.query(Attestation).order_by(Attestation.id.desc()).first()

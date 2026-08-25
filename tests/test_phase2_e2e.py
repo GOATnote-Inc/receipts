@@ -62,6 +62,7 @@ from receipts.clinical import (
     emit_clinical_outputs,
     reconcile_clinical_week,
 )
+from receipts.clinical.emitter import AttestationProvenance
 from receipts.connectors import AmbienceScribeConnector, FHIRConnector
 from receipts.connectors.fhir import ATTESTATION_EXTENSION_URL
 from receipts.ledger.merkle import MerkleLog
@@ -192,6 +193,7 @@ def test_phase2_full_cycle_with_fhir_connector(session: Session) -> None:
         fhir=fhir,
         cmio_email="cmio@example.org",
         dry_run=False,
+        provenance=AttestationProvenance(merkle_hash=MerkleLog(session).head_hash() or "c" * 64),
     )
 
     # Invariant (b): emitter result populated on every channel.
