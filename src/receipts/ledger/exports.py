@@ -32,7 +32,6 @@ import csv
 import io
 import json
 import uuid
-from datetime import UTC, datetime
 from typing import Any
 
 from sqlalchemy import select
@@ -486,7 +485,9 @@ def _fhir_composition(session: Session, epic: Epic, q: LineageQuery) -> dict[str
         "resourceType": "Composition",
         "identifier": _fhir_identifier(epic.external_id, "composition"),
         "status": "final",
-        "date": datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%S+00:00"),
+        # Deterministic (byte-stable exports guarantee): the epic's own
+        # created_at, not wall-clock.
+        "date": epic.created_at.strftime("%Y-%m-%dT%H:%M:%S+00:00"),
         "author": [{"display": "GOATnote receipts ledger"}],
         "type": {
             "coding": [
