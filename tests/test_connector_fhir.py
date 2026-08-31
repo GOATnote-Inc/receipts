@@ -203,7 +203,7 @@ def test_write_attestation_patch_payload_shape() -> None:
     ext = add_op["value"]
 
     # Extension element matches the AttestationExtension schema.
-    assert ext["url"] == "https://goatnote.dev/receipts/attestation"
+    assert ext["url"] == "https://receipts.thegoatnote.com/fhir/StructureDefinition/attestation"
     nested = {sub["url"]: sub for sub in ext.get("extension", [])}
     assert nested["model"]["valueString"] == "claude-opus-4-7"
     assert nested["prompt_sha"]["valueString"] == "sha256:abc"
@@ -279,4 +279,4 @@ def test_attestation_extension_url_invariant() -> None:
         merkle_hash="0xdeadbeef",
         recorded_at=datetime(2026, 5, 9, 12, 0, 0, tzinfo=UTC),
     )
-    assert ext.url == "https://goatnote.dev/receipts/attestation"
+    assert ext.url == "https://receipts.thegoatnote.com/fhir/StructureDefinition/attestation"

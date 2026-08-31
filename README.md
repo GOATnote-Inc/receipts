@@ -32,7 +32,7 @@ Produces a Markdown PR body, a Linear comment per drifted epic, and a Slack DM t
 python -m receipts.cli.clin run --week-fixture fixtures/clinical/week_0001 --dry-run
 ```
 
-Produces a PHI-redacted CMIO Markdown report and writes an `AttestationExtension` (canonical URL `https://goatnote.dev/receipts/attestation`) onto each committed FHIR `Composition`. The emitter has no Slack handle by design — patient text never leaves the FHIR + Markdown surface.
+Produces a PHI-redacted CMIO Markdown report and writes an `AttestationExtension` (canonical URL `https://receipts.thegoatnote.com/fhir/StructureDefinition/attestation`) onto each committed FHIR `Composition`. The emitter has no Slack handle by design — patient text never leaves the FHIR + Markdown surface.
 
 ## Architecture
 
@@ -45,7 +45,7 @@ Produces a PHI-redacted CMIO Markdown report and writes an `AttestationExtension
 
 ## What is and is not guaranteed
 
-- **Hash chain, not a Merkle tree**: `MerkleLog` is a linear SHA-256 chain (`hash = sha256(canonical_json(payload) + prev_hash)`). `verify_chain()` detects an in-place edit of a row's `payload` or `prev_hash` that was not recomputed. It does **not** detect a rewrite that recomputes the chain, truncation of the newest rows, or edits to the `kind` / `target_id` / `created_at` columns (they are not hashed). There is no signing, no external anchoring, and no database-level append-only enforcement; "append-only" is a code convention. Treat the ledger as a change-detection aid, not as tamper-proof evidence.
+- **Hash chain, not a Merkle tree**: `MerkleLog` is a linear SHA-256 chain (`hash = sha256(canonical_json(payload) + prev_hash)`). `verify_chain()` detects an in-place edit of a row's `payload` or `prev_hash` that was not recomputed. It does **not** detect a rewrite that recomputes the chain or truncation of the newest rows. Since v2 the hash covers `kind`, `target_id` and `target_kind` (length-prefixed, domain-tagged); `created_at` remains unhashed. There is no signing, no external anchoring, and no database-level append-only enforcement; "append-only" is a code convention. Treat the ledger as a change-detection aid, not as tamper-proof evidence.
 - **Ledger lifetime**: the shipped CLIs default to a SQLite database created in a `TemporaryDirectory` that is deleted when the run ends. Pass `--db-url` to keep a ledger. The S3 Object Lock store (`src/receipts/ledger/object_lock.py`) is exercised by tests but is not wired into either CLI.
 - **Attestation coverage**: the clinical reconciler appends one attestation row per contract; the engineering emitter's external writes (PR body, Linear comment, Slack DM) are not yet attested. The FHIR write path refuses to run without real ledger provenance (`AttestationProvenance`: a 64-hex chain hash; model / prompt / judge ids are recorded as `null` when no LLM ran).
 - **Judge gates**: Cohen's kappa is computed only when a `DualJudge` is supplied; the shipped CLIs pass `dual_judge=None`, so the kappa gate is exercised in tests, not in the default run.

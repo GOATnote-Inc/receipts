@@ -258,7 +258,7 @@ def test_stamp_always_exits_zero_even_with_malformed_stdin() -> None:
 
 def test_settings_json_wires_all_three_hooks() -> None:
     settings = json.loads((REPO_ROOT / ".claude" / "settings.json").read_text())
-    assert settings["permissions"]["defaultMode"] == "auto"
+    assert settings["permissions"]["defaultMode"] == "default"
     hooks = settings["hooks"]
     pre_commands = [
         h["command"]

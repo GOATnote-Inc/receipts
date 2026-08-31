@@ -308,6 +308,25 @@ def _run(args: argparse.Namespace) -> int:
                 merkle_log=merkle,
             )
 
+            # ---- Gate evaluation (before any external write; audit P1-3) ----
+
+            gate_failed = result.passk < args.passk_threshold
+
+            if result.kappa is not None and result.kappa < args.kappa_threshold:
+                gate_failed = True
+
+            if result.merkle_chain_intact is False:
+                gate_failed = True
+
+            effective_dry_run = args.dry_run or gate_failed
+
+            if gate_failed and not args.dry_run:
+                print(
+                    "GATE FAILURE: thresholds not met; external writes withheld "
+                    "(outputs built dry-run).",
+                    file=sys.stderr,
+                )
+
             emitter_out = emit_outputs(
                 result,
                 session,
@@ -316,7 +335,7 @@ def _run(args: argparse.Namespace) -> int:
                 github=github,
                 vp_eng_user_id=args.vp_eng_slack_user_id,
                 github_repo_for_pr=args.github_repo,
-                dry_run=args.dry_run,
+                dry_run=effective_dry_run,
             )
 
         engine.dispose()
@@ -333,15 +352,6 @@ def _run(args: argparse.Namespace) -> int:
         markdown_body=emitter_out.markdown_body,
     )
     print(summary)
-
-    # ---- Gate evaluation ----------------------------------------------------
-    gate_failed = False
-    if result.passk < args.passk_threshold:
-        gate_failed = True
-    if result.kappa is not None and result.kappa < args.kappa_threshold:
-        gate_failed = True
-    if result.merkle_chain_intact is False:
-        gate_failed = True
 
     return 1 if gate_failed else 0
 
