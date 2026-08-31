@@ -28,10 +28,38 @@ def _canonical_json(payload: Any) -> str:
     return json.dumps(payload, sort_keys=True, separators=(",", ":"))
 
 
-def compute_hash(payload: dict, prev_hash: str) -> str:
-    """SHA-256 of `canonical_json(payload) + prev_hash`."""
-    blob = (_canonical_json(payload) + prev_hash).encode("utf-8")
-    return hashlib.sha256(blob).hexdigest()
+_HASH_DOMAIN = b"receipts.attestation.v2"
+
+
+def compute_hash(
+    payload: dict,
+    prev_hash: str,
+    *,
+    kind: str = "",
+    target_id: int = 0,
+    target_kind: str = "",
+) -> str:
+    """Domain-tagged, length-prefixed SHA-256 over the row's hashed material.
+
+    v2 (2026-08): the hash now covers ``kind`` / ``target_id`` / ``target_kind``
+    in addition to the canonical payload and ``prev_hash``, each field
+    length-prefixed so no two field sequences can collide by concatenation.
+    Chains written by v1 (payload+prev only) will fail verify_chain() against
+    this implementation; the shipped CLIs create a fresh ledger per run, so no
+    persistent v1 chain ships with this repository.
+    """
+    h = hashlib.sha256()
+    h.update(_HASH_DOMAIN)
+    for part in (
+        _canonical_json(payload).encode("utf-8"),
+        prev_hash.encode("utf-8"),
+        kind.encode("utf-8"),
+        str(target_id).encode("utf-8"),
+        target_kind.encode("utf-8"),
+    ):
+        h.update(len(part).to_bytes(8, "big"))
+        h.update(part)
+    return h.hexdigest()
 
 
 class MerkleLog:
@@ -61,7 +89,9 @@ class MerkleLog:
     ) -> str:
         """Append a row to the chain. Returns the new row's hash."""
         prev_hash = self._last_hash()
-        new_hash = compute_hash(payload, prev_hash)
+        new_hash = compute_hash(
+            payload, prev_hash, kind=kind, target_id=target_id, target_kind=target_kind
+        )
         row = Attestation(
             kind=kind,
             target_id=target_id,
@@ -92,7 +122,16 @@ class MerkleLog:
                 # cascade-flag every subsequent row purely on a single break.
                 expected_prev = row.hash
                 continue
-            if compute_hash(row.payload, stored_prev) != row.hash:
+            if (
+                compute_hash(
+                    row.payload,
+                    stored_prev,
+                    kind=row.kind,
+                    target_id=row.target_id,
+                    target_kind=row.target_kind,
+                )
+                != row.hash
+            ):
                 bad.append(row.id)
             expected_prev = row.hash
         return bad
@@ -103,7 +142,16 @@ class MerkleLog:
         rows = self._session.query(Attestation).order_by(Attestation.id.asc()).all()
         for row in rows:
             stored_prev = row.prev_hash or ""
-            if compute_hash(row.payload, stored_prev) != row.hash:
+            if (
+                compute_hash(
+                    row.payload,
+                    stored_prev,
+                    kind=row.kind,
+                    target_id=row.target_id,
+                    target_kind=row.target_kind,
+                )
+                != row.hash
+            ):
                 bad.append(row.id)
         return bad
 

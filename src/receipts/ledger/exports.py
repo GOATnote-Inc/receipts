@@ -31,6 +31,8 @@ from __future__ import annotations
 import csv
 import io
 import json
+import uuid
+from datetime import UTC, datetime
 from typing import Any
 
 from sqlalchemy import select
@@ -461,6 +463,13 @@ def _fhir_composition(session: Session, epic: Epic, q: LineageQuery) -> dict[str
     # Section: Drift findings as extensions.
     drift_section: dict[str, Any] = {
         "title": "Drift findings",
+        "text": {
+            "status": "generated",
+            "div": (
+                '<div xmlns="http://www.w3.org/1999/xhtml">'
+                f"{len(drifts)} drift finding(s); details in extensions.</div>"
+            ),
+        },
         "code": {
             "coding": [
                 {
@@ -477,6 +486,8 @@ def _fhir_composition(session: Session, epic: Epic, q: LineageQuery) -> dict[str
         "resourceType": "Composition",
         "identifier": _fhir_identifier(epic.external_id, "composition"),
         "status": "final",
+        "date": datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%S+00:00"),
+        "author": [{"display": "GOATnote receipts ledger"}],
         "type": {
             "coding": [
                 {
@@ -515,7 +526,7 @@ def generate_fhir_bundle(session: Session, epic_external_ids: list[str] | None =
         composition = _fhir_composition(session, epic, q)
         entries.append(
             {
-                "fullUrl": f"urn:uuid:epic-{epic.external_id}",
+                "fullUrl": f"urn:uuid:{uuid.uuid5(uuid.NAMESPACE_URL, _FHIR_SYSTEM + '/epic/' + epic.external_id)}",
                 "resource": composition,
             }
         )

@@ -300,19 +300,33 @@ def _run(args: argparse.Namespace) -> int:
                 merkle_log=merkle,
             )
 
+            # ---- Gate evaluation (before any external write; audit P1-3) ----
+            gate_failed = result.passk < args.passk_threshold
+            if result.kappa is not None and result.kappa < args.kappa_threshold:
+                gate_failed = True
+            if result.merkle_chain_intact is False:
+                gate_failed = True
+            effective_dry_run = args.dry_run or gate_failed
+            if gate_failed and not args.dry_run:
+                print(
+                    "GATE FAILURE: thresholds not met; external writes withheld "
+                    "(outputs built dry-run).",
+                    file=sys.stderr,
+                )
+
             # Provenance for the FHIR attestation: the ledger chain head after
             # this week's rows were appended. No LLM drafter or judge runs on
             # this fixture-backed path, so model / prompt_sha / judge_run_id
             # are recorded as null rather than a made-up model name.
             provenance = None
-            if not args.dry_run and fhir is not None:
+            if not effective_dry_run and fhir is not None:
                 provenance = AttestationProvenance(merkle_hash=merkle.head_hash())
             emitter_out = emit_clinical_outputs(
                 result,
                 session,
                 fhir=fhir,
                 cmio_email=args.cmio_email,
-                dry_run=args.dry_run,
+                dry_run=effective_dry_run,
                 provenance=provenance,
             )
 
@@ -331,15 +345,6 @@ def _run(args: argparse.Namespace) -> int:
         markdown_body=emitter_out.markdown_body,
     )
     print(summary)
-
-    # ---- Gate evaluation ----------------------------------------------------
-    gate_failed = False
-    if result.passk < args.passk_threshold:
-        gate_failed = True
-    if result.kappa is not None and result.kappa < args.kappa_threshold:
-        gate_failed = True
-    if result.merkle_chain_intact is False:
-        gate_failed = True
 
     return 1 if gate_failed else 0
 

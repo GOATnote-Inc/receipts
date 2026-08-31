@@ -60,9 +60,27 @@ def session(upgraded_engine) -> Session:
         yield s
 
 
-def _expected_hash(payload: dict, prev_hash: str) -> str:
+def _expected_hash(
+    payload: dict,
+    prev_hash: str,
+    *,
+    kind: str = "",
+    target_id: int = 0,
+    target_kind: str = "",
+) -> str:
     canonical = json.dumps(payload, sort_keys=True, separators=(",", ":"))
-    return hashlib.sha256((canonical + prev_hash).encode("utf-8")).hexdigest()
+    h = hashlib.sha256()
+    h.update(b"receipts.attestation.v2")
+    for part in (
+        canonical.encode("utf-8"),
+        prev_hash.encode("utf-8"),
+        kind.encode("utf-8"),
+        str(target_id).encode("utf-8"),
+        target_kind.encode("utf-8"),
+    ):
+        h.update(len(part).to_bytes(8, "big"))
+        h.update(part)
+    return h.hexdigest()
 
 
 def test_genesis_append_has_empty_prev_hash(session: Session) -> None:
@@ -74,7 +92,9 @@ def test_genesis_append_has_empty_prev_hash(session: Session) -> None:
     assert row is not None
     assert row.prev_hash == ""
     assert row.hash == h
-    assert h == _expected_hash(payload, "")
+    assert h == _expected_hash(
+        payload, "", kind="linear.epic.created", target_id=1, target_kind="epic"
+    )
 
 
 def test_multi_row_append_links_prev_hash(session: Session) -> None:

@@ -32,7 +32,7 @@ absent.
 
 Audit invariant
 ---------------
-The extension URL ``https://goatnote.dev/receipts/attestation`` is a
+The extension URL ``https://receipts.thegoatnote.com/fhir/StructureDefinition/attestation`` is a
 load-bearing identifier downstream auditors grep for; it is hardcoded on
 ``AttestationExtension`` and asserted by the test suite.
 
@@ -57,7 +57,7 @@ from pydantic import BaseModel, Field
 
 #: The attestation extension URL is a load-bearing audit identifier.
 #: Auditors and downstream consumers grep for this exact string.
-ATTESTATION_EXTENSION_URL = "https://goatnote.dev/receipts/attestation"
+ATTESTATION_EXTENSION_URL = "https://receipts.thegoatnote.com/fhir/StructureDefinition/attestation"
 
 
 # ----------------------------- models -----------------------------
