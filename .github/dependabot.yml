@@ -1,10 +1,15 @@
+# Version updates are disabled (open-pull-requests-limit: 0): this repository is in
+# passive maintenance. Dependabot SECURITY updates are configured at the repository
+# level and still open PRs for real vulnerabilities.
 version: 2
 updates:
-  - package-ecosystem: pip
-    directory: "/"
-    schedule:
-      interval: weekly
-  - package-ecosystem: github-actions
-    directory: "/"
-    schedule:
-      interval: weekly
+- package-ecosystem: pip
+  directory: /
+  schedule:
+    interval: weekly
+  open-pull-requests-limit: 0
+- package-ecosystem: github-actions
+  directory: /
+  schedule:
+    interval: weekly
+  open-pull-requests-limit: 0
