@@ -1,5 +1,8 @@
 # receipts
 
+
+> **Maintenance status (2026-09):** passive. This repository is kept available as a reference implementation; CI runs on pushes and pull requests only, Dependabot security alerts remain enabled, and no scheduled jobs or hosted services consume ongoing resources. No active development is planned.
+
 Intent-vs-execution attestation ledger for AI-mediated workflows: a SHA-256 hash-chained attestation table, a dual-judge agreement engine with Cohen's kappa, and regulatory-format exports (FHIR R4 Bundle / SARIF / Markdown / CSV).
 
 **Status:** research build. Both verticals run end to end against committed fixtures with mocked connectors and a hermetic test suite; neither has run against a live Linear, Slack, Ambience or FHIR endpoint. Not a medical device; not for clinical decision-making. Read "What is and is not guaranteed" before relying on any property of the ledger.
