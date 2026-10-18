@@ -15,6 +15,7 @@ import io
 import json
 from datetime import UTC, datetime
 from pathlib import Path
+from xml.etree import ElementTree
 
 import pytest
 from alembic.config import Config
@@ -298,3 +299,99 @@ def test_explicit_epic_external_ids_filter(session: Session) -> None:
     assert len(rows) == 2
     header = rows[0]
     assert rows[1][header.index("epic_external_id")] == "LIN-A"
+
+
+@pytest.mark.parametrize(
+    "payload",
+    [
+        "=1+1",
+        "+1+1",
+        "-1+1",
+        "@SUM(1)",
+        " =1+1",
+        "\t=1+1",
+        "\r=1+1",
+        "\n=1+1",
+        "\v=1+1",
+        "\f=1+1",
+        "\x00=1+1",
+        "\x1f=1+1",
+        "\x7f=1+1",
+        "\x85=1+1",
+        "\u00a0=1+1",
+        "\u2003=1+1",
+        "\ufeff=1+1",
+        " \t\x00=1",
+        "\ttext",
+        "\rtext",
+        "\ntext",
+        "\x00text",
+        '=1,"\n+1',
+    ],
+)
+def test_csv_neutralizes_spreadsheet_formulas_in_all_text_columns(
+    session: Session, payload: str
+) -> None:
+    seeded = _seed_exports(session)
+    seeded["epic_a"].external_id = payload
+    seeded["epic_a"].title = payload
+    for key in ("pr1", "m1", "t1"):
+        seeded[key].external_id = payload
+    seeded["drift_a"].layer = payload
+    session.commit()
+
+    output = generate_csv(session, epic_external_ids=[payload])
+    rows = list(csv.reader(io.StringIO(output, newline="")))
+    assert len(rows) == 2
+    assert rows[1] == ["'" + payload] * 6 + ["0.420"]
+    assert output == generate_csv(session, epic_external_ids=[payload])
+
+
+@pytest.mark.parametrize(
+    "title",
+    ["", "ordinary title", " leading space", "x=1", "O'Brien", 'a,"b"\nc', "safe\r=1+1"],
+)
+def test_csv_preserves_benign_text_and_empty_cells(session: Session, title: str) -> None:
+    seeded = _seed_exports(session)
+    seeded["epic_b"].title = title
+    session.commit()
+
+    rows = list(csv.reader(io.StringIO(generate_csv(session, ["LIN-B"]), newline="")))
+    assert rows[1] == ["LIN-B", title, "gh/foo#2", "", "", "l0", "0.100"]
+
+
+_CRITERION_MARKUP = '<script>alert("test")</script> &amp; &#x3c; <b>literal</b>'
+
+
+@pytest.mark.parametrize(
+    ("criteria", "expected"),
+    [
+        (_CRITERION_MARKUP, [_CRITERION_MARKUP]),
+        ([_CRITERION_MARKUP], [_CRITERION_MARKUP]),
+        ({"must": [_CRITERION_MARKUP]}, [f"[must] {_CRITERION_MARKUP}"]),
+        ({"must": _CRITERION_MARKUP}, [f"[must] {_CRITERION_MARKUP}"]),
+        ({_CRITERION_MARKUP: ["value"]}, [f"[{_CRITERION_MARKUP}] value"]),
+        ({_CRITERION_MARKUP: "value"}, [f"[{_CRITERION_MARKUP}] value"]),
+        (42, ["42"]),
+        (None, []),
+        ({"must": ["ordinary text"]}, ["[must] ordinary text"]),
+    ],
+)
+def test_fhir_criteria_are_literal_xhtml_text(session: Session, criteria, expected) -> None:
+    seeded = _seed_exports(session)
+    seeded["epic_a"].acceptance_criteria = criteria
+    session.commit()
+
+    output = generate_fhir_bundle(session, ["LIN-A"])
+    composition = json.loads(output)["entry"][0]["resource"]
+    narrative = ElementTree.fromstring(composition["section"][0]["text"]["div"])
+    namespace = "{http://www.w3.org/1999/xhtml}"
+    assert [element.tag for element in narrative.iter()] == [
+        namespace + "div",
+        namespace + "ul",
+        *[namespace + "li"] * len(expected),
+    ]
+    assert [element.text for element in narrative.iter(namespace + "li")] == expected
+    assert output == generate_fhir_bundle(session, ["LIN-A"])
+    for line in expected:
+        assert "- " + line in generate_markdown(session, ["LIN-A"])
