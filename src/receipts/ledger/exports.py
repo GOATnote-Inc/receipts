@@ -31,7 +31,9 @@ from __future__ import annotations
 import csv
 import io
 import json
+import unicodedata
 import uuid
+from html import escape
 from typing import Any
 
 from sqlalchemy import select
@@ -208,11 +210,27 @@ _CSV_HEADER = [
 ]
 
 
+def _spreadsheet_safe_text(value: str) -> str:
+    """Keep formula-like cells literal, including ignored leading characters."""
+    for char in value:
+        # Spreadsheet importers may discard leading whitespace or controls.
+        # Prefix the original text so those bytes cannot expose a formula.
+        if unicodedata.category(char) in {"Cc", "Cf"}:
+            return "'" + value
+        if char.isspace():
+            continue
+        if char in "=+-@":
+            return "'" + value
+        break
+    return value
+
+
 def generate_csv(session: Session, epic_external_ids: list[str] | None = None) -> str:
     """Render a flat CSV digest, one row per epic.
 
     Multi-valued fields (PR / meeting / thread external_ids, drift layers and
     scores) are joined with `|` so the cell remains a single string.
+    Formula-like cells are prefixed with an apostrophe for spreadsheet import.
     """
     epics = _resolve_epics(session, epic_external_ids)
     q = LineageQuery(session)
@@ -229,7 +247,8 @@ def generate_csv(session: Session, epic_external_ids: list[str] | None = None) -
         drifts = _drift_for_epic(session, epic.id)
         layers = "|".join(d.layer for d in drifts)
         scores = "|".join(f"{d.score:.3f}" for d in drifts)
-        writer.writerow([epic.external_id, epic.title, prs, meetings, threads, layers, scores])
+        row = [epic.external_id, epic.title, prs, meetings, threads, layers, scores]
+        writer.writerow([_spreadsheet_safe_text(value) for value in row])
 
     return buf.getvalue()
 
@@ -373,7 +392,7 @@ def _fhir_composition(session: Session, epic: Epic, q: LineageQuery) -> dict[str
     criteria_lines = _format_criteria(epic.acceptance_criteria)
     criteria_html = (
         '<div xmlns="http://www.w3.org/1999/xhtml"><ul>'
-        + "".join(f"<li>{line[2:]}</li>" for line in criteria_lines)
+        + "".join(f"<li>{escape(line[2:])}</li>" for line in criteria_lines)
         + "</ul></div>"
     )
     criteria_section: dict[str, Any] = {

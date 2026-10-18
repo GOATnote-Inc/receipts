@@ -291,6 +291,38 @@ def test_emit_redacts_phi_patterns(session: Session) -> None:
     assert "ENC-0001" in md
 
 
+@pytest.mark.parametrize(
+    ("phi", "visible_characters"),
+    [("123-45-6789", 7), ("03/14/1965", 6), ("1234567", 5), ("John Smith", 5)],
+)
+def test_emit_redacts_phi_crossing_summary_truncation_boundary(
+    session: Session, phi: str, visible_characters: int
+) -> None:
+    prefix = "scope-creep: ".ljust(80 - visible_characters - 1, "x") + " "
+    summary = prefix + phi + " mentioned."
+    result = _result_with_drafts([("ENC-0001", _contract("ENC-001", summary))])
+
+    out = emit_clinical_outputs(result, session, dry_run=True)
+
+    # Checking only for the full PHI value misses the leak: the old code
+    # truncated the token into a fragment the final scrub could not match.
+    assert phi[:visible_characters] not in out.markdown_body
+    expected_snippet = (prefix + "[REDACTED] mentioned.")[:80]
+    assert f"- ENC-0001: {expected_snippet}" in out.markdown_body
+
+
+def test_emit_preserves_safe_summary_truncation(session: Session) -> None:
+    summary = "scope-creep: " + "safe text " * 12
+    result = _result_with_drafts([("ENC-0001", _contract("ENC-001", summary))])
+
+    out = emit_clinical_outputs(result, session, dry_run=True)
+
+    drift_line = next(
+        line for line in out.markdown_body.splitlines() if line.startswith("- ENC-0001:")
+    )
+    assert drift_line == f"- ENC-0001: {summary[:80]}"
+
+
 # ---------------------------------------------------------------------------
 # Fail-closed provenance (audit P0-2): the FHIR write path must never stamp
 # placeholder provenance into a patient record.

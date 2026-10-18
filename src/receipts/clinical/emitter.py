@@ -176,7 +176,7 @@ def _build_markdown(
       - CMIO recipient: ...
 
       ## Top drift items
-      - ENC-NNNN: <first 80 chars of drift_summary, sanitized>
+      - ENC-NNNN: <first 80 chars of sanitized drift_summary>
       ...
 
     Every line is run through :func:`_scrub_phi` before joining so any
@@ -199,10 +199,9 @@ def _build_markdown(
     for ext_id, contract in result.drafts:
         summary = contract.drift_summary or ""
         if _is_drifted(summary):
-            # Truncate to the first 80 chars then PHI-scrub. We scrub
-            # *after* truncation so partial PHI at the boundary collapses
-            # to a [REDACTED] token rather than leaking half-numbers.
-            snippet = summary[:80]
+            # Scrub full tokens before truncation can turn them into fragments
+            # that the final body scrub would no longer recognize.
+            snippet = _scrub_phi(summary)[:80]
             drifted.append((ext_id, snippet))
 
     drifted.sort(key=lambda pair: pair[0])
